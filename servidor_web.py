@@ -496,9 +496,8 @@ def api_consultar_processos():
         if ESTADO_PROCESSOS['rodando']:
             return jsonify({'sucesso': False, 'erro': 'Uma consulta já está em andamento'})
 
-        # Consulta TODAS as empresas enviadas (a UI filtra no final).
-        # Cap de segurança em 200 empresas por rodada.
-        limite = min(int(dados.get('limite') or 200), 200)
+        # Limita por rodada (protege rate limit da API e timeout do navegador)
+        limite = min(int(dados.get('limite') or 10), 25)
         alvo = []
         for e in empresas:
             cnpj = ''.join(ch for ch in (e.get('cnpj') or '') if ch.isdigit())
@@ -534,7 +533,7 @@ def _thread_consultar_processos(empresas, chave):
             ESTADO_PROCESSOS['progresso'] = feitos
             ESTADO_PROCESSOS['total'] = total
 
-        por_empresa = consultar_em_lote(empresas, chave, workers=16, timeout=8,
+        por_empresa = consultar_em_lote(empresas, chave, workers=12, timeout=8,
                                         progresso_callback=progresso)
         ESTADO_PROCESSOS['por_empresa'] = por_empresa
 
