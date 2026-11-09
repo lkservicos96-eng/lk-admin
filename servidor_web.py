@@ -6,6 +6,7 @@ from flask import Flask, render_template, request, jsonify, Response
 from flask_cors import CORS
 import json
 import os
+import threading
 from datetime import datetime
 from cnpj_searcher import BuscadorIntegrado
 from cidades_brasil import CIDADES_POR_ESTADO
@@ -461,6 +462,101 @@ def historico_buscas():
 
     except Exception as e:
         return jsonify({'erro': str(e)}), 500
+
+# ======================================================================
+# CONSULTA DE PROCESSOS JUDICIAIS (API pública do CNJ — DataJud)
+# Consulta roda em thread de background com progresso (a UI faz polling),
+# porque 51 tribunais por empresa demoram mais que o timeout de um request.
+# ======================================================================
+
+ESTADO_PROCESSOS = {
+    'rodando': False,      # há consulta em andamento?
+    'pronto': False,       # terminou a última consulta?
+    'progresso': 0,        # tarefas concluídas
+    'total': 0,            # total de tarefas (empresas x tribunais)
+    'por_empresa': {},     # {cnpj: {total_processos, tribunais_consultados, processos}}
+    'avisos': [],
+}
+
+
+@app.route('/api/consultar_processos', methods=['POST'])
+def api_consultar_processos():
+    """Inicia a consulta de processos (thread de background) para os CNPJs enviados"""
+    try:
+        dados = request.json or {}
+        empresas = dados.get('empresas', []) or []
+
+        chave = os.environ.get('CNJ_DATAJUD_KEY', '')
+        if not chave:
+            return jsonify({
+                'sucesso': False,
+                'erro': 'Configure a variável CNJ_DATAJUD_KEY no Render (cadastro gratuito no CNJ — veja o guia PROCESSOS_CNJ.md)'
+            })
+
+        if ESTADO_PROCESSOS['rodando']:
+            return jsonify({'sucesso': False, 'erro': 'Uma consulta já está em andamento'})
+
+        # Limita por rodada (protege rate limit da API e timeout do navegador)
+        limite = min(int(dados.get('limite') or 10), 25)
+        alvo = []
+        for e in empresas:
+            cnpj = ''.join(ch for ch in (e.get('cnpj') or '') if ch.isdigit())
+            if len(cnpj) == 14:
+                alvo.append({'cnpj': cnpj, 'razao_social': e.get('razao_social') or ''})
+            if len(alvo) >= limite:
+                break
+
+        if not alvo:
+            return jsonify({'sucesso': False, 'erro': 'Nenhum CNPJ válido nos resultados'})
+
+        ESTADO_PROCESSOS.update(
+            rodando=True, pronto=False, progresso=0, total=0,
+            por_empresa={},
+            avisos=[f'Consultando processos de {len(alvo)} empresa(s) em 51 tribunais (TJs + TRTs)...']
+        )
+
+        thread = threading.Thread(target=_thread_consultar_processos, args=(alvo, chave), daemon=True)
+        thread.start()
+
+        return jsonify({'sucesso': True, 'iniciado': True, 'total_empresas': len(alvo)})
+
+    except Exception as e:
+        return jsonify({'sucesso': False, 'erro': str(e)}), 500
+
+
+def _thread_consultar_processos(empresas, chave):
+    """Executa a consulta em background e atualiza ESTADO_PROCESSOS"""
+    try:
+        from processos_datajud import consultar_em_lote
+
+        def progresso(feitos, total):
+            ESTADO_PROCESSOS['progresso'] = feitos
+            ESTADO_PROCESSOS['total'] = total
+
+        por_empresa = consultar_em_lote(empresas, chave, workers=12, timeout=8,
+                                        progresso_callback=progresso)
+        ESTADO_PROCESSOS['por_empresa'] = por_empresa
+
+        com_processos = sum(1 for v in por_empresa.values() if v['total_processos'] > 0)
+        total_proc = sum(v['total_processos'] for v in por_empresa.values())
+        ESTADO_PROCESSOS['avisos'].append(
+            f'Consulta concluída: {com_processos} de {len(empresas)} empresas têm processos '
+            f'({total_proc} processo(s) no total)'
+        )
+        print(f"✅ Processos: {com_processos}/{len(empresas)} empresas com processos ({total_proc} no total)")
+    except Exception as e:
+        ESTADO_PROCESSOS['avisos'].append(f'Erro na consulta de processos: {e}')
+        print(f"❌ Erro na consulta de processos: {e}")
+    finally:
+        ESTADO_PROCESSOS['pronto'] = True
+        ESTADO_PROCESSOS['rodando'] = False
+
+
+@app.route('/api/status_processos', methods=['GET'])
+def api_status_processos():
+    """Progresso e resultados parciais/finais da consulta de processos"""
+    return jsonify(ESTADO_PROCESSOS)
+
 
 if __name__ == '__main__':
     # A hospedagem (Render) informa a porta pela variável PORT.

@@ -696,6 +696,9 @@
                         <strong id="totalEmpresas">0</strong> empresas encontradas
                     </div>
                     <div class="action-buttons" style="display: none;" id="actionButtons">
+                        <button class="btn-export" id="btnProcessos" onclick="iniciarProcessos()">
+                            <span>⚖️</span> Consultar processos
+                        </button>
                         <button class="btn-export" onclick="exportarExcel()">
                             <span>📊</span> Exportar Excel
                         </button>
@@ -968,6 +971,77 @@
             list.classList.toggle('show');
             const btn = list.previousElementSibling;
             btn.classList.toggle('aberto');
+        }
+
+        // ===== CONSULTA DE PROCESSOS JUDICIAIS (API CNJ - DataJud) =====
+        let consultandoProcessos = false;
+
+        async function iniciarProcessos() {
+            if (consultandoProcessos) return;
+            if (!ultimosResultados || !ultimosResultados.length) { alert('Faça uma busca primeiro'); return; }
+            consultandoProcessos = true;
+            const btn = document.getElementById('btnProcessos');
+            btn.disabled = true;
+            btn.querySelector('span').textContent = '⏳';
+            const rc = document.getElementById('resultsContainer');
+            try {
+                const empresas = ultimosResultados.map(e => ({cnpj: e.cnpj, razao_social: e.razao_social}));
+                const res = await fetch('/api/consultar_processos', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({empresas: empresas, limite: 10})
+                });
+                const data = await res.json();
+                if (!data.sucesso) throw new Error(data.erro || 'Erro ao iniciar consulta');
+                rc.innerHTML = '<div class="loading"><div class="spinner"></div><p id="progTexto">Consultando processos nos tribunais...</p><p class="hint" id="progDetalhe">Iniciando...</p></div>';
+                await acompanharProgresso();
+            } catch (err) {
+                alert('Erro: ' + err.message);
+                btn.disabled = false;
+                btn.querySelector('span').textContent = '⚖️';
+                consultandoProcessos = false;
+            }
+        }
+
+        async function acompanharProgresso() {
+            while (true) {
+                await new Promise(r => setTimeout(r, 2000));
+                try {
+                    const res = await fetch('/api/status_processos');
+                    const st = await res.json();
+                    const pt = document.getElementById('progTexto');
+                    const pd = document.getElementById('progDetalhe');
+                    const pct = st.total ? Math.round(st.progresso * 100 / st.total) : 0;
+                    if (pt) pt.textContent = `Consultando processos... ${pct}%`;
+                    if (pd) pd.textContent = st.total ? `${st.progresso} de ${st.total} consultas aos tribunais concluídas` : 'Conectando aos tribunais...';
+                    if (st.pronto) {
+                        aplicarProcessos(st);
+                        break;
+                    }
+                } catch (e) { /* tenta de novo no próximo ciclo */ }
+            }
+        }
+
+        function aplicarProcessos(st) {
+            const btn = document.getElementById('btnProcessos');
+            if (btn) { btn.disabled = false; btn.querySelector('span').textContent = '⚖️'; }
+            consultandoProcessos = false;
+            const porCnpj = st.por_empresa || {};
+            let mescladas = 0;
+            ultimosResultados.forEach(e => {
+                const cnpjLimpo = (e.cnpj || '').replace(/\D/g, '');
+                if (porCnpj[cnpjLimpo]) {
+                    e.processos = porCnpj[cnpjLimpo];
+                    e.tem_processos = e.processos.total_processos > 0;
+                    e.data_consulta = new Date().toLocaleString('pt-BR');
+                    mescladas++;
+                }
+            });
+            const badge = document.getElementById('statusBadge');
+            badge.className = 'status-badge status-success';
+            badge.textContent = 'Processos consultados';
+            mostrarEstatisticas(ultimosResultados);
+            showResults(ultimosResultados, st.avisos || []);
         }
 
         init();
