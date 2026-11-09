@@ -208,31 +208,30 @@ def buscar_empresas():
         print(f"   Apenas com processos: {apenas_com_processos}")
 
         if modo_real:
-            # Busca real via API CNPJA
+            # Busca real via API CNPJA (GET /office com filtros)
             from busca_cnpja_api import BuscadorCNPJA
             buscador = BuscadorCNPJA()
 
-            empresas_encontradas = buscador.buscar_empresas(
-                ramo=ramo,
-                estados=estados,
-                cidades=cidades if cidades else [],
-                portes=portes,
-                limite_por_cidade=50
-            )
+            empresas_encontradas = []
 
-            # Se não especificou cidades, busca em todas as principais do estado
-            if not cidades:
-                for estado in estados:
-                    cidades_estado = CIDADES_POR_ESTADO.get(estado, [])[:5]  # Top 5 cidades
-                    empresas_encontradas.extend(
-                        buscador.buscar_empresas(
-                            ramo=ramo,
-                            estados=[estado],
-                            cidades=cidades_estado,
-                            portes=portes,
-                            limite_por_cidade=10
-                        )
-                    )
+            for estado in estados:
+                print(f"📍 Pesquisando estabelecimentos em {estado}...")
+                registros = buscador.buscar_por_filtros(
+                    uf=estado,
+                    cidades=cidades if cidades else None,
+                    portes=portes,
+                    termo_nome=ramo if ramo else None,
+                    limite=100,
+                    paginas=1  # cada página custa créditos; começa com 1
+                )
+                print(f"   {len(registros)} registros recebidos em {estado}")
+
+                for reg in registros:
+                    emp = buscador.normalizar_empresa(reg, ramo_buscado=ramo)
+                    # Filtro de porte (garante ME/EPP mesmo se a API não filtrar)
+                    if emp['porte'] and emp['porte'] not in portes:
+                        continue
+                    empresas_encontradas.append(emp)
 
             # Adiciona campo de processos (por enquanto vazio - integração futura)
             for empresa in empresas_encontradas:
@@ -266,7 +265,6 @@ def buscar_empresas():
             })
 
         # MODO DEMONSTRAÇÃO (código existente)
-        print(f"\n⚠️  Rodando em modo DEMO - configure CNPJA_API_KEY para dados reais")
 
         # DADOS DE DEMONSTRAÇÃO (simulando resultados reais)
         import random
