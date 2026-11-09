@@ -21,11 +21,10 @@ from typing import List, Dict, Optional
 class BuscadorCNPJA:
     """Cliente para API CNPJA Comercial com autodetecção de filtros"""
 
-    # Candidatos para o filtro de cidade (testados em ordem até algum ser aceito)
+    # Candidatos para o filtro de cidade por NOME (fallback — a API prefere código IBGE)
     CANDIDATOS_CIDADE = [
         'address.city.name.in',
         'address.city.id.in',
-        'address.municipality.in',
         'address.cityName.in',
         'city.name.in',
         'address.city.in'
@@ -186,23 +185,40 @@ class BuscadorCNPJA:
                 else:
                     self.avisos.append('A API não aceitou filtro de ramo (CNAE) — buscando sem filtro de atividade')
 
-        # --- Autodetecção do filtro de cidade ---
+        # --- Filtro de cidade ---
+        # A API aceita cidade SOMENTE por código IBGE (address.municipality.in=3200607).
+        # Tenta converter os nomes; sem códigos, faz autodetecção com nomes (fallback).
         if cidades:
-            filtro_cidade = self._filtro_conhecido('filtro_cidade', self.CANDIDATOS_CIDADE)
-            if filtro_cidade:
-                filtros_base[filtro_cidade] = ','.join(cidades)
-            else:
-                # Descobre qual nome funciona
-                data, filtro_cidade = self._descobrir_filtro(
-                    filtros_base, 'filtro_cidade', self.CANDIDATOS_CIDADE, cidades, 'cidade'
+            codigos_ibge, nao_encontradas = [], []
+            try:
+                from cidades_ibge import codigos_ibge_para_cidades
+                codigos_ibge, nao_encontradas = codigos_ibge_para_cidades(cidades, uf or '')
+            except Exception as e:
+                print(f"   ⚠️  Conversor IBGE indisponível: {e}")
+
+            if nao_encontradas:
+                self.avisos.append(
+                    f"Cidade(s) não encontrada(s) na base IBGE: {', '.join(nao_encontradas)} — ignorada(s)"
                 )
+
+            if codigos_ibge:
+                filtros_base['address.municipality.in'] = ','.join(codigos_ibge)
+                print(f"   🏙️  Cidades → códigos IBGE: {', '.join(codigos_ibge)}")
+            else:
+                # Sem códigos IBGE: autodetecção com nomes (pode não funcionar)
+                filtro_cidade = self._filtro_conhecido('filtro_cidade', self.CANDIDATOS_CIDADE)
                 if filtro_cidade:
                     filtros_base[filtro_cidade] = ','.join(cidades)
-                    if data_primeira is None:
-                        data_primeira = data  # aproveitamos os dados da descoberta
                 else:
-                    msg = f'A API não aceitou filtro de cidade — buscando {uf or "todo o Brasil"} inteiro'
-                    self.avisos.append(msg)
+                    data, filtro_cidade = self._descobrir_filtro(
+                        filtros_base, 'filtro_cidade', self.CANDIDATOS_CIDADE, cidades, 'cidade'
+                    )
+                    if filtro_cidade:
+                        filtros_base[filtro_cidade] = ','.join(cidades)
+                        if data_primeira is None:
+                            data_primeira = data  # aproveita os dados da descoberta
+                    else:
+                        self.avisos.append(f'A API não aceitou filtro de cidade — buscando {uf or "todo o Brasil"} inteiro')
 
         # --- Consulta final (se ainda não temos dados da autodetecção) ---
         registros = []
@@ -213,9 +229,13 @@ class BuscadorCNPJA:
             token = data_primeira.get('next')
         else:
             # Primeira consulta normal
-            data, _ = self._consultar_com_fallback(dict(filtros_base))
+            data, removidos = self._consultar_com_fallback(dict(filtros_base))
             if data is None:
                 return []
+            # Se a API rejeitou o filtro de cidade na consulta final, avisa com clareza
+            campos_cidade = ['address.municipality.in'] + self.CANDIDATOS_CIDADE
+            if any(c in removidos for c in campos_cidade):
+                self.avisos.append(f'A API rejeitou o filtro de cidade — buscando {uf or "todo o Brasil"} inteiro')
             registros.extend(data.get('records', []))
             print(f"   Página 1: {len(data.get('records', []))} registros "
                   f"(total disponível: {data.get('count', '?')})")
