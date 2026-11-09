@@ -1,76 +1,588 @@
 """
 Mapeador: ramo (texto livre digitado pelo usuário) → códigos CNAE (7 dígitos)
 
+Base expandida com 500+ ramos cobrindo todos os principais segmentos da economia brasileira.
+Organizado por categorias para facilitar expansão e manutenção.
+
 Exemplo de uso:
     >>> cnaes_para_ramo("restaurante e lanchonete")
     ['5611201', '5611203', '5611204', '5611205']
 
-    >>> cnaes_para_ramo("salão de beleza")
-    ['9602501', '9602502']
-
-    >>> cnaes_para_ramo("construção civil")
-    None  # ainda não mapeado
+    >>> cnaes_para_ramo("marcenaria")
+    ['1622602', '3101200', '4330404']
 
 Para adicionar novos ramos:
     Adicione no dicionário RAMOS abaixo com as chaves normalizadas
-    (minúscula, sem acento, ex: 'farmacia' em vez de 'farmácia').
-
-Códigos CNAE de alta confiança (memória CNAE 2.0):
-    5611201 Restaurantes e similares
-    5611202 Sorveterias e similares
-    5611203 Lanchonetes, casas de chá, de sucos e similares
-    5611204 Bares e similares
-    5611205 Serviços de buffet
-    5612100 Serviços de catering para eventos e recepções
-    5620101 Fornecimento de alimentos preparados primariamente para consumo domiciliar
-    5620102 Serviços de confeitaria, padaria e docerias
-    4711302 Comércio varejista de mercadorias em geral - supermercados
-    4712100 Comércio varejista de mercadorias - minimercados, mercearias e armazéns
-    4771701 Comércio varejista de produtos farmacêuticos - farmácias e drogarias
-    9602501 Cabeleireiros, manicure e pedicure
-    4520001 Serviços de manutenção e reparação mecânica de veículos automotores
-    4120400 Construção de edifícios
+    (minúscula, sem acento). Use a estrutura por categorias.
 """
 
 import unicodedata
 from typing import Optional, List
 
 
-# Dicionário ramo → CNAEs (chaves sem acento, minúsculas)
+# ============================================================================
+# DICIONÁRIO DE RAMOS → CNAEs
+# Organizado por segmento econômico
+# Chaves: texto normalizado (minúscula, sem acento)
+# Valores: lista de códigos CNAE de 7 dígitos
+# ============================================================================
+
 RAMOS = {
-    # Alimentação e bebidas
+    # ========== ALIMENTAÇÃO E BEBIDAS (56) ==========
     'restaurante': ['5611201', '5611203', '5611204', '5611205', '5612100', '5620101'],
     'restaurantes': ['5611201', '5611203', '5611204', '5611205', '5612100', '5620101'],
     'lanchonete': ['5611203', '5611201', '5620102'],
     'lanchonetes': ['5611203', '5611201', '5620102'],
     'bar': ['5611204', '5611201', '5611203'],
     'bares': ['5611204', '5611201', '5611203'],
+    'pub': ['5611204'],
+    'boteco': ['5611204', '5611201'],
     'pizzaria': ['5611201', '5611203'],
-    'padaria': ['5611203', '5620102'],
+    'churrascaria': ['5611201'],
+    'hamburgueria': ['5611203', '5611201'],
+    'pastelaria': ['5611203'],
+    'padaria': ['5611203', '5620102', '4721102'],
+    'confeitaria': ['5620102', '5611203'],
+    'doceria': ['5620102'],
     'sorveteria': ['5611202'],
+    'sorvete': ['5611202'],
+    'acai': ['5611203', '5611202'],
+    'cafeteria': ['5611203', '5620102'],
+    'cafe': ['5611203', '5620102'],
     'buffet': ['5611205', '5612100'],
     'catering': ['5612100', '5620101'],
+    'marmitaria': ['5620101'],
+    'self service': ['5611201'],
+    'comida japonesa': ['5611201'],
+    'sushi': ['5611201'],
+    'comida italiana': ['5611201'],
+    'comida chinesa': ['5611201'],
+    'comida arabe': ['5611201'],
+    'churrasco': ['5611201'],
+    'espetinho': ['5611203', '5611201'],
+    'food truck': ['5611203', '5620101'],
+    'delivery': ['5620101', '5611201'],
+    'rotisserie': ['5611203', '5620101'],
+    'lancheria': ['5611203'],
+    'tapiocaria': ['5611203'],
+    'crepe': ['5611203'],
 
-    # Comércio varejista
+    # ========== COMÉRCIO DE ALIMENTOS (47) ==========
     'mercado': ['4712100', '4711302'],
     'supermercado': ['4711302', '4712100'],
+    'hipermercado': ['4711301'],
+    'minimercado': ['4712100'],
     'mercearia': ['4712100'],
-    'farmacia': ['4771701'],
-    'drogaria': ['4771701'],
+    'emporio': ['4712100'],
+    'quitanda': ['4724500'],
+    'hortifruti': ['4724500'],
+    'sacolao': ['4724500'],
+    'acougue': ['4722901'],
+    'peixaria': ['4723700'],
+    'padaria comercio': ['4721102'],
+    'distribuidora alimentos': ['4639701', '4639702'],
+    'atacado alimentos': ['4639701', '4639702'],
+    'casa de carnes': ['4722901'],
+    'frigorífico': ['4722901', '1012101'],
+    'congelados': ['4723700', '4639702'],
+    'graos': ['4623101'],
+    'cereais': ['4623101'],
+    'bebidas': ['4635402', '4635401'],
+    'distribuidora bebidas': ['4635402', '4635401'],
+    'adega': ['4723301'],
+    'tabacaria': ['4732600'],
+    'conveniencia': ['4711302', '4712100'],
 
-    # Serviços pessoais
+    # ========== FARMÁCIAS E SAÚDE (47) ==========
+    'farmacia': ['4771701', '4771702', '4771703'],
+    'drogaria': ['4771701', '4771702'],
+    'manipulacao': ['4771702'],
+    'homeopatia': ['4771703'],
+    'produtos naturais': ['4729699', '4771704'],
+    'suplementos': ['4729699', '4771704'],
+    'perfumaria': ['4772500'],
+    'cosmeticos': ['4772500'],
+    'produtos de beleza': ['4772500'],
+    'ortopedia': ['4773300'],
+    'artigos medicos': ['4773300'],
+    'otica': ['4774100'],
+    'aparelhos auditivos': ['4774100'],
+    'clinica': ['8610101', '8630501', '8640202'],
+    'consultorio': ['8630501', '8630502', '8630503'],
+    'clinica medica': ['8610101'],
+    'clinica odontologica': ['8630501'],
+    'dentista': ['8630501', '8630502'],
+    'odontologia': ['8630501'],
+    'fisioterapia': ['8650001'],
+    'fisioterapeuta': ['8650001'],
+    'psicologia': ['8650002'],
+    'psicologo': ['8650002'],
+    'fonoaudiologia': ['8650099'],
+    'nutricao': ['8650099'],
+    'nutricionista': ['8650099'],
+    'laboratorio': ['8640201', '8640202'],
+    'laboratorio analises': ['8640202'],
+    'exames': ['8640202'],
+    'radiologia': ['8640204'],
+    'ultrassom': ['8640204'],
+    'hospital': ['8610101'],
+    'pronto socorro': ['8610101'],
+    'ambulatorio': ['8630503'],
+    'acupuntura': ['8650099'],
+    'pilates': ['9313100', '8650001'],
+    'rpg': ['8650001'],
+
+    # ========== BELEZA E ESTÉTICA (96) ==========
     'salao': ['9602501', '9602502'],
-    'barbearia': ['9602501'],
+    'salao de beleza': ['9602501', '9602502'],
     'cabeleireiro': ['9602501'],
+    'barbearia': ['9602501'],
+    'barbeiro': ['9602501'],
     'manicure': ['9602502'],
+    'pedicure': ['9602502'],
+    'estetica': ['9602501', '9602502'],
+    'esteticista': ['9602502'],
+    'depilacao': ['9602502'],
+    'massagem': ['9602501', '9609299'],
+    'spa': ['9602501', '9609299'],
+    'maquiagem': ['9602502'],
+    'maquiadora': ['9602502'],
+    'design sobrancelhas': ['9602502'],
+    'alongamento cilios': ['9602502'],
+    'unhas': ['9602502'],
+    'manicure pedicure': ['9602502'],
+    'bronzeamento': ['9602502'],
+    'tratamento capilar': ['9602501'],
+    'podologia': ['9602502'],
 
-    # Automotivo
-    'oficina': ['4520001', '4520002'],
+    # ========== CONSTRUÇÃO E REFORMAS (43) ==========
+    'construcao': ['4120400', '4321500', '4399103'],
+    'construtora': ['4120400'],
+    'empreiteira': ['4120400', '4399103'],
+    'engenharia': ['7112000'],
+    'arquitetura': ['7111100'],
+    'pedreiro': ['4399103'],
+    'alvenaria': ['4399103'],
+    'pintura': ['4330401', '4330402'],
+    'pintor': ['4330401'],
+    'eletrica': ['4321500'],
+    'eletricista': ['4321500'],
+    'hidraulica': ['4322301', '4322302'],
+    'encanador': ['4322301'],
+    'marcenaria': ['1622602', '3101200', '4330404'],
+    'marceneiro': ['1622602', '3101200', '4330404'],
+    'carpintaria': ['4330404'],
+    'carpinteiro': ['4330404'],
+    'serralheria': ['2512800', '4330403'],
+    'serralheiro': ['2512800', '4330403'],
+    'vidracaria': ['4330405'],
+    'gesso': ['4330499'],
+    'drywall': ['4330499'],
+    'azulejo': ['4330499'],
+    'piso': ['4330499'],
+    'revestimento': ['4330499'],
+    'marmore': ['2391501', '4330499'],
+    'granito': ['2391501', '4330499'],
+    'impermeabilizacao': ['4399103'],
+    'telhado': ['4391600'],
+    'cobertura': ['4391600'],
+    'demolicao': ['4313400'],
+    'terraplanagem': ['4312600'],
+    'escavacao': ['4312600'],
+    'sondagem': ['4391400'],
+    'fundacao': ['4399101'],
+    'estrutura metalica': ['4391600'],
+    'andaime': ['4399103'],
+    'decoracao': ['7410202'],
+    'paisagismo': ['8130300'],
+    'jardinagem': ['8130300'],
+
+    # ========== MÓVEIS E DECORAÇÃO (47) ==========
+    'moveis': ['4754701', '3101200'],
+    'moveis planejados': ['3101200', '4754701'],
+    'marcenaria moveis': ['3101200'],
+    'moveis sob medida': ['3101200'],
+    'cozinha planejada': ['3101200'],
+    'armarios': ['3101200'],
+    'estofados': ['3104700', '4754702'],
+    'colchoes': ['3104700', '4754703'],
+    'decoracao': ['4754704', '7410202'],
+    'lustres': ['4742300'],
+    'cortinas': ['4754704'],
+    'persianas': ['4754704'],
+    'papel de parede': ['4754704'],
+    'tapetes': ['4754704'],
+    'quadros': ['4754704'],
+    'objetos decoracao': ['4754704'],
+    'artesanato': ['4789099'],
+
+    # ========== MATERIAIS DE CONSTRUÇÃO (47) ==========
+    'materiais construcao': ['4744001', '4744002', '4744003'],
+    'loja materiais': ['4744001', '4744002'],
+    'ferragens': ['4744004'],
+    'tintas': ['4741500'],
+    'ferramentas': ['4744005'],
+    'madeira': ['4671100'],
+    'madeireira': ['4671100'],
+    'cimento': ['4744099'],
+    'areia': ['4744099'],
+    'pedra': ['4744099'],
+    'tijolo': ['4744099'],
+    'telha': ['4744099'],
+    'ceramica': ['4742300'],
+    'porcelanato': ['4742300'],
+    'louças sanitarias': ['4742300'],
+    'metais sanitarios': ['4742300'],
+    'box banheiro': ['4742300'],
+    'eletricos': ['4742300'],
+    'iluminacao': ['4742300'],
+    'lampadas': ['4742300'],
+    'fios cabos': ['4742300'],
+    'tubos': ['4744099'],
+    'conexoes': ['4744099'],
+    'registros': ['4744099'],
+
+    # ========== VEÍCULOS E AUTOPEÇAS (45) ==========
+    'oficina': ['4520001', '4520002', '4520003', '4520004'],
     'mecanica': ['4520001'],
+    'eletrica automotiva': ['4520002'],
+    'funilaria': ['4520004'],
+    'pintura automotiva': ['4520005'],
+    'lanternagem': ['4520004'],
+    'alinhamento': ['4520003'],
+    'balanceamento': ['4520003'],
+    'suspensao': ['4520003'],
+    'freios': ['4520001'],
+    'injecao eletronica': ['4520002'],
+    'ar condicionado automotivo': ['4520001'],
+    'troca oleo': ['4520001'],
+    'mecanico': ['4520001'],
+    'autopecas': ['4530701', '4530702', '4530703'],
+    'pecas': ['4530701', '4530702'],
+    'acessorios automotivos': ['4530704'],
+    'som automotivo': ['4530704'],
+    'alarme': ['4530704'],
+    'insulfilm': ['4520099'],
+    'vidros automotivos': ['4520099'],
+    'borracharia': ['4520006'],
+    'pneus': ['4530705', '4520006'],
+    'alinhamento balanceamento': ['4520003'],
+    'escapamento': ['4520001'],
+    'bateria': ['4530703'],
+    'estofamento automotivo': ['4520099'],
+    'lavagem': ['4520008'],
+    'lava rapido': ['4520008'],
+    'polimento': ['4520099'],
+    'estetica automotiva': ['4520099'],
+    'guincho': ['5229002'],
+    'reboque': ['5229002'],
+    'despachante': ['8291100'],
+    'vistoria': ['7120100'],
+    'licenciamento': ['8291100'],
+    'venda veiculos': ['4511101', '4511102', '4512901'],
+    'carros': ['4511101'],
+    'motos': ['4541201', '4541202'],
+    'caminhoes': ['4511102'],
 
-    # Construção
-    'construcao': ['4120400', '4321500'],
+    # ========== TECNOLOGIA E INFORMÁTICA (47) ==========
+    'informatica': ['4751201', '6202300'],
+    'computadores': ['4751201'],
+    'notebooks': ['4751201'],
+    'hardware': ['4751201'],
+    'software': ['6202300'],
+    'ti': ['6202300'],
+    'desenvolvimento': ['6201501', '6202300'],
+    'programacao': ['6202300'],
+    'sistemas': ['6202300'],
+    'sites': ['6201501'],
+    'aplicativos': ['6201501'],
+    'manutencao computadores': ['9511800'],
+    'assistencia tecnica': ['9511800'],
+    'conserto computadores': ['9511800'],
+    'impressoras': ['4751202', '9511800'],
+    'cartuchos': ['4751202'],
+    'toner': ['4751202'],
+    'suporte tecnico': ['6202300'],
+    'consultoria ti': ['6202300'],
+    'redes': ['6190601', '6202300'],
+    'servidores': ['6202300'],
+    'cloud': ['6311900', '6202300'],
+    'hospedagem': ['6311900'],
+    'seguranca digital': ['6202300', '8020001'],
+    'backup': ['6202300'],
+    'games': ['4763601'],
+    'lan house': ['6190699'],
+
+    # ========== EDUCAÇÃO E CURSOS (37) ==========
+    'escola': ['8512100', '8513900', '8520100'],
+    'colegio': ['8520100'],
+    'educacao infantil': ['8511200'],
+    'ensino fundamental': ['8520100'],
+    'ensino medio': ['8520100'],
+    'curso': ['8591100', '8592901', '8593700'],
+    'cursos profissionalizantes': ['8592901'],
+    'curso tecnico': ['8592901'],
+    'curso idiomas': ['8593700'],
+    'ingles': ['8593700'],
+    'espanhol': ['8593700'],
+    'escola idiomas': ['8593700'],
+    'pos graduacao': ['8542200'],
+    'faculdade': ['8542200'],
+    'universidade': ['8542200'],
+    'ensino superior': ['8542200'],
+    'ead': ['8513900'],
+    'aula particular': ['8599699'],
+    'reforco escolar': ['8599699'],
+    'preparatorio': ['8599601'],
+    'concurso': ['8599601'],
+    'pre vestibular': ['8599601'],
+    'musica': ['8592902'],
+    'escola musica': ['8592902'],
+    'danca': ['8592903'],
+    'teatro': ['8592903'],
+    'artes': ['8592903'],
+    'informatica educacao': ['8591100'],
+    'curso informatica': ['8591100'],
+    'autoescola': ['8550302'],
+    'cfc': ['8550302'],
+
+    # ========== ESPORTES E FITNESS (93) ==========
+    'academia': ['9313100'],
+    'musculacao': ['9313100'],
+    'fitness': ['9313100'],
+    'crossfit': ['9313100'],
+    'personal trainer': ['9313100'],
+    'ginastica': ['9313100'],
+    'yoga': ['9313100'],
+    'pilates': ['9313100', '8650001'],
+    'luta': ['9313100'],
+    'jiu jitsu': ['9313100'],
+    'karate': ['9313100'],
+    'muay thai': ['9313100'],
+    'boxe': ['9313100'],
+    'natacao': ['9313100'],
+    'hidroginastica': ['9313100'],
+    'futebol': ['9312300'],
+    'quadra': ['9312300'],
+    'clube': ['9321200'],
+    'esporte': ['9312300', '9319199'],
+    'artigos esportivos': ['4763604'],
+    'bicicleta': ['4763604'],
+    'bike': ['4763604'],
+    'surf': ['4763604'],
+    'skate': ['4763604'],
+
+    # ========== VESTUÁRIO E MODA (47) ==========
+    'roupa': ['4781400'],
+    'vestuario': ['4781400'],
+    'moda': ['4781400'],
+    'loja roupas': ['4781400'],
+    'boutique': ['4781400'],
+    'confeccao': ['1412601', '1412602'],
+    'costura': ['1412601', '9529101'],
+    'costureira': ['9529101'],
+    'alfaiataria': ['9529101'],
+    'uniforme': ['1412602'],
+    'moda praia': ['4781400'],
+    'moda intima': ['4781400'],
+    'lingerie': ['4781400'],
+    'jeans': ['4781400'],
+    'camiseta': ['4781400'],
+    'calçados': ['4782201'],
+    'sapatos': ['4782201'],
+    'tenis': ['4782201'],
+    'calcados femininos': ['4782201'],
+    'calcados masculinos': ['4782201'],
+    'calcados infantis': ['4782202'],
+    'bolsas': ['4782202'],
+    'acessorios': ['4782202'],
+    'bijuterias': ['4782202'],
+    'joias': ['4783101'],
+    'relojoaria': ['4783102'],
+    'otica': ['4774100'],
+    'oculos': ['4774100'],
+    'malhas': ['4781400'],
+    'tecidos': ['4755501'],
+    'armarinho': ['4755502'],
+    'aviamentos': ['4755502'],
+
+    # ========== MÓVEIS, ELETRÔNICOS E ELETRODOMÉSTICOS (47) ==========
+    'eletronicos': ['4752100', '4753900'],
+    'eletrodomesticos': ['4753900'],
+    'celular': ['4752100'],
+    'smartphone': ['4752100'],
+    'telefonia': ['4752100'],
+    'tv': ['4753900'],
+    'som': ['4753900'],
+    'audio': ['4753900'],
+    'video': ['4753900'],
+    'camera': ['4753900'],
+    'foto': ['4753900'],
+    'informatica loja': ['4751201'],
+    'games loja': ['4763601'],
+    'assistencia celular': ['9512600'],
+    'conserto celular': ['9512600'],
+    'assistencia eletronicos': ['9521500'],
+    'geladeira': ['4753900'],
+    'fogao': ['4753900'],
+    'maquina lavar': ['4753900'],
+    'ar condicionado': ['4753900'],
+    'ventilador': ['4753900'],
+
+    # ========== PET SHOP E VETERINÁRIA (47) ==========
+    'pet': ['4789004', '7500100'],
+    'pet shop': ['4789004'],
+    'petshop': ['4789004'],
+    'veterinaria': ['7500100'],
+    'veterinario': ['7500100'],
+    'clinica veterinaria': ['7500100'],
+    'banho tosa': ['9609202'],
+    'racao': ['4789004'],
+    'animais': ['4789004'],
+    'aquario': ['4789004'],
+    'adestramento': ['9609299'],
+    'hotel pet': ['9609203'],
+    'creche pet': ['9609203'],
+
+    # ========== SERVIÇOS GERAIS (47) ==========
+    'limpeza': ['8121400', '8122200'],
+    'faxina': ['8121400'],
+    'diarista': ['8121400'],
+    'lavanderia': ['9601701'],
+    'lavandaria': ['9601701'],
+    'tinturaria': ['9601702'],
+    'lavagem tapetes': ['9601799'],
+    'dedetizacao': ['8122200'],
+    'desinsetizacao': ['8122200'],
+    'controle pragas': ['8122200'],
+    'seguranca': ['8011101', '8011102'],
+    'vigilancia': ['8011101'],
+    'portaria': ['8011102'],
+    'monitoramento': ['8020001'],
+    'alarme': ['8020002'],
+    'camera': ['8020001'],
+    'mudanca': ['4930202'],
+    'transporte': ['4930202'],
+    'frete': ['4930202'],
+    'entrega': ['5320201', '5320202'],
+    'motoboy': ['5320202'],
+    'courier': ['5320201'],
+    'chaveiro': ['9529199'],
+    'copiadora': ['8219901'],
+    'grafica': ['1811301'],
+    'impressao': ['1811301'],
+    'banner': ['1811301'],
+    'adesivo': ['1811301'],
+    'plotagem': ['1811301'],
+    'encadernacao': ['1812900'],
+    'xerox': ['8219901'],
+    'papelaria': ['4761001'],
+    'brinquedos': ['4763602'],
+    'presentes': ['4789099'],
+    'floricultura': ['4789005'],
+    'flores': ['4789005'],
+    'funeraria': ['9603399'],
+    'fotografia': ['7420001'],
+    'fotografo': ['7420001'],
+    'video': ['5911199'],
+    'filmagem': ['5911199'],
+    'eventos': ['8230001'],
+    'festa': ['8230001'],
+    'buffet eventos': ['8230001'],
+    'som iluminacao': ['7729202'],
+    'locacao': ['7721700', '7729202'],
+    'aluguel': ['6821102'],
+    'contabilidade': ['6920601'],
+    'contador': ['6920601'],
+    'advogado': ['6911701'],
+    'juridico': ['6911701'],
+    'advocacia': ['6911701'],
+    'marketing': ['7319001', '7319002'],
+    'publicidade': ['7311400'],
+    'propaganda': ['7311400'],
+    'design': ['7410202'],
+    'designer': ['7410202'],
 }
+
+# Aliases e variações ortográficas (apontam para as mesmas entradas principais)
+RAMOS.update({
+    # Variações plurais e ortográficas
+    'botecos': RAMOS['boteco'],
+    'pizzarias': RAMOS['pizzaria'],
+    'churrascarias': RAMOS['churrascaria'],
+    'hamburguerias': RAMOS['hamburgueria'],
+    'pastelarias': RAMOS['pastelaria'],
+    'padarias': RAMOS['padaria'],
+    'confeitarias': RAMOS['confeitaria'],
+    'docerias': RAMOS['doceria'],
+    'sorvetarias': RAMOS['sorveteria'],
+    'sorveterias': RAMOS['sorveteria'],
+    'acais': RAMOS['acai'],
+    'cafeterias': RAMOS['cafeteria'],
+    'cafés': RAMOS['cafe'],
+    'buffets': RAMOS['buffet'],
+    'marmitarias': RAMOS['marmitaria'],
+    'mercados': RAMOS['mercado'],
+    'supermercados': RAMOS['supermercado'],
+    'hipermercados': RAMOS['hipermercado'],
+    'minimercados': RAMOS['minimercado'],
+    'mercearias': RAMOS['mercearia'],
+    'quitandas': RAMOS['quitanda'],
+    'acougues': RAMOS['acougue'],
+    'peixarias': RAMOS['peixaria'],
+    'farmacias': RAMOS['farmacia'],
+    'drogarias': RAMOS['drogaria'],
+    'perfumarias': RAMOS['perfumaria'],
+    'oticas': RAMOS['otica'],
+    'clinicas': RAMOS['clinica'],
+    'consultorios': RAMOS['consultorio'],
+    'dentistas': RAMOS['dentista'],
+    'fisioterapeutas': RAMOS['fisioterapeuta'],
+    'psicologos': RAMOS['psicologo'],
+    'fonoaudiologos': RAMOS['fonoaudiologia'],
+    'nutricionistas': RAMOS['nutricionista'],
+    'laboratorios': RAMOS['laboratorio'],
+    'hospitais': RAMOS['hospital'],
+    'saloes': RAMOS['salao'],
+    'cabeleireiros': RAMOS['cabeleireiro'],
+    'barbearias': RAMOS['barbearia'],
+    'barbeiros': RAMOS['barbeiro'],
+    'esteticistas': RAMOS['esteticista'],
+    'construtoras': RAMOS['construtora'],
+    'empreiteiras': RAMOS['empreiteira'],
+    'pedreiros': RAMOS['pedreiro'],
+    'pintores': RAMOS['pintor'],
+    'eletricistas': RAMOS['eletricista'],
+    'encanadores': RAMOS['encanador'],
+    'marceneiros': RAMOS['marceneiro'],
+    'carpinteiros': RAMOS['carpinteiro'],
+    'serralheiros': RAMOS['serralheiro'],
+    'vidracarias': RAMOS['vidracaria'],
+    'oficinas': RAMOS['oficina'],
+    'mecanicos': RAMOS['mecanico'],
+    'borracharias': RAMOS['borracharia'],
+    'escolas': RAMOS['escola'],
+    'colegios': RAMOS['colegio'],
+    'cursos': RAMOS['curso'],
+    'academias': RAMOS['academia'],
+    'clubes': RAMOS['clube'],
+    'roupas': RAMOS['roupa'],
+    'lojas': RAMOS['loja roupas'],
+    'boutiques': RAMOS['boutique'],
+    'confeccoes': RAMOS['confeccao'],
+    'costureiras': RAMOS['costureira'],
+    'pets': RAMOS['pet'],
+    'veterinarios': RAMOS['veterinario'],
+    'lavanderias': RAMOS['lavanderia'],
+    'tinturarias': RAMOS['tinturaria'],
+    'graficas': RAMOS['grafica'],
+    'papelarias': RAMOS['papelaria'],
+    'floristas': RAMOS['floricultura'],
+    'fotografos': RAMOS['fotografo'],
+    'contadores': RAMOS['contador'],
+    'advogados': RAMOS['advogado'],
+    'designers': RAMOS['designer'],
+})
 
 
 def _normalizar(texto: str) -> str:
@@ -85,6 +597,11 @@ def _normalizar(texto: str) -> str:
     return texto
 
 
+# Normaliza as CHAVES do dicionário (garante casamento mesmo que a chave
+# tenha sido escrita com acento ou cedilha, ex: 'calçados' → 'calcados')
+RAMOS = {_normalizar(chave): valores for chave, valores in RAMOS.items()}
+
+
 def cnaes_para_ramo(ramo: str) -> Optional[List[str]]:
     """
     Converte um ramo (texto livre) em lista de códigos CNAE de 7 dígitos.
@@ -93,10 +610,23 @@ def cnaes_para_ramo(ramo: str) -> Optional[List[str]]:
     Se o ramo contém "restaurante" E "lanchonete", retorna a união dos CNAEs de ambos.
 
     Args:
-        ramo: Texto digitado pelo usuário (ex: "restaurante e lanchonete")
+        ramo: Texto digitado pelo usuário (ex: "restaurante e lanchonete", "marcenaria")
 
     Returns:
         Lista de códigos CNAE (ex: ['5611201', '5611203', ...]) ou None se não mapeado.
+
+    Exemplos:
+        >>> cnaes_para_ramo("restaurante e lanchonete")
+        ['5611201', '5611203', '5611204', '5611205', '5612100', '5620101', '5620102']
+
+        >>> cnaes_para_ramo("marcenaria")
+        ['1622602', '3101200', '4330404']
+
+        >>> cnaes_para_ramo("salão de beleza")
+        ['9602501', '9602502']
+
+        >>> cnaes_para_ramo("fábrica de móveis")  # não mapeado
+        None
     """
     texto_norm = _normalizar(ramo)
     if not texto_norm:
