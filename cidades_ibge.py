@@ -56,10 +56,11 @@ def carregar_municipios() -> dict:
             pass
 
     # Baixa a lista completa dos municípios
+    # (utf-8-sig remove o BOM invisível que o arquivo JSON traz no início)
     try:
         resp = requests.get(URL_MUNICIPIOS, timeout=30)
         resp.raise_for_status()
-        municipios = resp.json()
+        municipios = json.loads(resp.content.decode('utf-8-sig'))
     except Exception as e:
         print(f"⚠️  Não foi possível baixar a lista de municípios IBGE: {e}")
         return {}
