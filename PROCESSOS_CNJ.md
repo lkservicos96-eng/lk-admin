@@ -35,17 +35,20 @@ cDZHYzlZa0JadVREZDJCendQbXY6SkJlTzNjLV9TRENyQk1RdnFKZGRQdw==
 
 ## Passo 3: Usar no sistema
 
+**A consulta de processos agora é AUTOMÁTICA** — você não precisa clicar em nada:
+
 1. Faça sua busca normalmente (ramo + estado + cidade + porte)
-2. Com as empresas na tela, clique no botão **⚖️ Consultar processos**
-3. Acompanhe a barra de progresso (consulta 10 empresas por rodada em 51 tribunais)
-4. No fim, cada empresa mostra **⚖️ N processos** com detalhes (número, classe, tribunal, assunto)
+2. O sistema encontra as empresas e **automaticamente consulta os processos** em todos os tribunais (barra de progresso aparece)
+3. No final, a tela mostra **APENAS as empresas que têm processos** (respeitando o "mínimo de processos" do formulário)
+4. Clique em **📊 Exportar Excel** para salvar o resultado
 
 ## Como funciona por dentro
 
-- A consulta roda **em segundo plano** (não trava a página)
-- Consulta **10 empresas por rodada** (para respeitar os limites da API gratuita)
+- A consulta roda **em segundo plano** (a página mostra o progresso)
+- Consulta **até 200 empresas por busca** em paralelo (16 consultas simultâneas)
 - Para cada empresa, consulta os **51 tribunais** (27 TJs + 24 TRTs)
-- Você pode clicar no botão de novo para consultar as próximas 10
+- Pode levar **5-15 minutos** dependendo do número de empresas — a barra de progresso mostra o andamento
+- Empresas sem nenhum processo ficam de fora da lista final (avisos explicam)
 
 ## Perguntas frequentes
 

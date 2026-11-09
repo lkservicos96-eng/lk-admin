@@ -496,8 +496,9 @@ def api_consultar_processos():
         if ESTADO_PROCESSOS['rodando']:
             return jsonify({'sucesso': False, 'erro': 'Uma consulta já está em andamento'})
 
-        # Limita por rodada (protege rate limit da API e timeout do navegador)
-        limite = min(int(dados.get('limite') or 10), 25)
+        # Consulta TODAS as empresas enviadas (a UI filtra no final).
+        # Cap de segurança em 200 empresas por rodada.
+        limite = min(int(dados.get('limite') or 200), 200)
         alvo = []
         for e in empresas:
             cnpj = ''.join(ch for ch in (e.get('cnpj') or '') if ch.isdigit())
@@ -533,7 +534,7 @@ def _thread_consultar_processos(empresas, chave):
             ESTADO_PROCESSOS['progresso'] = feitos
             ESTADO_PROCESSOS['total'] = total
 
-        por_empresa = consultar_em_lote(empresas, chave, workers=12, timeout=8,
+        por_empresa = consultar_em_lote(empresas, chave, workers=16, timeout=8,
                                         progresso_callback=progresso)
         ESTADO_PROCESSOS['por_empresa'] = por_empresa
 
@@ -556,6 +557,29 @@ def _thread_consultar_processos(empresas, chave):
 def api_status_processos():
     """Progresso e resultados parciais/finais da consulta de processos"""
     return jsonify(ESTADO_PROCESSOS)
+
+
+@app.route('/api/diag_datajud')
+def api_diag_datajud():
+    """
+    Diagnóstico: descobre (e mostra) quais campos do DataJud guardam
+    o documento e o nome das partes. Abra no navegador para conferir.
+    """
+    chave = os.environ.get('CNJ_DATAJUD_KEY', '')
+    if not chave:
+        return jsonify({'sucesso': False, 'erro': 'CNJ_DATAJUD_KEY não configurada no Render'})
+    try:
+        from processos_datajud import descobrir_campos
+        info = descobrir_campos(chave, sigla='tjsp', forcar=True)
+        return jsonify({
+            'sucesso': True,
+            'tribunal_testado': info.get('fonte'),
+            'campos_documento': info.get('documento'),
+            'campos_nome': info.get('nome'),
+            'nota': 'A busca por processos usa estes campos automaticamente (cache em config_campos_datajud.json)'
+        })
+    except Exception as e:
+        return jsonify({'sucesso': False, 'erro': str(e)})
 
 
 if __name__ == '__main__':
