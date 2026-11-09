@@ -1,0 +1,559 @@
+[
+  {
+    "cnpj": "73.809.919/0001-54",
+    "razao_social": "FOOD COMPANY EIRELI",
+    "nome_fantasia": "SABORES",
+    "situacao": "ATIVA",
+    "cnae_principal": "5321-2/00",
+    "cnae_buscado": "restaurante e lanchonete",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2017-07-10",
+    "processos": {
+      "total_processos": 6,
+      "tribunais_consultados": [
+        "trt7",
+        "trt14",
+        "tjce"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "5880015-56.2020.8.26.0993",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trt17"
+        },
+        {
+          "numero_cnj": "8373224-41.2020.8.26.0145",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjsp"
+        },
+        {
+          "numero_cnj": "7249717-21.2020.8.26.0889",
+          "classe": "Ação de Indenização",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjma"
+        },
+        {
+          "numero_cnj": "2381424-53.2023.8.26.0562",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "stf"
+        },
+        {
+          "numero_cnj": "7452889-37.2022.8.26.0226",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "tjpi"
+        },
+        {
+          "numero_cnj": "7589193-86.2024.8.26.0475",
+          "classe": "Ação de Indenização",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trf2"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:49:43",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "27.718.882/0001-75",
+    "razao_social": "GASTRONOMIA LTDA ME",
+    "nome_fantasia": "RESTAURANTE",
+    "situacao": "ATIVA",
+    "cnae_principal": "5882-7/00",
+    "cnae_buscado": "restaurante e lanchonete",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2015-11-17",
+    "processos": {
+      "total_processos": 12,
+      "tribunais_consultados": [
+        "tjba",
+        "tjrj",
+        "trf6",
+        "trf2",
+        "trt6"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "5226419-71.2020.8.26.0442",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tse"
+        },
+        {
+          "numero_cnj": "3677541-30.2024.8.26.0753",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tjce"
+        },
+        {
+          "numero_cnj": "8592711-45.2024.8.26.0140",
+          "classe": "Ação de Cobrança",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjes"
+        },
+        {
+          "numero_cnj": "2055794-49.2023.8.26.0363",
+          "classe": "Ação de Indenização",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjrs"
+        },
+        {
+          "numero_cnj": "3048225-72.2023.8.26.0835",
+          "classe": "Execução Fiscal",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjsc"
+        },
+        {
+          "numero_cnj": "5033225-59.2022.8.26.0752",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Dano Material",
+          "tribunal": "trt14"
+        },
+        {
+          "numero_cnj": "7768176-35.2024.8.26.0665",
+          "classe": "Ação de Indenização",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tse"
+        },
+        {
+          "numero_cnj": "7400460-50.2023.8.26.0270",
+          "classe": "Execução Fiscal",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "tjce"
+        },
+        {
+          "numero_cnj": "5603523-66.2021.8.26.0759",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjap"
+        },
+        {
+          "numero_cnj": "7531499-73.2022.8.26.0601",
+          "classe": "Execução Fiscal",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt24"
+        },
+        {
+          "numero_cnj": "8140830-37.2024.8.26.0853",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Dano Material",
+          "tribunal": "tjro"
+        },
+        {
+          "numero_cnj": "9376404-57.2023.8.26.0581",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "FGTS",
+          "tribunal": "trf4"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:49:43",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "70.811.570/0001-47",
+    "razao_social": "CULINÁRIA EXPRESS EIRELI",
+    "nome_fantasia": "RESTAURANTE",
+    "situacao": "ATIVA",
+    "cnae_principal": "9808-2/00",
+    "cnae_buscado": "restaurante e lanchonete",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2010-03-02",
+    "processos": {
+      "total_processos": 8,
+      "tribunais_consultados": [
+        "stf",
+        "tjma",
+        "tse",
+        "tjro"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "1334796-87.2024.8.26.0958",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tjro"
+        },
+        {
+          "numero_cnj": "4335053-39.2021.8.26.0197",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "FGTS",
+          "tribunal": "tjms"
+        },
+        {
+          "numero_cnj": "2727701-34.2024.8.26.0127",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Dano Material",
+          "tribunal": "tjrr"
+        },
+        {
+          "numero_cnj": "1490372-82.2021.8.26.0968",
+          "classe": "Execução Fiscal",
+          "assunto": "Horas Extras",
+          "tribunal": "trt11"
+        },
+        {
+          "numero_cnj": "9757821-91.2023.8.26.0857",
+          "classe": "Ação de Cobrança",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "trt7"
+        },
+        {
+          "numero_cnj": "9739447-47.2020.8.26.0921",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "trt18"
+        },
+        {
+          "numero_cnj": "6460729-68.2021.8.26.0674",
+          "classe": "Ação de Indenização",
+          "assunto": "FGTS",
+          "tribunal": "tjro"
+        },
+        {
+          "numero_cnj": "5420959-32.2021.8.26.0960",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Horas Extras",
+          "tribunal": "trt10"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:49:43",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "79.342.175/0001-91",
+    "razao_social": "FOOD COMPANY S.A.",
+    "nome_fantasia": "CULINÁRIA",
+    "situacao": "ATIVA",
+    "cnae_principal": "9787-2/00",
+    "cnae_buscado": "restaurante e lanchonete",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2017-11-07",
+    "processos": {
+      "total_processos": 12,
+      "tribunais_consultados": [
+        "trf5",
+        "tjam",
+        "trt3",
+        "tjpb",
+        "tjac"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "9113993-64.2021.8.26.0663",
+          "classe": "Execução Fiscal",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjrr"
+        },
+        {
+          "numero_cnj": "9709635-85.2023.8.26.0328",
+          "classe": "Execução Fiscal",
+          "assunto": "Horas Extras",
+          "tribunal": "tjdf"
+        },
+        {
+          "numero_cnj": "7334595-45.2023.8.26.0250",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "FGTS",
+          "tribunal": "tjro"
+        },
+        {
+          "numero_cnj": "1234146-63.2020.8.26.0711",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "trt11"
+        },
+        {
+          "numero_cnj": "5506571-65.2024.8.26.0800",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tst"
+        },
+        {
+          "numero_cnj": "7556503-73.2023.8.26.0775",
+          "classe": "Ação de Cobrança",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjpi"
+        },
+        {
+          "numero_cnj": "1352909-29.2022.8.26.0454",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "FGTS",
+          "tribunal": "tjpi"
+        },
+        {
+          "numero_cnj": "5943364-51.2020.8.26.0565",
+          "classe": "Ação de Indenização",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt17"
+        },
+        {
+          "numero_cnj": "7524346-65.2021.8.26.0212",
+          "classe": "Ação de Indenização",
+          "assunto": "Dano Material",
+          "tribunal": "tjdf"
+        },
+        {
+          "numero_cnj": "3764239-37.2023.8.26.0587",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjba"
+        },
+        {
+          "numero_cnj": "5896493-14.2020.8.26.0751",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "trt2"
+        },
+        {
+          "numero_cnj": "1325283-70.2023.8.26.0384",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjce"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:49:43",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "54.721.218/0001-67",
+    "razao_social": "CULINÁRIA EXPRESS S.A.",
+    "nome_fantasia": "RESTAURANTE",
+    "situacao": "ATIVA",
+    "cnae_principal": "5329-9/00",
+    "cnae_buscado": "restaurante e lanchonete",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2015-01-09",
+    "processos": {
+      "total_processos": 3,
+      "tribunais_consultados": [
+        "tjmt"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "3659045-98.2024.8.26.0381",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "tjsc"
+        },
+        {
+          "numero_cnj": "6334172-69.2021.8.26.0239",
+          "classe": "Ação de Indenização",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trt1"
+        },
+        {
+          "numero_cnj": "2350300-27.2021.8.26.0125",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "trf6"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:49:43",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "16.730.431/0001-69",
+    "razao_social": "SABORES DA CASA S.A.",
+    "nome_fantasia": "GASTRONOMIA",
+    "situacao": "ATIVA",
+    "cnae_principal": "2462-3/00",
+    "cnae_buscado": "restaurante e lanchonete",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2014-06-01",
+    "processos": {
+      "total_processos": 6,
+      "tribunais_consultados": [
+        "trt17",
+        "trt16",
+        "trt9"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "9982486-92.2021.8.26.0166",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Dano Material",
+          "tribunal": "tjmg"
+        },
+        {
+          "numero_cnj": "7872833-19.2021.8.26.0657",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "trf6"
+        },
+        {
+          "numero_cnj": "7168963-21.2020.8.26.0527",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "trt13"
+        },
+        {
+          "numero_cnj": "3710781-37.2021.8.26.0849",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tjpr"
+        },
+        {
+          "numero_cnj": "5617797-11.2020.8.26.0224",
+          "classe": "Execução Fiscal",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tsm"
+        },
+        {
+          "numero_cnj": "6645836-28.2022.8.26.0431",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tjsp"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:49:43",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "98.188.613/0001-88",
+    "razao_social": "SABORES DA CASA S.A.",
+    "nome_fantasia": "FOOD",
+    "situacao": "ATIVA",
+    "cnae_principal": "9414-3/00",
+    "cnae_buscado": "restaurante e lanchonete",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2016-07-12",
+    "processos": {
+      "total_processos": 10,
+      "tribunais_consultados": [
+        "tjpi",
+        "trf6",
+        "trt5",
+        "trt21",
+        "trt18"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "6288358-80.2023.8.26.0729",
+          "classe": "Execução Fiscal",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjro"
+        },
+        {
+          "numero_cnj": "7385396-34.2021.8.26.0995",
+          "classe": "Ação de Indenização",
+          "assunto": "Horas Extras",
+          "tribunal": "trt18"
+        },
+        {
+          "numero_cnj": "7702339-49.2022.8.26.0299",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "trf5"
+        },
+        {
+          "numero_cnj": "1068493-95.2021.8.26.0467",
+          "classe": "Execução Fiscal",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "stf"
+        },
+        {
+          "numero_cnj": "4397659-46.2023.8.26.0817",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "trt13"
+        },
+        {
+          "numero_cnj": "7870914-28.2021.8.26.0846",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjrj"
+        },
+        {
+          "numero_cnj": "4902370-65.2024.8.26.0292",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tjro"
+        },
+        {
+          "numero_cnj": "4466925-91.2020.8.26.0814",
+          "classe": "Ação de Indenização",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "trt18"
+        },
+        {
+          "numero_cnj": "4613961-93.2021.8.26.0987",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "FGTS",
+          "tribunal": "trf6"
+        },
+        {
+          "numero_cnj": "4527983-40.2021.8.26.0337",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tst"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:49:43",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "27.505.201/0001-93",
+    "razao_social": "CULINÁRIA EXPRESS LTDA",
+    "nome_fantasia": "CULINÁRIA",
+    "situacao": "ATIVA",
+    "cnae_principal": "6249-9/00",
+    "cnae_buscado": "restaurante e lanchonete",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2022-10-01",
+    "processos": {
+      "total_processos": 2,
+      "tribunais_consultados": [
+        "tjma"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "7423008-19.2021.8.26.0796",
+          "classe": "Ação de Indenização",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "trt12"
+        },
+        {
+          "numero_cnj": "9180478-70.2024.8.26.0233",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tjpb"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:49:43",
+    "modo": "DEMONSTRAÇÃO"
+  }
+]

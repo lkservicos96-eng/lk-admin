@@ -1,0 +1,709 @@
+[
+  {
+    "cnpj": "11.982.783/0001-46",
+    "razao_social": "ENGENHARIA CIVIL ME",
+    "nome_fantasia": "LABORATORIO",
+    "situacao": "ATIVA",
+    "cnae_principal": "4570-2/00",
+    "cnae_buscado": "pescaria",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2023-04-02",
+    "processos": {
+      "total_processos": 11,
+      "tribunais_consultados": [
+        "tse",
+        "tjto",
+        "trt22",
+        "tjpa",
+        "trt10"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "9512314-39.2021.8.26.0907",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "trf5"
+        },
+        {
+          "numero_cnj": "8985249-86.2022.8.26.0442",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Dano Material",
+          "tribunal": "trt11"
+        },
+        {
+          "numero_cnj": "1167168-54.2024.8.26.0284",
+          "classe": "Execução Fiscal",
+          "assunto": "FGTS",
+          "tribunal": "trf3"
+        },
+        {
+          "numero_cnj": "1056352-69.2022.8.26.0605",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Horas Extras",
+          "tribunal": "tjsc"
+        },
+        {
+          "numero_cnj": "5945140-64.2023.8.26.0530",
+          "classe": "Execução Fiscal",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tjsp"
+        },
+        {
+          "numero_cnj": "1717449-79.2022.8.26.0581",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Horas Extras",
+          "tribunal": "tjac"
+        },
+        {
+          "numero_cnj": "2597513-27.2021.8.26.0464",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Dano Material",
+          "tribunal": "tjrn"
+        },
+        {
+          "numero_cnj": "9294474-64.2024.8.26.0103",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Horas Extras",
+          "tribunal": "trt3"
+        },
+        {
+          "numero_cnj": "7206486-31.2022.8.26.0697",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "tjba"
+        },
+        {
+          "numero_cnj": "4503726-17.2022.8.26.0892",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "trt22"
+        },
+        {
+          "numero_cnj": "8387599-89.2022.8.26.0820",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trf3"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:39",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "36.959.974/0001-34",
+    "razao_social": "CONSTRUTORA NOVA LTDA",
+    "nome_fantasia": "ENGENHARIA",
+    "situacao": "ATIVA",
+    "cnae_principal": "2601-1/00",
+    "cnae_buscado": "pescaria",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2015-05-03",
+    "processos": {
+      "total_processos": 10,
+      "tribunais_consultados": [
+        "tjap",
+        "tjam",
+        "tjac",
+        "tjpr",
+        "trt2"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "6095542-15.2020.8.26.0431",
+          "classe": "Execução Fiscal",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tjpb"
+        },
+        {
+          "numero_cnj": "8175448-55.2022.8.26.0887",
+          "classe": "Execução Fiscal",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tjma"
+        },
+        {
+          "numero_cnj": "4837005-50.2021.8.26.0382",
+          "classe": "Ação de Cobrança",
+          "assunto": "Horas Extras",
+          "tribunal": "trt23"
+        },
+        {
+          "numero_cnj": "5577738-24.2023.8.26.0673",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjac"
+        },
+        {
+          "numero_cnj": "3901709-41.2021.8.26.0729",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "tjpi"
+        },
+        {
+          "numero_cnj": "9917437-32.2020.8.26.0295",
+          "classe": "Ação de Cobrança",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tjrs"
+        },
+        {
+          "numero_cnj": "1688469-27.2022.8.26.0488",
+          "classe": "Ação de Indenização",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjba"
+        },
+        {
+          "numero_cnj": "6829851-66.2020.8.26.0230",
+          "classe": "Ação de Indenização",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjsc"
+        },
+        {
+          "numero_cnj": "5870288-64.2022.8.26.0783",
+          "classe": "Execução Fiscal",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "trt6"
+        },
+        {
+          "numero_cnj": "3248116-21.2021.8.26.0326",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "trt19"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:39",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "18.998.414/0001-48",
+    "razao_social": "HOSPITAL DIA ME",
+    "nome_fantasia": "LABORATORIO",
+    "situacao": "ATIVA",
+    "cnae_principal": "7322-9/00",
+    "cnae_buscado": "pescaria",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2014-06-26",
+    "processos": {
+      "total_processos": 3,
+      "tribunais_consultados": [
+        "tjma"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "6657180-34.2022.8.26.0199",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tjgo"
+        },
+        {
+          "numero_cnj": "3459451-37.2022.8.26.0345",
+          "classe": "Rescisão de Contrato",
+          "assunto": "FGTS",
+          "tribunal": "trt23"
+        },
+        {
+          "numero_cnj": "9466921-22.2021.8.26.0125",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "trf1"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:39",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "23.428.453/0001-25",
+    "razao_social": "GASTRONOMIA LTDA ME",
+    "nome_fantasia": "DATA",
+    "situacao": "ATIVA",
+    "cnae_principal": "3996-3/00",
+    "cnae_buscado": "pescaria",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2011-12-06",
+    "processos": {
+      "total_processos": 5,
+      "tribunais_consultados": [
+        "tjms",
+        "trf6"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "4377485-73.2023.8.26.0614",
+          "classe": "Execução Fiscal",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjpe"
+        },
+        {
+          "numero_cnj": "1671844-44.2022.8.26.0436",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Dano Material",
+          "tribunal": "tst"
+        },
+        {
+          "numero_cnj": "9972849-73.2022.8.26.0314",
+          "classe": "Execução Fiscal",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tjal"
+        },
+        {
+          "numero_cnj": "8174565-93.2024.8.26.0468",
+          "classe": "Execução Fiscal",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjap"
+        },
+        {
+          "numero_cnj": "4602814-42.2023.8.26.0672",
+          "classe": "Ação de Cobrança",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "trt17"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:39",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "36.867.341/0001-90",
+    "razao_social": "STRATEGIC GROUP EIRELI",
+    "nome_fantasia": "ATACADISTA",
+    "situacao": "ATIVA",
+    "cnae_principal": "8423-5/00",
+    "cnae_buscado": "pescaria",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2016-11-04",
+    "processos": {
+      "total_processos": 7,
+      "tribunais_consultados": [
+        "trt2",
+        "tjgo",
+        "trt3"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "2886082-54.2024.8.26.0747",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tst"
+        },
+        {
+          "numero_cnj": "4510562-65.2023.8.26.0725",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Dano Material",
+          "tribunal": "trt8"
+        },
+        {
+          "numero_cnj": "5807939-70.2020.8.26.0643",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjpb"
+        },
+        {
+          "numero_cnj": "9920873-39.2020.8.26.0994",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Dano Material",
+          "tribunal": "tjrs"
+        },
+        {
+          "numero_cnj": "8463473-75.2024.8.26.0676",
+          "classe": "Ação de Indenização",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "trf3"
+        },
+        {
+          "numero_cnj": "6535439-48.2021.8.26.0775",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "stf"
+        },
+        {
+          "numero_cnj": "5748178-54.2024.8.26.0450",
+          "classe": "Ação de Indenização",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjdf"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:39",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "69.494.494/0001-55",
+    "razao_social": "CONSTRUTORA EXEMPLO S.A.",
+    "nome_fantasia": "DATA",
+    "situacao": "ATIVA",
+    "cnae_principal": "2345-5/00",
+    "cnae_buscado": "pescaria",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2017-09-15",
+    "processos": {
+      "total_processos": 5,
+      "tribunais_consultados": [
+        "trt24",
+        "tjto"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "5487049-17.2020.8.26.0245",
+          "classe": "Ação de Cobrança",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjrn"
+        },
+        {
+          "numero_cnj": "3361600-20.2021.8.26.0538",
+          "classe": "Ação de Indenização",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "trf1"
+        },
+        {
+          "numero_cnj": "2766121-54.2023.8.26.0680",
+          "classe": "Ação de Indenização",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "stj"
+        },
+        {
+          "numero_cnj": "5460762-93.2024.8.26.0893",
+          "classe": "Ação de Indenização",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "trf5"
+        },
+        {
+          "numero_cnj": "1439879-45.2020.8.26.0588",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "FGTS",
+          "tribunal": "tjrr"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:39",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "58.802.950/0001-73",
+    "razao_social": "BUSINESS CONSULTING EIRELI",
+    "nome_fantasia": "CULINÁRIA",
+    "situacao": "ATIVA",
+    "cnae_principal": "1232-5/00",
+    "cnae_buscado": "pescaria",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2016-12-16",
+    "processos": {
+      "total_processos": 3,
+      "tribunais_consultados": [
+        "tjro"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "1089329-52.2022.8.26.0802",
+          "classe": "Ação de Cobrança",
+          "assunto": "Horas Extras",
+          "tribunal": "trt20"
+        },
+        {
+          "numero_cnj": "5157749-87.2020.8.26.0637",
+          "classe": "Execução Fiscal",
+          "assunto": "Dano Material",
+          "tribunal": "tjto"
+        },
+        {
+          "numero_cnj": "1244260-10.2023.8.26.0841",
+          "classe": "Execução Fiscal",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "trf5"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:39",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "15.461.246/0001-35",
+    "razao_social": "EDIFICAÇÕES ABC EIRELI",
+    "nome_fantasia": "OBRAS",
+    "situacao": "ATIVA",
+    "cnae_principal": "9207-7/00",
+    "cnae_buscado": "pescaria",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2013-07-22",
+    "processos": {
+      "total_processos": 1,
+      "tribunais_consultados": [
+        "tjmg"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "1199043-70.2021.8.26.0681",
+          "classe": "Ação de Cobrança",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt22"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:39",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "88.303.931/0001-22",
+    "razao_social": "MERCADO CENTRAL EIRELI",
+    "nome_fantasia": "CONSULTORIA",
+    "situacao": "ATIVA",
+    "cnae_principal": "3189-6/00",
+    "cnae_buscado": "pescaria",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2021-04-18",
+    "processos": {
+      "total_processos": 10,
+      "tribunais_consultados": [
+        "trt6",
+        "trt22",
+        "tjse",
+        "tjsc",
+        "tse"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "6741809-42.2020.8.26.0135",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjms"
+        },
+        {
+          "numero_cnj": "8072974-65.2022.8.26.0409",
+          "classe": "Execução Fiscal",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "trt9"
+        },
+        {
+          "numero_cnj": "2308312-52.2023.8.26.0150",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt4"
+        },
+        {
+          "numero_cnj": "4692555-78.2024.8.26.0144",
+          "classe": "Ação de Indenização",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt8"
+        },
+        {
+          "numero_cnj": "9769460-28.2020.8.26.0625",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "FGTS",
+          "tribunal": "tjpa"
+        },
+        {
+          "numero_cnj": "7758302-93.2020.8.26.0995",
+          "classe": "Ação de Cobrança",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trt8"
+        },
+        {
+          "numero_cnj": "2909752-44.2020.8.26.0867",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjma"
+        },
+        {
+          "numero_cnj": "4084038-56.2020.8.26.0393",
+          "classe": "Execução Fiscal",
+          "assunto": "Horas Extras",
+          "tribunal": "trt8"
+        },
+        {
+          "numero_cnj": "4448670-38.2022.8.26.0929",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "trt22"
+        },
+        {
+          "numero_cnj": "1258391-39.2024.8.26.0441",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Dano Material",
+          "tribunal": "tjac"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:39",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "49.589.553/0001-93",
+    "razao_social": "COMERCIO VAREJO ABC EIRELI",
+    "nome_fantasia": "COMERCIO",
+    "situacao": "ATIVA",
+    "cnae_principal": "9892-9/00",
+    "cnae_buscado": "pescaria",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2021-10-07",
+    "processos": {
+      "total_processos": 11,
+      "tribunais_consultados": [
+        "trt7",
+        "tjse",
+        "trt4",
+        "tjro",
+        "trf4"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "6267651-45.2021.8.26.0173",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjsc"
+        },
+        {
+          "numero_cnj": "5148565-59.2021.8.26.0185",
+          "classe": "Rescisão de Contrato",
+          "assunto": "FGTS",
+          "tribunal": "trt21"
+        },
+        {
+          "numero_cnj": "6412719-59.2021.8.26.0170",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Horas Extras",
+          "tribunal": "tjro"
+        },
+        {
+          "numero_cnj": "6745174-73.2024.8.26.0627",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "FGTS",
+          "tribunal": "trf3"
+        },
+        {
+          "numero_cnj": "8097532-23.2023.8.26.0386",
+          "classe": "Execução Fiscal",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "trt16"
+        },
+        {
+          "numero_cnj": "5470521-35.2022.8.26.0765",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trt5"
+        },
+        {
+          "numero_cnj": "2812945-19.2020.8.26.0983",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trt13"
+        },
+        {
+          "numero_cnj": "4331605-65.2021.8.26.0389",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Dano Material",
+          "tribunal": "tjsc"
+        },
+        {
+          "numero_cnj": "3142244-73.2024.8.26.0491",
+          "classe": "Ação de Cobrança",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "stf"
+        },
+        {
+          "numero_cnj": "9463194-48.2021.8.26.0218",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tjam"
+        },
+        {
+          "numero_cnj": "4679779-95.2024.8.26.0873",
+          "classe": "Ação de Indenização",
+          "assunto": "Horas Extras",
+          "tribunal": "trt9"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:39",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "91.170.234/0001-18",
+    "razao_social": "RESTAURANTE BOM SABOR EIRELI",
+    "nome_fantasia": "ATACADISTA",
+    "situacao": "ATIVA",
+    "cnae_principal": "9713-5/00",
+    "cnae_buscado": "pescaria",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2021-02-18",
+    "processos": {
+      "total_processos": 6,
+      "tribunais_consultados": [
+        "tjpe",
+        "tjpa",
+        "tjam"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "7575873-62.2021.8.26.0682",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Horas Extras",
+          "tribunal": "tjal"
+        },
+        {
+          "numero_cnj": "9479326-62.2023.8.26.0883",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "trt7"
+        },
+        {
+          "numero_cnj": "6670915-16.2024.8.26.0746",
+          "classe": "Ação de Indenização",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "trt13"
+        },
+        {
+          "numero_cnj": "6210015-89.2021.8.26.0477",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tsm"
+        },
+        {
+          "numero_cnj": "4629122-87.2022.8.26.0664",
+          "classe": "Ação de Indenização",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt19"
+        },
+        {
+          "numero_cnj": "9211884-69.2020.8.26.0994",
+          "classe": "Ação de Indenização",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "trf1"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:39",
+    "modo": "DEMONSTRAÇÃO"
+  }
+]

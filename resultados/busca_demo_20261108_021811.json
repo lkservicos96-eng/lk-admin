@@ -1,0 +1,969 @@
+[
+  {
+    "cnpj": "86.305.357/0001-58",
+    "razao_social": "Indústria de Clinica Estetica ME",
+    "nome_fantasia": "Indústria",
+    "situacao": "ATIVA",
+    "cnae_principal": "3253-6/00",
+    "cnae_buscado": "clinica estetica",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2014-12-19",
+    "processos": {
+      "total_processos": 10,
+      "tribunais_consultados": [
+        "tjsc",
+        "trt11",
+        "trt15",
+        "trf5",
+        "trt3"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "9774159-33.2020.8.26.0193",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "FGTS",
+          "tribunal": "tjse"
+        },
+        {
+          "numero_cnj": "9247878-41.2022.8.26.0552",
+          "classe": "Ação de Indenização",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjms"
+        },
+        {
+          "numero_cnj": "4515701-72.2023.8.26.0278",
+          "classe": "Ação de Indenização",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tjms"
+        },
+        {
+          "numero_cnj": "5367260-97.2020.8.26.0261",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trt17"
+        },
+        {
+          "numero_cnj": "8441295-24.2021.8.26.0834",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tjrj"
+        },
+        {
+          "numero_cnj": "5917063-45.2020.8.26.0216",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tjpe"
+        },
+        {
+          "numero_cnj": "4745317-17.2024.8.26.0207",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Dano Material",
+          "tribunal": "trf3"
+        },
+        {
+          "numero_cnj": "9646429-51.2023.8.26.0896",
+          "classe": "Ação de Indenização",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tjce"
+        },
+        {
+          "numero_cnj": "8694530-56.2023.8.26.0454",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "tjpr"
+        },
+        {
+          "numero_cnj": "4323003-32.2023.8.26.0113",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjac"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 02:18:11",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "79.227.693/0001-78",
+    "razao_social": "Indústria de Clinica Estetica Center ME",
+    "nome_fantasia": "Serviços",
+    "situacao": "ATIVA",
+    "cnae_principal": "8519-6/00",
+    "cnae_buscado": "clinica estetica",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2016-02-16",
+    "processos": {
+      "total_processos": 11,
+      "tribunais_consultados": [
+        "tjmg",
+        "trt11",
+        "stj",
+        "tjms",
+        "tjma"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "5285815-44.2024.8.26.0315",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "trt14"
+        },
+        {
+          "numero_cnj": "1544936-43.2021.8.26.0692",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Dano Material",
+          "tribunal": "stj"
+        },
+        {
+          "numero_cnj": "9481591-80.2021.8.26.0153",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjba"
+        },
+        {
+          "numero_cnj": "3073325-21.2020.8.26.0605",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjdf"
+        },
+        {
+          "numero_cnj": "3631866-45.2021.8.26.0449",
+          "classe": "Ação de Cobrança",
+          "assunto": "Horas Extras",
+          "tribunal": "tse"
+        },
+        {
+          "numero_cnj": "9690413-45.2021.8.26.0977",
+          "classe": "Ação de Cobrança",
+          "assunto": "Horas Extras",
+          "tribunal": "tjgo"
+        },
+        {
+          "numero_cnj": "3487554-30.2021.8.26.0688",
+          "classe": "Ação de Indenização",
+          "assunto": "FGTS",
+          "tribunal": "trt17"
+        },
+        {
+          "numero_cnj": "6279799-48.2023.8.26.0866",
+          "classe": "Ação de Cobrança",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjrr"
+        },
+        {
+          "numero_cnj": "7037484-14.2024.8.26.0734",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Horas Extras",
+          "tribunal": "stf"
+        },
+        {
+          "numero_cnj": "3038658-97.2021.8.26.0888",
+          "classe": "Ação de Cobrança",
+          "assunto": "FGTS",
+          "tribunal": "trt22"
+        },
+        {
+          "numero_cnj": "4608178-17.2023.8.26.0731",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trt23"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 02:18:11",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "47.715.851/0001-21",
+    "razao_social": "Serviços de Clinica Estetica Company EPP",
+    "nome_fantasia": "Comércio",
+    "situacao": "ATIVA",
+    "cnae_principal": "3911-8/00",
+    "cnae_buscado": "clinica estetica",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2017-04-05",
+    "processos": {
+      "total_processos": 9,
+      "tribunais_consultados": [
+        "trt12",
+        "trt23",
+        "trt8",
+        "trt11"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "2139364-66.2020.8.26.0251",
+          "classe": "Rescisão de Contrato",
+          "assunto": "FGTS",
+          "tribunal": "tjpa"
+        },
+        {
+          "numero_cnj": "8857066-48.2024.8.26.0201",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trf3"
+        },
+        {
+          "numero_cnj": "1056690-28.2024.8.26.0520",
+          "classe": "Ação de Indenização",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjsp"
+        },
+        {
+          "numero_cnj": "1881483-35.2022.8.26.0418",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "trt12"
+        },
+        {
+          "numero_cnj": "6873063-64.2023.8.26.0177",
+          "classe": "Ação de Cobrança",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "tjmg"
+        },
+        {
+          "numero_cnj": "7991528-36.2023.8.26.0882",
+          "classe": "Ação de Indenização",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "tjdf"
+        },
+        {
+          "numero_cnj": "5232692-40.2022.8.26.0606",
+          "classe": "Execução Fiscal",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "trt1"
+        },
+        {
+          "numero_cnj": "9757002-23.2024.8.26.0882",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjam"
+        },
+        {
+          "numero_cnj": "2194131-94.2020.8.26.0128",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Horas Extras",
+          "tribunal": "tjmt"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 02:18:11",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "24.615.386/0001-58",
+    "razao_social": "Comércio de Clinica Estetica Company EPP",
+    "nome_fantasia": "Clinica",
+    "situacao": "ATIVA",
+    "cnae_principal": "3295-1/00",
+    "cnae_buscado": "clinica estetica",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2015-07-13",
+    "processos": {
+      "total_processos": 3,
+      "tribunais_consultados": [
+        "stf"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "3861528-76.2024.8.26.0776",
+          "classe": "Execução Fiscal",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt8"
+        },
+        {
+          "numero_cnj": "3461006-22.2021.8.26.0520",
+          "classe": "Ação de Cobrança",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tjam"
+        },
+        {
+          "numero_cnj": "3000274-59.2021.8.26.0999",
+          "classe": "Execução Fiscal",
+          "assunto": "Horas Extras",
+          "tribunal": "tjrs"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 02:18:11",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "45.478.119/0001-83",
+    "razao_social": "Indústria de Clinica Estetica Nacional EPP",
+    "nome_fantasia": "Serviços",
+    "situacao": "ATIVA",
+    "cnae_principal": "6225-7/00",
+    "cnae_buscado": "clinica estetica",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2019-09-06",
+    "processos": {
+      "total_processos": 1,
+      "tribunais_consultados": [
+        "tjrs"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "8455146-70.2020.8.26.0808",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Dano Material",
+          "tribunal": "trt17"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 02:18:11",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "61.767.109/0001-79",
+    "razao_social": "Comércio de Clinica Estetica Company EPP",
+    "nome_fantasia": "Atacado",
+    "situacao": "ATIVA",
+    "cnae_principal": "4021-4/00",
+    "cnae_buscado": "clinica estetica",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2010-05-15",
+    "processos": {
+      "total_processos": 3,
+      "tribunais_consultados": [
+        "tjam"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "1895136-20.2023.8.26.0224",
+          "classe": "Ação de Cobrança",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjdf"
+        },
+        {
+          "numero_cnj": "3140897-81.2023.8.26.0671",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tjap"
+        },
+        {
+          "numero_cnj": "4185319-29.2020.8.26.0168",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Horas Extras",
+          "tribunal": "trt9"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 02:18:11",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "10.992.536/0001-77",
+    "razao_social": "Comércio de Clinica Estetica Regional EPP",
+    "nome_fantasia": "Atacado",
+    "situacao": "ATIVA",
+    "cnae_principal": "1540-6/00",
+    "cnae_buscado": "clinica estetica",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2012-01-06",
+    "processos": {
+      "total_processos": 8,
+      "tribunais_consultados": [
+        "trt4",
+        "tjpa",
+        "tjmg",
+        "trt18"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "1552877-89.2024.8.26.0642",
+          "classe": "Ação de Indenização",
+          "assunto": "Dano Material",
+          "tribunal": "trt15"
+        },
+        {
+          "numero_cnj": "2189520-68.2023.8.26.0818",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "trt14"
+        },
+        {
+          "numero_cnj": "5761297-28.2021.8.26.0208",
+          "classe": "Ação de Indenização",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "tjpe"
+        },
+        {
+          "numero_cnj": "3018759-62.2022.8.26.0926",
+          "classe": "Ação de Indenização",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "tst"
+        },
+        {
+          "numero_cnj": "2992282-41.2021.8.26.0364",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Horas Extras",
+          "tribunal": "tjac"
+        },
+        {
+          "numero_cnj": "4086846-31.2024.8.26.0176",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Dano Material",
+          "tribunal": "tjgo"
+        },
+        {
+          "numero_cnj": "6797851-22.2021.8.26.0398",
+          "classe": "Execução Fiscal",
+          "assunto": "Horas Extras",
+          "tribunal": "tjto"
+        },
+        {
+          "numero_cnj": "6503832-92.2020.8.26.0564",
+          "classe": "Ação de Cobrança",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trt1"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 02:18:11",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "80.982.152/0001-43",
+    "razao_social": "Indústria de Clinica Estetica Premium EPP",
+    "nome_fantasia": "Clinica",
+    "situacao": "ATIVA",
+    "cnae_principal": "9001-3/00",
+    "cnae_buscado": "clinica estetica",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2014-03-19",
+    "processos": {
+      "total_processos": 9,
+      "tribunais_consultados": [
+        "trt9",
+        "tjpe",
+        "tjms",
+        "tjro"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "4024931-48.2022.8.26.0611",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt5"
+        },
+        {
+          "numero_cnj": "8757035-25.2023.8.26.0668",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tjac"
+        },
+        {
+          "numero_cnj": "4262401-55.2024.8.26.0275",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "stj"
+        },
+        {
+          "numero_cnj": "4226430-77.2024.8.26.0815",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt8"
+        },
+        {
+          "numero_cnj": "2603683-50.2020.8.26.0583",
+          "classe": "Ação de Indenização",
+          "assunto": "FGTS",
+          "tribunal": "tsm"
+        },
+        {
+          "numero_cnj": "5190585-96.2020.8.26.0998",
+          "classe": "Execução Fiscal",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjce"
+        },
+        {
+          "numero_cnj": "3855562-33.2024.8.26.0915",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt5"
+        },
+        {
+          "numero_cnj": "2310118-20.2020.8.26.0854",
+          "classe": "Ação de Indenização",
+          "assunto": "Dano Material",
+          "tribunal": "trt6"
+        },
+        {
+          "numero_cnj": "2341600-87.2024.8.26.0608",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "FGTS",
+          "tribunal": "trt17"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 02:18:11",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "33.958.942/0001-42",
+    "razao_social": "Atacado Clinica Estetica Premium EPP",
+    "nome_fantasia": "Atacado",
+    "situacao": "ATIVA",
+    "cnae_principal": "2235-9/00",
+    "cnae_buscado": "clinica estetica",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2016-01-23",
+    "processos": {
+      "total_processos": 3,
+      "tribunais_consultados": [
+        "tjam"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "7710293-61.2023.8.26.0364",
+          "classe": "Ação de Indenização",
+          "assunto": "FGTS",
+          "tribunal": "trf3"
+        },
+        {
+          "numero_cnj": "3340308-39.2023.8.26.0558",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjac"
+        },
+        {
+          "numero_cnj": "8862491-46.2023.8.26.0739",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjac"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 02:18:11",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "85.996.913/0001-98",
+    "razao_social": "Serviços de Clinica Estetica Group EPP",
+    "nome_fantasia": "Comércio",
+    "situacao": "ATIVA",
+    "cnae_principal": "2545-9/00",
+    "cnae_buscado": "clinica estetica",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2013-02-21",
+    "processos": {
+      "total_processos": 12,
+      "tribunais_consultados": [
+        "tjpb",
+        "tjrs",
+        "trt11",
+        "trt13",
+        "trf4"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "5486471-84.2022.8.26.0379",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tsm"
+        },
+        {
+          "numero_cnj": "3241291-30.2024.8.26.0891",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "stf"
+        },
+        {
+          "numero_cnj": "4796256-86.2023.8.26.0662",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tjac"
+        },
+        {
+          "numero_cnj": "8425362-11.2020.8.26.0162",
+          "classe": "Ação de Cobrança",
+          "assunto": "Horas Extras",
+          "tribunal": "tjce"
+        },
+        {
+          "numero_cnj": "3294271-70.2023.8.26.0533",
+          "classe": "Ação de Cobrança",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjpe"
+        },
+        {
+          "numero_cnj": "7821034-78.2024.8.26.0147",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "trf1"
+        },
+        {
+          "numero_cnj": "7958085-39.2023.8.26.0561",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjpi"
+        },
+        {
+          "numero_cnj": "8055617-31.2021.8.26.0480",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tsm"
+        },
+        {
+          "numero_cnj": "2965595-86.2023.8.26.0100",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt7"
+        },
+        {
+          "numero_cnj": "1004959-52.2022.8.26.0978",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "trf1"
+        },
+        {
+          "numero_cnj": "4395120-59.2020.8.26.0123",
+          "classe": "Ação de Cobrança",
+          "assunto": "Horas Extras",
+          "tribunal": "trt17"
+        },
+        {
+          "numero_cnj": "5648110-53.2024.8.26.0174",
+          "classe": "Execução Fiscal",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trf5"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 02:18:11",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "31.889.330/0001-83",
+    "razao_social": "Serviços de Clinica Estetica Premium EPP",
+    "nome_fantasia": "Serviços",
+    "situacao": "ATIVA",
+    "cnae_principal": "1831-8/00",
+    "cnae_buscado": "clinica estetica",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2016-02-18",
+    "processos": {
+      "total_processos": 12,
+      "tribunais_consultados": [
+        "tjro",
+        "trt9",
+        "tjap",
+        "trt14",
+        "tjse"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "6548975-93.2023.8.26.0318",
+          "classe": "Ação de Indenização",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "tjpb"
+        },
+        {
+          "numero_cnj": "5324202-45.2021.8.26.0443",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "trt15"
+        },
+        {
+          "numero_cnj": "6358276-42.2021.8.26.0818",
+          "classe": "Ação de Cobrança",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "tjms"
+        },
+        {
+          "numero_cnj": "9576421-73.2023.8.26.0252",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjap"
+        },
+        {
+          "numero_cnj": "7276474-80.2021.8.26.0563",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "trf3"
+        },
+        {
+          "numero_cnj": "7452624-65.2020.8.26.0360",
+          "classe": "Ação de Cobrança",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tsm"
+        },
+        {
+          "numero_cnj": "9838721-66.2021.8.26.0201",
+          "classe": "Execução Fiscal",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjal"
+        },
+        {
+          "numero_cnj": "6602818-82.2020.8.26.0178",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Dano Material",
+          "tribunal": "trt16"
+        },
+        {
+          "numero_cnj": "3658169-12.2024.8.26.0526",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trt3"
+        },
+        {
+          "numero_cnj": "7026350-42.2023.8.26.0915",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjsp"
+        },
+        {
+          "numero_cnj": "5829019-39.2021.8.26.0550",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Dano Material",
+          "tribunal": "tjac"
+        },
+        {
+          "numero_cnj": "2513134-69.2020.8.26.0557",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjdf"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 02:18:11",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "16.338.749/0001-17",
+    "razao_social": "Serviços de Clinica Estetica Regional ME",
+    "nome_fantasia": "Clinica",
+    "situacao": "ATIVA",
+    "cnae_principal": "7969-2/00",
+    "cnae_buscado": "clinica estetica",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2014-11-17",
+    "processos": {
+      "total_processos": 10,
+      "tribunais_consultados": [
+        "trt23",
+        "tst",
+        "tjpe",
+        "trt3",
+        "tjce"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "9359348-21.2021.8.26.0909",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjsp"
+        },
+        {
+          "numero_cnj": "4361397-62.2023.8.26.0972",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Horas Extras",
+          "tribunal": "trf6"
+        },
+        {
+          "numero_cnj": "1940384-45.2020.8.26.0993",
+          "classe": "Ação de Cobrança",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tst"
+        },
+        {
+          "numero_cnj": "6012003-35.2024.8.26.0437",
+          "classe": "Ação de Cobrança",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "trf2"
+        },
+        {
+          "numero_cnj": "7042796-85.2022.8.26.0349",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjpa"
+        },
+        {
+          "numero_cnj": "9472796-94.2021.8.26.0447",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Horas Extras",
+          "tribunal": "tsm"
+        },
+        {
+          "numero_cnj": "5714988-48.2022.8.26.0561",
+          "classe": "Ação de Cobrança",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "trt3"
+        },
+        {
+          "numero_cnj": "2271355-22.2024.8.26.0316",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tjal"
+        },
+        {
+          "numero_cnj": "6644435-84.2022.8.26.0699",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjpe"
+        },
+        {
+          "numero_cnj": "8392110-24.2022.8.26.0759",
+          "classe": "Execução Fiscal",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "trt4"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 02:18:11",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "78.373.486/0001-31",
+    "razao_social": "Atacado Clinica Estetica Premium EPP",
+    "nome_fantasia": "Atacado",
+    "situacao": "ATIVA",
+    "cnae_principal": "7496-1/00",
+    "cnae_buscado": "clinica estetica",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2017-02-01",
+    "processos": {
+      "total_processos": 1,
+      "tribunais_consultados": [
+        "stj"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "8868848-83.2021.8.26.0206",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjrr"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 02:18:11",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "41.920.486/0001-53",
+    "razao_social": "Distribuidora Clinica Estetica Center ME",
+    "nome_fantasia": "Distribuidora",
+    "situacao": "ATIVA",
+    "cnae_principal": "8757-5/00",
+    "cnae_buscado": "clinica estetica",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Americana",
+    "data_abertura": "2023-12-09",
+    "processos": {
+      "total_processos": 10,
+      "tribunais_consultados": [
+        "trt20",
+        "tjro",
+        "tjgo",
+        "trt14",
+        "trt13"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "4084716-59.2022.8.26.0174",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjsp"
+        },
+        {
+          "numero_cnj": "9691562-83.2024.8.26.0702",
+          "classe": "Ação de Cobrança",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "tjmg"
+        },
+        {
+          "numero_cnj": "5004808-68.2020.8.26.0756",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tjms"
+        },
+        {
+          "numero_cnj": "6568670-52.2022.8.26.0104",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjrj"
+        },
+        {
+          "numero_cnj": "7508782-38.2023.8.26.0785",
+          "classe": "Ação de Cobrança",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tjam"
+        },
+        {
+          "numero_cnj": "6003820-83.2021.8.26.0784",
+          "classe": "Ação de Indenização",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "tjma"
+        },
+        {
+          "numero_cnj": "1484154-74.2020.8.26.0817",
+          "classe": "Ação de Indenização",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "trt18"
+        },
+        {
+          "numero_cnj": "1231921-12.2022.8.26.0850",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt4"
+        },
+        {
+          "numero_cnj": "2977033-82.2021.8.26.0410",
+          "classe": "Execução Fiscal",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tse"
+        },
+        {
+          "numero_cnj": "7325888-91.2023.8.26.0105",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tjro"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 02:18:11",
+    "modo": "DEMONSTRAÇÃO"
+  }
+]

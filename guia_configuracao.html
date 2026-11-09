@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Configuração - APIs</title>
+    <style>
+        :root { color-scheme: light; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        .step {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #ecf0f1;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        .step-number {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .step-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .step-content {
+            margin-left: 40px;
+            color: #34495e;
+            line-height: 1.6;
+        }
+        .menu-path {
+            background: #fff;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 2px solid #3498db;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .hosts-box {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            white-space: pre-line;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .success {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .diagram {
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+            border: 2px dashed #95a5a6;
+            border-radius: 8px;
+        }
+        .menu-item {
+            padding: 8px 16px;
+            margin: 5px 0;
+            background: #3498db;
+            color: white;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        .arrow {
+            font-size: 24px;
+            color: #3498db;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Guia: Como Liberar as APIs</h1>
+        <p class="subtitle">Siga estes passos para permitir que o sistema acesse as APIs de busca</p>
+
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">1</span>
+                Abra o Menu do Claude
+            </div>
+            <div class="step-content">
+                <p>No canto superior da janela do Claude Desktop, clique no <strong>menu</strong> (pode ser três linhas horizontais ☰ ou seu ícone de usuário)</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">2</span>
+                Navegue até as Configurações
+            </div>
+            <div class="step-content">
+                <p>Procure por uma destas opções (dependendo da tradução):</p>
+                <div class="diagram">
+                    <span class="menu-item">Configuração de inferência</span>
+                    <span style="display:block; margin:5px 0; color: #95a5a6;">ou</span>
+                    <span class="menu-item">Inference configuration</span>
+                    <span style="display:block; margin:5px 0; color: #95a5a6;">ou</span>
+                    <span class="menu-item">Configurações</span>
+                    <span style="display:block; margin:5px 0; color: #95a5a6;">ou</span>
+                    <span class="menu-item">Settings</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">3</span>
+                Entre em Capacidades/Capabilities
+            </div>
+            <div class="step-content">
+                <p>Dentro das configurações, procure e clique em:</p>
+                <div class="menu-path">
+                    Capacidades → Restrições gerais
+                </div>
+                <p style="margin-top: 10px; color: #7f8c8d;">OU em inglês:</p>
+                <div class="menu-path">
+                    Capabilities → General restrictions
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">4</span>
+                Encontre "Hosts Permitidos"
+            </div>
+            <div class="step-content">
+                <p>Procure pelo campo chamado:</p>
+                <ul style="margin-left: 20px;">
+                    <li><strong>"Hosts de saída permitidos"</strong></li>
+                    <li>ou <strong>"Allowed egress hosts"</strong></li>
+                </ul>
+                <p>É um campo de texto onde você pode adicionar URLs</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">5</span>
+                Cole os Hosts das APIs
+            </div>
+            <div class="step-content">
+                <p>No campo, adicione estas linhas (pode copiar e colar todas de uma vez):</p>
+                <div class="hosts-box">api.cnpja.com
+cnpja.com
+www.receitaws.com.br
+api-publica.datajud.cnj.jus.br
+opencnpj.org
+api.opencnpj.com</div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">6</span>
+                Aplicar e Reiniciar
+            </div>
+            <div class="step-content">
+                <p>Clique no botão:</p>
+                <div class="menu-path">
+                    Aplicar mudanças / Apply Changes
+                </div>
+                <p style="margin-top: 15px;">Quando pedir para reiniciar, clique em <strong>"Reiniciar Agora"</strong> ou <strong>"Restart Now"</strong></p>
+            </div>
+        </div>
+
+        <div class="success">
+            <strong>✅ Pronto!</strong> Depois que o Claude reiniciar, volte para <code>http://localhost:5000</code> no navegador e tente fazer a busca novamente.
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Lembre-se:</strong> Você precisa manter o terminal aberto com o comando <code>python servidor_web.py</code> rodando. Se fechou, abra novamente e rode o comando.
+        </div>
+
+        <hr style="margin: 40px 0; border: none; border-top: 1px solid #ecf0f1;">
+
+        <h2 style="color: #2c3e50; margin-bottom: 15px;">Caminho Visual Resumido:</h2>
+        <div style="text-align: center; padding: 20px; background: #ecf0f1; border-radius: 8px;">
+            <div style="font-size: 18px; line-height: 2;">
+                Menu <span class="arrow">→</span> Configurações <span class="arrow">→</span> Capacidades <span class="arrow">→</span> Restrições Gerais <span class="arrow">→</span> Hosts Permitidos
+            </div>
+        </div>
+    </div>
+</body>
+</html>

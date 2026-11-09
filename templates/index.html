@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Empresas com Processos</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --bg: #FAF9F5;
+            --bg-hover: #F5F4EF;
+            --card: #FFFFFF;
+            --border: #E8E6DC;
+            --border-strong: #DAD8CE;
+            --text: #141413;
+            --text-secondary: #6E6D66;
+            --text-muted: #9C9B94;
+            --accent: #D97757;
+            --accent-hover: #C96442;
+            --accent-soft: rgba(217, 119, 87, 0.1);
+            --green: #7A9B76;
+            --green-soft: rgba(122, 155, 118, 0.12);
+            --blue: #6A8BAF;
+            --blue-soft: rgba(106, 139, 175, 0.12);
+            --shadow-sm: 0 1px 2px rgba(20, 20, 19, 0.04);
+            --shadow-md: 0 4px 16px rgba(20, 20, 19, 0.06);
+            --shadow-lg: 0 8px 32px rgba(20, 20, 19, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 32px 24px;
+            font-size: 15px;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 1320px; margin: 0 auto; }
+
+        header { margin-bottom: 40px; }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 26px;
+        }
+
+        .logo-mark {
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+            filter: drop-shadow(0 3px 10px rgba(217, 119, 87, 0.28));
+        }
+
+        .logo-ring { animation: radar-spin 6s linear infinite; transform-origin: 32px 32px; }
+        @keyframes radar-spin { to { transform: rotate(360deg); } }
+
+        .logo-pulse { animation: logo-pulse 2.4s ease-in-out infinite; transform-origin: 32px 32px; }
+        @keyframes logo-pulse {
+            0%, 100% { opacity: 0.35; transform: scale(0.92); }
+            50% { opacity: 0.08; transform: scale(1.12); }
+        }
+
+        .brand-name {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 27px;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: var(--text);
+            line-height: 1.15;
+        }
+
+        .brand-name span { color: var(--accent); }
+
+        .brand-badge {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif;
+            font-size: 11.5px;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            color: var(--text-secondary);
+            background: var(--card);
+            border: 1px solid var(--border-strong);
+            border-radius: 999px;
+            padding: 2px 10px;
+            vertical-align: 3px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.15s;
+        }
+
+        .brand-badge:hover {
+            color: var(--accent-hover);
+            border-color: var(--accent);
+        }
+
+        .brand-tagline {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            margin-top: 2px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .brand-tagline .dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: inline-block;
+        }
+
+        h1 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 36px;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        h1 em {
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 16px;
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        /* ===== PAINEL DE BUSCA ===== */
+        .search-panel {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            position: sticky;
+            top: 24px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-section { margin-bottom: 24px; }
+        .form-section:last-of-type { margin-bottom: 0; }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 8px;
+            letter-spacing: 0.01em;
+        }
+
+        select, input[type="text"], input[type="number"] {
+            width: 100%;
+            background: var(--bg);
+            border: 1px solid var(--border-strong);
+            color: var(--text);
+            padding: 11px 14px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: all 0.15s ease;
+        }
+
+        select:focus, input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-soft);
+            background: var(--card);
+        }
+
+        select { cursor: pointer; }
+        select[multiple] { min-height: 170px; padding: 6px; }
+
+        select option {
+            padding: 8px 10px;
+            border-radius: 6px;
+        }
+
+        .help-text {
+            font-size: 12.5px;
+            color: var(--text-muted);
+            margin-top: 6px;
+        }
+
+        /* Checkboxes estilizados */
+        .checkbox-group { display: flex; flex-direction: column; gap: 10px; }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .checkbox-item:hover { border-color: var(--border-strong); background: var(--bg-hover); }
+
+        input[type="checkbox"] {
+            width: 17px;
+            height: 17px;
+            cursor: pointer;
+            accent-color: var(--accent);
+        }
+
+        .checkbox-item span {
+            font-size: 13.5px;
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        /* Botão principal */
+        .btn-primary {
+            width: 100%;
+            background: var(--text);
+            color: #FAF9F5;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: #2D2C28;
+            box-shadow: var(--shadow-md);
+            transform: translateY(-1px);
+        }
+
+        .btn-primary:active { transform: translateY(0); }
+        .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+        /* ===== PAINEL DE RESULTADOS ===== */
+        .results-panel {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            min-height: 600px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .results-count {
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+
+        .results-count strong {
+            color: var(--text);
+            font-size: 28px;
+            font-weight: 600;
+            margin-right: 6px;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .status-idle { background: var(--bg-hover); color: var(--text-secondary); }
+        .status-searching { background: var(--accent-soft); color: var(--accent-hover); }
+        .status-searching::before {
+            content: '';
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            animation: pulse-dot 1.4s infinite;
+        }
+        .status-success { background: var(--green-soft); color: #5A7A56; }
+        .status-error { background: rgba(200, 80, 60, 0.1); color: #B5432F; }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.85); }
+        }
+
+        /* Cards de empresa */
+        .empresa-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 14px;
+            transition: all 0.2s ease;
+        }
+
+        .empresa-card:hover {
+            border-color: var(--accent);
+            box-shadow: var(--shadow-md);
+        }
+
+        .empresa-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 14px;
+        }
+
+        .empresa-nome {
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--text);
+            margin-bottom: 4px;
+            line-height: 1.35;
+        }
+
+        .empresa-cnpj {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-variant-numeric: tabular-nums;
+            letter-spacing: 0.02em;
+        }
+
+        .processo-badge {
+            background: var(--accent-soft);
+            color: var(--accent-hover);
+            padding: 5px 12px;
+            border-radius: 100px;
+            font-size: 12.5px;
+            font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .empresa-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px;
+            font-size: 13.5px;
+        }
+
+        .info-item { color: var(--text); }
+
+        .info-label {
+            color: var(--text-muted);
+            margin-right: 5px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-weight: 500;
+        }
+
+        /* Badges de porte */
+        .porte-badge {
+            display: inline-block;
+            padding: 2px 9px;
+            border-radius: 6px;
+            font-size: 11.5px;
+            font-weight: 600;
+            margin-left: 8px;
+            vertical-align: 1px;
+        }
+
+        .porte-me { background: var(--blue-soft); color: var(--blue); }
+        .porte-epp { background: var(--green-soft); color: #5A7A56; }
+
+        /* Seção de processos */
+        .processos-section {
+            margin-top: 16px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border);
+        }
+
+        .processos-toggle {
+            background: none;
+            border: none;
+            color: var(--accent-hover);
+            cursor: pointer;
+            font-size: 13.5px;
+            font-weight: 500;
+            padding: 6px 10px;
+            margin: 0;
+            width: auto;
+            border-radius: 8px;
+            transition: all 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .processos-toggle:hover { background: var(--accent-soft); }
+
+        .processos-toggle .seta {
+            display: inline-block;
+            transition: transform 0.2s;
+            font-size: 11px;
+        }
+
+        .processos-toggle.aberto .seta { transform: rotate(180deg); }
+
+        .processos-list {
+            margin-top: 12px;
+            display: none;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .processos-list.show { display: flex; }
+
+        .processo-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px 16px;
+        }
+
+        .processo-numero {
+            font-family: 'SF Mono', 'Consolas', 'Courier New', monospace;
+            font-size: 12.5px;
+            color: var(--accent-hover);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .processo-detalhes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 6px 16px;
+            font-size: 13px;
+        }
+
+        .processo-detalhes .info-item.full { grid-column: 1 / -1; }
+
+        /* Estados vazios e loading */
+        .empty-state {
+            text-align: center;
+            padding: 90px 24px;
+            color: var(--text-muted);
+        }
+
+        .empty-icon {
+            font-size: 44px;
+            margin-bottom: 18px;
+            opacity: 0.7;
+        }
+
+        .empty-state p { font-size: 15px; }
+        .empty-state p.hint { font-size: 13.5px; margin-top: 8px; color: var(--text-muted); }
+
+        .loading { text-align: center; padding: 70px 24px; }
+
+        .spinner {
+            width: 36px; height: 36px;
+            border: 3px solid var(--border);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 18px;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .loading p { color: var(--text-secondary); }
+        .loading p.hint { font-size: 13px; margin-top: 8px; color: var(--text-muted); }
+
+        /* Responsivo */
+        @media (max-width: 1024px) {
+            .main-grid { grid-template-columns: 1fr; }
+            .search-panel { position: static; }
+        }
+
+        /* ===== ESTATÍSTICAS ===== */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 0.4s ease forwards;
+        }
+
+        .stat-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-weight: 500;
+        }
+
+        /* ===== BOTÕES DE AÇÃO ===== */
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn-export {
+            background: var(--card);
+            color: var(--text);
+            border: 1px solid var(--border-strong);
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 13.5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .btn-export:hover {
+            background: var(--bg-hover);
+            border-color: var(--accent);
+            color: var(--accent-hover);
+            box-shadow: var(--shadow-sm);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .empresa-card {
+            animation: slideIn 0.3s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .empresa-card:nth-child(1) { animation-delay: 0.05s; }
+        .empresa-card:nth-child(2) { animation-delay: 0.1s; }
+        .empresa-card:nth-child(3) { animation-delay: 0.15s; }
+        .empresa-card:nth-child(4) { animation-delay: 0.2s; }
+        .empresa-card:nth-child(5) { animation-delay: 0.25s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <svg class="logo-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GPS Empresas">
+                    <!-- anel externo -->
+                    <circle cx="32" cy="32" r="27" stroke="#E8E6DC" stroke-width="2.5"/>
+                    <!-- anel médio -->
+                    <circle cx="32" cy="32" r="19" stroke="#E8E6DC" stroke-width="2"/>
+                    <!-- pulso -->
+                    <circle class="logo-pulse" cx="32" cy="32" r="26" fill="#D97757"/>
+                    <!-- sector do radar -->
+                    <g class="logo-ring">
+                        <path d="M32 32 L32 6 A26 26 0 0 1 53.7 19 Z" fill="#D97757" fill-opacity="0.16"/>
+                        <path d="M32 32 L32 6 A26 26 0 0 1 53.7 19 Z" stroke="#D97757" stroke-width="1.6" stroke-linejoin="round"/>
+                    </g>
+                    <!-- marcador central -->
+                    <circle cx="32" cy="32" r="6" fill="#D97757"/>
+                    <circle cx="32" cy="32" r="2.4" fill="#FAF9F5"/>
+                    <!-- pinos de empresas -->
+                    <circle cx="32" cy="12" r="2.6" fill="#141413"/>
+                    <circle cx="50.5" cy="42" r="2.6" fill="#141413"/>
+                    <circle cx="14" cy="44" r="2.6" fill="#141413"/>
+                    <!-- linha de crescimento -->
+                    <path d="M12 52 L21 45 L29 48 L38 39 L46 42 L53 32" stroke="#141413" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.85"/>
+                    <circle cx="53" cy="32" r="3" fill="#D97757"/>
+                </svg>
+                <div>
+                    <div class="brand-name">LK <span class="brand-badge">admin</span></div>
+                    <div class="brand-tagline">
+                        GPS empresa que mais cresce no Brasil e no mundo
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-grid">
+            <!-- Painel de Busca -->
+            <div class="search-panel">
+                <form id="searchForm">
+                    <div class="form-section">
+                        <label for="ramoInput">Ramo de atividade</label>
+                        <input type="text" id="ramoInput" placeholder="Ex: pesca, construção, tecnologia..." required>
+                        <p class="help-text">Digite o ramo que você procura — os resultados virão com esse termo no nome</p>
+                    </div>
+
+                    <div class="form-section">
+                        <label for="estadoSelect">Estados</label>
+                        <select id="estadoSelect" multiple required></select>
+                        <p class="help-text">Segure Ctrl para selecionar vários</p>
+                    </div>
+
+                    <div class="form-section" id="cidadeSection" style="display:none;">
+                        <label for="cidadeSelect">Cidades</label>
+                        <select id="cidadeSelect" multiple></select>
+                        <p class="help-text">Opcional — deixe vazio para buscar em todas</p>
+                    </div>
+
+                    <div class="form-section">
+                        <label for="porteSelect">Porte da empresa</label>
+                        <select id="porteSelect" multiple>
+                            <option value="ME" selected>ME — Microempresa</option>
+                            <option value="EPP" selected>EPP — Pequeno Porte</option>
+                        </select>
+                    </div>
+
+                    <div class="form-section">
+                        <label for="minProcessos">Mínimo de processos</label>
+                        <input type="number" id="minProcessos" min="0" value="1" placeholder="Ex: 1">
+                        <p class="help-text">Só mostrar empresas com pelo menos X processos</p>
+                    </div>
+
+                    <div class="form-section">
+                        <label for="tipoProcessoSelect">Tipo de processo</label>
+                        <select id="tipoProcessoSelect" multiple>
+                            <option value="trabalhista" selected>Trabalhista</option>
+                            <option value="civel" selected>Cível</option>
+                            <option value="fiscal" selected>Fiscal / Execução</option>
+                            <option value="outros" selected>Outros</option>
+                        </select>
+                        <p class="help-text">Filtrar por tipo de processo judicial</p>
+                    </div>
+
+                    <div class="form-section">
+                        <label>Filtros</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="checkProcessos" checked>
+                                <span>Apenas empresas com processos</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="checkBuscarProcessos" checked>
+                                <span>Buscar processos judiciais</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="btnBuscar" class="btn-primary">
+                        <span>Buscar empresas</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Painel de Resultados -->
+            <div class="results-panel">
+                <div class="results-header">
+                    <div class="results-count" id="resultsCount" style="display: none;">
+                        <strong id="totalEmpresas">0</strong> empresas encontradas
+                    </div>
+                    <div class="action-buttons" style="display: none;" id="actionButtons">
+                        <button class="btn-export" onclick="exportarExcel()">
+                            <span>📊</span> Exportar Excel
+                        </button>
+                    </div>
+                    <span class="status-badge status-idle" id="statusBadge">Aguardando busca</span>
+                </div>
+
+                <div id="statsContainer" style="display:none;"></div>
+
+                <div id="resultsContainer">
+                    <div class="empty-state">
+                        <div class="empty-icon">🔍</div>
+                        <p>Preencha os filtros ao lado e clique em "Buscar empresas"</p>
+                        <p class="hint">Você pode filtrar por ramo, estado, cidade, porte e número de processos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ESTADOS = [
+            {sigla:"SP",nome:"São Paulo"},{sigla:"RJ",nome:"Rio de Janeiro"},{sigla:"MG",nome:"Minas Gerais"},
+            {sigla:"RS",nome:"Rio Grande do Sul"},{sigla:"PR",nome:"Paraná"},{sigla:"SC",nome:"Santa Catarina"},
+            {sigla:"BA",nome:"Bahia"},{sigla:"PE",nome:"Pernambuco"},{sigla:"CE",nome:"Ceará"},
+            {sigla:"GO",nome:"Goiás"},{sigla:"DF",nome:"Distrito Federal"},{sigla:"ES",nome:"Espírito Santo"},
+            {sigla:"MA",nome:"Maranhão"},{sigla:"PB",nome:"Paraíba"},{sigla:"AM",nome:"Amazonas"},
+            {sigla:"MT",nome:"Mato Grosso"},{sigla:"RN",nome:"Rio Grande do Norte"},{sigla:"RO",nome:"Rondônia"},
+            {sigla:"TO",nome:"Tocantins"},{sigla:"AL",nome:"Alagoas"},{sigla:"SE",nome:"Sergipe"},
+            {sigla:"MS",nome:"Mato Grosso do Sul"},{sigla:"PI",nome:"Piauí"},{sigla:"AC",nome:"Acre"},
+            {sigla:"AP",nome:"Amapá"},{sigla:"RR",nome:"Roraima"}
+        ];
+
+        let ultimosResultados = [];
+
+        // Exportar para Excel
+        function exportarExcel() {
+            if(!ultimosResultados.length) {
+                alert('Nenhum resultado para exportar');
+                return;
+            }
+
+            let csv = 'CNPJ;Razão Social;Porte;Cidade;Estado;Total Processos;Ramo\n';
+
+            ultimosResultados.forEach(e => {
+                const cnpj = (e.cnpj || '').replace(/;/g, ',');
+                const razao = (e.razao_social || '').replace(/;/g, ',');
+                const porte = e.porte || '';
+                const cidade = (e.cidade || '').replace(/;/g, ',');
+                const estado = e.estado || '';
+                const processos = (e.processos?.total_processos || 0);
+                const ramo = (e.cnae_buscado || e.cnae_principal || '').replace(/;/g, ',');
+
+                csv += `${cnpj};${razao};${porte};${cidade};${estado};${processos};${ramo}\n`;
+            });
+
+            const blob = new Blob(['﻿' + csv], {type: 'text/csv;charset=utf-8;'});
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            const timestamp = new Date().toISOString().slice(0,10);
+
+            link.setAttribute('href', url);
+            link.setAttribute('download', `empresas_processos_${timestamp}.csv`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Mostrar estatísticas
+        function mostrarEstatisticas(resultados) {
+            const container = document.getElementById('statsContainer');
+            if(!resultados.length) {
+                container.style.display = 'none';
+                return;
+            }
+
+            const totalEmpresas = resultados.length;
+            const totalProcessos = resultados.reduce((sum, e) => sum + (e.processos?.total_processos || 0), 0);
+            const mediaProcessos = (totalProcessos / totalEmpresas).toFixed(1);
+
+            // Conta por estado
+            const porEstado = {};
+            resultados.forEach(e => {
+                const est = e.estado || 'N/A';
+                porEstado[est] = (porEstado[est] || 0) + 1;
+            });
+            const estadoMaisEmpresas = Object.keys(porEstado).sort((a,b) => porEstado[b] - porEstado[a])[0];
+
+            container.style.display = 'block';
+            container.innerHTML = `
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value">${totalEmpresas}</div>
+                        <div class="stat-label">Empresas</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">${totalProcessos}</div>
+                        <div class="stat-label">Processos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">${mediaProcessos}</div>
+                        <div class="stat-label">Média/Empresa</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">${estadoMaisEmpresas}</div>
+                        <div class="stat-label">Estado com mais</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function init() {
+            const estSelect = document.getElementById('estadoSelect');
+            ESTADOS.forEach(e => {
+                const op = document.createElement('option');
+                op.value = e.sigla;
+                op.textContent = e.sigla + ' — ' + e.nome;
+                estSelect.appendChild(op);
+            });
+
+            // Carrega cidades quando mudar a seleção de estados
+            estSelect.addEventListener('change', async () => {
+                const selecionados = Array.from(estSelect.selectedOptions).map(o => o.value);
+                const cidadeSection = document.getElementById('cidadeSection');
+                const cidadeSelect = document.getElementById('cidadeSelect');
+
+                if(selecionados.length === 0) {
+                    cidadeSection.style.display = 'none';
+                    cidadeSelect.innerHTML = '';
+                    return;
+                }
+
+                cidadeSection.style.display = 'block';
+                cidadeSelect.innerHTML = '<option value="">Carregando cidades...</option>';
+
+                try {
+                    const todasCidades = [];
+                    for(const sigla of selecionados) {
+                        const res = await fetch(`/api/cidades/${sigla}`);
+                        const cidades = await res.json();
+                        cidades.forEach(c => todasCidades.push({cidade: c, estado: sigla}));
+                    }
+
+                    cidadeSelect.innerHTML = '';
+                    todasCidades.forEach(item => {
+                        const op = document.createElement('option');
+                        op.value = item.cidade;
+                        op.textContent = `${item.cidade} (${item.estado})`;
+                        cidadeSelect.appendChild(op);
+                    });
+                } catch(err) {
+                    console.error('Erro ao carregar cidades:', err);
+                    cidadeSelect.innerHTML = '<option value="">Erro ao carregar</option>';
+                }
+            });
+        }
+
+        document.getElementById('searchForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const ramo = document.getElementById('ramoInput').value.trim();
+            const estados = Array.from(document.getElementById('estadoSelect').selectedOptions).map(o => o.value);
+            const cidades = Array.from(document.getElementById('cidadeSelect').selectedOptions).map(o => o.value);
+            const portes = Array.from(document.getElementById('porteSelect').selectedOptions).map(o => o.value);
+            const minProcessos = parseInt(document.getElementById('minProcessos').value) || 0;
+            const apenasComProcessos = document.getElementById('checkProcessos').checked;
+            const buscarProcessos = document.getElementById('checkBuscarProcessos').checked;
+
+            if(!ramo || !estados.length) {
+                alert('Digite o ramo de atividade e selecione pelo menos um Estado');
+                return;
+            }
+
+            const badge = document.getElementById('statusBadge');
+            badge.className = 'status-badge status-searching';
+            badge.textContent = 'Buscando...';
+            const btn = document.getElementById('btnBuscar');
+            btn.disabled = true;
+            btn.querySelector('span').textContent = 'Buscando...';
+            const rc = document.getElementById('resultsContainer');
+            document.getElementById('resultsCount').style.display = 'none';
+            rc.innerHTML = '<div class="loading"><div class="spinner"></div><p>Buscando empresas e processos...</p><p class="hint">Isso pode levar alguns minutos</p></div>';
+
+            try {
+                const res = await fetch('/api/buscar', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ramo, estados, cidades, portes, min_processos: minProcessos, apenas_com_processos: apenasComProcessos, buscar_processos: buscarProcessos})
+                });
+                const data = await res.json();
+                if(data.sucesso) {
+                    badge.className = 'status-badge status-success';
+                    badge.textContent = 'Busca concluída';
+                    document.getElementById('resultsCount').style.display = 'block';
+                    document.getElementById('totalEmpresas').textContent = data.total;
+                    document.getElementById('actionButtons').style.display = 'flex';
+                    ultimosResultados = data.resultados;
+                    mostrarEstatisticas(data.resultados);
+                    showResults(data.resultados);
+                } else {
+                    throw new Error(data.erro || 'Erro desconhecido');
+                }
+            } catch(err) {
+                badge.className = 'status-badge status-error';
+                badge.textContent = 'Erro na busca';
+                rc.innerHTML = '<div class="empty-state"><div class="empty-icon">⚠️</div><p>Erro: '+err.message+'</p><p class="hint">Verifique se o servidor está rodando</p></div>';
+            } finally {
+                btn.disabled = false;
+                btn.querySelector('span').textContent = 'Buscar empresas';
+            }
+        });
+
+        function showResults(rs) {
+            const c = document.getElementById('resultsContainer');
+            if(!rs.length) {
+                c.innerHTML = '<div class="empty-state"><div class="empty-icon">🔍</div><p>Nenhuma empresa encontrada com esses filtros</p><p class="hint">Tente ampliar os filtros ou escolher outras cidades</p></div>';
+                return;
+            }
+            c.innerHTML = rs.map((e,i) => {
+                const p = e.processos || {};
+                const tp = p.total_processos || 0;
+                const lp = p.processos || [];
+                const porte = e.porte || 'N/A';
+                const pc = porte === 'ME' ? 'porte-me' : (porte === 'EPP' ? 'porte-epp' : '');
+                return `
+<div class="empresa-card">
+    <div class="empresa-header">
+        <div>
+            <div class="empresa-nome">
+                ${e.razao_social||'N/A'}
+                ${porte!=='N/A'?'<span class="porte-badge '+pc+'">'+porte+'</span>':''}
+            </div>
+            <div class="empresa-cnpj">${e.cnpj||'N/A'}</div>
+        </div>
+        ${tp>0?'<div class="processo-badge">⚖️ '+tp+' processo'+(tp>1?'s':'')+'</div>':''}
+    </div>
+    <div class="empresa-info">
+        <div class="info-item"><span class="info-label">Ramo</span>${e.cnae_buscado||e.cnae_principal||'N/A'}</div>
+        <div class="info-item"><span class="info-label">Cidade</span>${e.cidade||'N/A'} — ${e.estado||'N/A'}</div>
+        <div class="info-item"><span class="info-label">Situação</span>${e.situacao||'N/A'}</div>
+        <div class="info-item"><span class="info-label">Abertura</span>${e.data_abertura||'N/A'}</div>
+    </div>
+    ${tp>0?`<div class="processos-section">
+        <button class="processos-toggle" onclick="toggle(${i})"><span class="seta">▼</span> Ver detalhes dos ${tp} processo${tp>1?'s':''}</button>
+        <div class="processos-list" id="p${i}">
+            ${lp.map(pr=>`<div class="processo-item">
+                <div class="processo-numero">${pr.numero_cnj||'Número não disponível'}</div>
+                <div class="processo-detalhes">
+                    <div class="info-item"><span class="info-label">Classe</span>${pr.classe||'N/A'}</div>
+                    <div class="info-item"><span class="info-label">Tribunal</span>${pr.tribunal||'N/A'}</div>
+                    <div class="info-item full"><span class="info-label">Assunto</span>${pr.assunto||'N/A'}</div>
+                </div>
+            </div>`).join('')}
+        </div>
+    </div>`:''}
+</div>`;
+            }).join('');
+        }
+
+        function toggle(i) {
+            const list = document.getElementById('p'+i);
+            list.classList.toggle('show');
+            const btn = list.previousElementSibling;
+            btn.classList.toggle('aberto');
+        }
+
+        init();
+    </script>
+</body>
+</html>

@@ -1,0 +1,568 @@
+[
+  {
+    "cnpj": "72.161.992/0001-31",
+    "razao_social": "Indústria de Pescaria do Brasil S.A.",
+    "nome_fantasia": "Serviços",
+    "situacao": "ATIVA",
+    "cnae_principal": "2423-7/00",
+    "cnae_buscado": "pescaria",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "São Paulo",
+    "data_abertura": "2011-04-13",
+    "processos": {
+      "total_processos": 9,
+      "tribunais_consultados": [
+        "trt1",
+        "trt9",
+        "tjrn",
+        "tjgo"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "5630919-29.2021.8.26.0416",
+          "classe": "Ação de Indenização",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trf3"
+        },
+        {
+          "numero_cnj": "2912100-27.2023.8.26.0645",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tst"
+        },
+        {
+          "numero_cnj": "3784289-29.2024.8.26.0719",
+          "classe": "Ação de Cobrança",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "tjpr"
+        },
+        {
+          "numero_cnj": "9565770-70.2023.8.26.0996",
+          "classe": "Ação de Indenização",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt21"
+        },
+        {
+          "numero_cnj": "5763854-30.2024.8.26.0619",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "tjac"
+        },
+        {
+          "numero_cnj": "4441017-77.2020.8.26.0718",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "trt12"
+        },
+        {
+          "numero_cnj": "5599725-23.2022.8.26.0867",
+          "classe": "Execução Fiscal",
+          "assunto": "Horas Extras",
+          "tribunal": "trf1"
+        },
+        {
+          "numero_cnj": "8892091-24.2020.8.26.0881",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjsc"
+        },
+        {
+          "numero_cnj": "9882605-13.2021.8.26.0763",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tjes"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:56:06",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "54.997.788/0001-39",
+    "razao_social": "Distribuidora Pescaria Premium LTDA",
+    "nome_fantasia": "Indústria",
+    "situacao": "ATIVA",
+    "cnae_principal": "9484-5/00",
+    "cnae_buscado": "pescaria",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "São Paulo",
+    "data_abertura": "2013-12-21",
+    "processos": {
+      "total_processos": 5,
+      "tribunais_consultados": [
+        "tjrr",
+        "tsm"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "9392788-42.2022.8.26.0591",
+          "classe": "Ação de Cobrança",
+          "assunto": "Dano Material",
+          "tribunal": "trt10"
+        },
+        {
+          "numero_cnj": "4062926-65.2024.8.26.0289",
+          "classe": "Execução Fiscal",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "trt23"
+        },
+        {
+          "numero_cnj": "6959817-15.2022.8.26.0829",
+          "classe": "Execução Fiscal",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "trf4"
+        },
+        {
+          "numero_cnj": "9818435-57.2022.8.26.0124",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trt7"
+        },
+        {
+          "numero_cnj": "2230995-13.2023.8.26.0457",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "FGTS",
+          "tribunal": "trf5"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:56:06",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "75.188.330/0001-74",
+    "razao_social": "Pescaria Express ME",
+    "nome_fantasia": "Distribuidora",
+    "situacao": "ATIVA",
+    "cnae_principal": "9019-3/00",
+    "cnae_buscado": "pescaria",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "São Paulo",
+    "data_abertura": "2013-06-16",
+    "processos": {
+      "total_processos": 5,
+      "tribunais_consultados": [
+        "trt18",
+        "tjpb"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "8160019-60.2020.8.26.0734",
+          "classe": "Rescisão de Contrato",
+          "assunto": "FGTS",
+          "tribunal": "trt18"
+        },
+        {
+          "numero_cnj": "2827828-98.2022.8.26.0346",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "trf2"
+        },
+        {
+          "numero_cnj": "5901938-85.2024.8.26.0704",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Horas Extras",
+          "tribunal": "tjdf"
+        },
+        {
+          "numero_cnj": "1133056-29.2021.8.26.0142",
+          "classe": "Ação de Cobrança",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjdf"
+        },
+        {
+          "numero_cnj": "5933271-84.2021.8.26.0686",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjpb"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:56:06",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "78.431.982/0001-58",
+    "razao_social": "Distribuidora Pescaria do Brasil S.A.",
+    "nome_fantasia": "Indústria",
+    "situacao": "ATIVA",
+    "cnae_principal": "4700-2/00",
+    "cnae_buscado": "pescaria",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "São Paulo",
+    "data_abertura": "2010-01-23",
+    "processos": {
+      "total_processos": 11,
+      "tribunais_consultados": [
+        "trf1",
+        "trt13",
+        "tjmg",
+        "trt24",
+        "trt6"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "3517352-39.2022.8.26.0913",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Horas Extras",
+          "tribunal": "tjpb"
+        },
+        {
+          "numero_cnj": "2726139-61.2024.8.26.0508",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Horas Extras",
+          "tribunal": "tjap"
+        },
+        {
+          "numero_cnj": "4547909-77.2022.8.26.0416",
+          "classe": "Ação de Cobrança",
+          "assunto": "Horas Extras",
+          "tribunal": "tjam"
+        },
+        {
+          "numero_cnj": "2310154-53.2021.8.26.0842",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "FGTS",
+          "tribunal": "tjpb"
+        },
+        {
+          "numero_cnj": "7979391-73.2024.8.26.0775",
+          "classe": "Execução Fiscal",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjes"
+        },
+        {
+          "numero_cnj": "5981349-14.2020.8.26.0434",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Dano Material",
+          "tribunal": "tjse"
+        },
+        {
+          "numero_cnj": "4136931-51.2022.8.26.0942",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt6"
+        },
+        {
+          "numero_cnj": "6600817-43.2021.8.26.0730",
+          "classe": "Ação de Indenização",
+          "assunto": "Horas Extras",
+          "tribunal": "tjrs"
+        },
+        {
+          "numero_cnj": "3474147-95.2020.8.26.0277",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trt23"
+        },
+        {
+          "numero_cnj": "8278512-22.2021.8.26.0869",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Dano Material",
+          "tribunal": "tjce"
+        },
+        {
+          "numero_cnj": "8700189-96.2024.8.26.0831",
+          "classe": "Ação de Cobrança",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjam"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:56:06",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "56.647.418/0001-73",
+    "razao_social": "Pescaria Nacional EIRELI",
+    "nome_fantasia": "Atacado",
+    "situacao": "ATIVA",
+    "cnae_principal": "6167-9/00",
+    "cnae_buscado": "pescaria",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "São Paulo",
+    "data_abertura": "2021-02-16",
+    "processos": {
+      "total_processos": 10,
+      "tribunais_consultados": [
+        "trt10",
+        "trt17",
+        "trt13",
+        "tjam",
+        "trt7"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "8257451-46.2022.8.26.0477",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "trf4"
+        },
+        {
+          "numero_cnj": "4092591-89.2021.8.26.0588",
+          "classe": "Execução Fiscal",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "trt10"
+        },
+        {
+          "numero_cnj": "2569730-98.2024.8.26.0255",
+          "classe": "Ação de Cobrança",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trt1"
+        },
+        {
+          "numero_cnj": "1534091-32.2024.8.26.0768",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "FGTS",
+          "tribunal": "stj"
+        },
+        {
+          "numero_cnj": "4989904-77.2020.8.26.0566",
+          "classe": "Ação de Cobrança",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tjce"
+        },
+        {
+          "numero_cnj": "7258465-31.2022.8.26.0420",
+          "classe": "Ação de Indenização",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjpa"
+        },
+        {
+          "numero_cnj": "9120969-81.2022.8.26.0297",
+          "classe": "Ação de Indenização",
+          "assunto": "Dano Material",
+          "tribunal": "tjba"
+        },
+        {
+          "numero_cnj": "2468851-54.2020.8.26.0670",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trf4"
+        },
+        {
+          "numero_cnj": "8720135-60.2022.8.26.0366",
+          "classe": "Execução Fiscal",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "tjma"
+        },
+        {
+          "numero_cnj": "4356594-67.2022.8.26.0176",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "tjgo"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:56:06",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "24.328.151/0001-52",
+    "razao_social": "Serviços de Pescaria Company S.A.",
+    "nome_fantasia": "Atacado",
+    "situacao": "ATIVA",
+    "cnae_principal": "5828-9/00",
+    "cnae_buscado": "pescaria",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "São Paulo",
+    "data_abertura": "2014-04-24",
+    "processos": {
+      "total_processos": 2,
+      "tribunais_consultados": [
+        "tjpi"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "2875254-85.2023.8.26.0516",
+          "classe": "Rescisão de Contrato",
+          "assunto": "FGTS",
+          "tribunal": "trt17"
+        },
+        {
+          "numero_cnj": "1048590-26.2022.8.26.0186",
+          "classe": "Ação de Indenização",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trf3"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:56:06",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "54.864.387/0001-36",
+    "razao_social": "Distribuidora Pescaria Premium EIRELI",
+    "nome_fantasia": "Serviços",
+    "situacao": "ATIVA",
+    "cnae_principal": "8756-2/00",
+    "cnae_buscado": "pescaria",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "São Paulo",
+    "data_abertura": "2021-05-19",
+    "processos": {
+      "total_processos": 2,
+      "tribunais_consultados": [
+        "tjgo"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "2096653-98.2021.8.26.0863",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Horas Extras",
+          "tribunal": "tjgo"
+        },
+        {
+          "numero_cnj": "6193748-84.2021.8.26.0490",
+          "classe": "Execução Fiscal",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tsm"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:56:06",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "78.957.330/0001-65",
+    "razao_social": "Comércio de Pescaria S.A.",
+    "nome_fantasia": "Comércio",
+    "situacao": "ATIVA",
+    "cnae_principal": "7773-4/00",
+    "cnae_buscado": "pescaria",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "São Paulo",
+    "data_abertura": "2015-03-24",
+    "processos": {
+      "total_processos": 4,
+      "tribunais_consultados": [
+        "trt8",
+        "trf6"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "3504687-64.2023.8.26.0321",
+          "classe": "Execução Fiscal",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tst"
+        },
+        {
+          "numero_cnj": "5766826-56.2024.8.26.0698",
+          "classe": "Execução Fiscal",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjal"
+        },
+        {
+          "numero_cnj": "5174333-89.2024.8.26.0714",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "trt11"
+        },
+        {
+          "numero_cnj": "5382528-43.2023.8.26.0655",
+          "classe": "Ação de Indenização",
+          "assunto": "Horas Extras",
+          "tribunal": "trt21"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:56:06",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "45.110.409/0001-35",
+    "razao_social": "Pescaria Express S.A.",
+    "nome_fantasia": "Pescaria",
+    "situacao": "ATIVA",
+    "cnae_principal": "6358-3/00",
+    "cnae_buscado": "pescaria",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "São Paulo",
+    "data_abertura": "2019-11-11",
+    "processos": {
+      "total_processos": 9,
+      "tribunais_consultados": [
+        "tsm",
+        "tjms",
+        "tjrj",
+        "trt17"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "4139334-78.2022.8.26.0192",
+          "classe": "Ação de Indenização",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt16"
+        },
+        {
+          "numero_cnj": "5216182-79.2022.8.26.0203",
+          "classe": "Ação de Cobrança",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjrj"
+        },
+        {
+          "numero_cnj": "1960021-68.2023.8.26.0338",
+          "classe": "Ação de Cobrança",
+          "assunto": "Dano Material",
+          "tribunal": "tjsp"
+        },
+        {
+          "numero_cnj": "1717921-13.2024.8.26.0476",
+          "classe": "Ação de Indenização",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "trt11"
+        },
+        {
+          "numero_cnj": "7433758-82.2023.8.26.0872",
+          "classe": "Rescisão de Contrato",
+          "assunto": "FGTS",
+          "tribunal": "tjal"
+        },
+        {
+          "numero_cnj": "6913291-94.2024.8.26.0949",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjsp"
+        },
+        {
+          "numero_cnj": "8625389-57.2022.8.26.0319",
+          "classe": "Ação de Indenização",
+          "assunto": "Dano Material",
+          "tribunal": "trt14"
+        },
+        {
+          "numero_cnj": "5978555-44.2021.8.26.0620",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Dano Material",
+          "tribunal": "tse"
+        },
+        {
+          "numero_cnj": "7308617-10.2022.8.26.0825",
+          "classe": "Ação de Cobrança",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tjgo"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:56:06",
+    "modo": "DEMONSTRAÇÃO"
+  }
+]

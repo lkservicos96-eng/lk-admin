@@ -1,0 +1,146 @@
+[
+  {
+    "cnpj": "46.307.343/0001-32",
+    "razao_social": "CONSULTORIA EMPRESARIAL XYZ",
+    "nome_fantasia": "CONSULTORIA",
+    "situacao": "ATIVA",
+    "cnae_principal": "4711-3/02",
+    "cnae_buscado": "4711-3/02",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Campinas",
+    "data_abertura": "2017-04-27",
+    "processos": {
+      "total_processos": 0,
+      "tribunais_consultados": [],
+      "processos": []
+    },
+    "tem_processos": false,
+    "data_consulta": "2026-11-08 01:23:16",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "65.533.111/0001-61",
+    "razao_social": "CONSULTORIA EMPRESARIAL XYZ",
+    "nome_fantasia": "SERVICOS",
+    "situacao": "ATIVA",
+    "cnae_principal": "4711-3/02",
+    "cnae_buscado": "4711-3/02",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Campinas",
+    "data_abertura": "2020-12-25",
+    "processos": {
+      "total_processos": 2,
+      "tribunais_consultados": [
+        "tjsp",
+        "trt2"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "5586267-52.2024.8.26.0100",
+          "classe": "Procedimento Comum",
+          "assunto": "Cobrança",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "1212977-35.2024.8.26.0100",
+          "classe": "Procedimento Comum",
+          "assunto": "Rescisão de Contrato",
+          "tribunal": "TJSP"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:23:16",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "71.217.721/0001-39",
+    "razao_social": "INDUSTRIA ALIMENTOS LTDA",
+    "nome_fantasia": "INDUSTRIA",
+    "situacao": "ATIVA",
+    "cnae_principal": "4711-3/02",
+    "cnae_buscado": "4711-3/02",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Campinas",
+    "data_abertura": "2016-03-28",
+    "processos": {
+      "total_processos": 0,
+      "tribunais_consultados": [],
+      "processos": []
+    },
+    "tem_processos": false,
+    "data_consulta": "2026-11-08 01:23:16",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "30.289.503/0001-78",
+    "razao_social": "CONSULTORIA EMPRESARIAL XYZ",
+    "nome_fantasia": "TECH",
+    "situacao": "ATIVA",
+    "cnae_principal": "4711-3/02",
+    "cnae_buscado": "4711-3/02",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Campinas",
+    "data_abertura": "2020-06-16",
+    "processos": {
+      "total_processos": 4,
+      "tribunais_consultados": [
+        "tjsp",
+        "trt2"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "1617980-98.2024.8.26.0100",
+          "classe": "Procedimento Comum",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "2955354-20.2024.8.26.0100",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TRT-2"
+        },
+        {
+          "numero_cnj": "5608227-16.2024.8.26.0100",
+          "classe": "Procedimento Comum",
+          "assunto": "Rescisão de Contrato",
+          "tribunal": "TRT-2"
+        },
+        {
+          "numero_cnj": "9600035-85.2024.8.26.0100",
+          "classe": "Procedimento Comum",
+          "assunto": "Cobrança",
+          "tribunal": "TRT-2"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:23:16",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "51.488.826/0001-33",
+    "razao_social": "INDUSTRIA ALIMENTOS LTDA",
+    "nome_fantasia": "CONSTRUTORA",
+    "situacao": "ATIVA",
+    "cnae_principal": "4711-3/02",
+    "cnae_buscado": "4711-3/02",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Santos",
+    "data_abertura": "2018-06-22",
+    "processos": {
+      "total_processos": 0,
+      "tribunais_consultados": [],
+      "processos": []
+    },
+    "tem_processos": false,
+    "data_consulta": "2026-11-08 01:23:16",
+    "modo": "DEMONSTRAÇÃO"
+  }
+]

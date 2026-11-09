@@ -1,0 +1,146 @@
+[
+  {
+    "cnpj": "28.710.271/0001-91",
+    "razao_social": "RESTAURANTE BOM SABOR LTDA",
+    "nome_fantasia": "CONSTRUTORA",
+    "situacao": "ATIVA",
+    "cnae_principal": "5611-2/01",
+    "cnae_buscado": "5611-2/01",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Ribeirão Preto",
+    "data_abertura": "2011-11-03",
+    "processos": {
+      "total_processos": 5,
+      "tribunais_consultados": [
+        "tjsp",
+        "trt2"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "9495997-18.2024.8.26.0100",
+          "classe": "Procedimento Comum",
+          "assunto": "Cobrança",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "9406210-32.2024.8.26.0100",
+          "classe": "Procedimento Comum",
+          "assunto": "Rescisão de Contrato",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "3725827-94.2024.8.26.0100",
+          "classe": "Procedimento Comum",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TRT-2"
+        },
+        {
+          "numero_cnj": "5198875-50.2024.8.26.0100",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TRT-2"
+        },
+        {
+          "numero_cnj": "5950016-27.2024.8.26.0100",
+          "classe": "Procedimento Comum",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TRT-2"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:35:07",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "32.355.235/0001-56",
+    "razao_social": "ENGENHARIA OBRAS S.A.",
+    "nome_fantasia": "RESTAURANTE",
+    "situacao": "ATIVA",
+    "cnae_principal": "5611-2/01",
+    "cnae_buscado": "5611-2/01",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Ribeirão Preto",
+    "data_abertura": "2011-03-07",
+    "processos": {
+      "total_processos": 2,
+      "tribunais_consultados": [
+        "tjsp",
+        "trt2"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "7595374-21.2024.8.26.0100",
+          "classe": "Procedimento Comum",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TRT-2"
+        },
+        {
+          "numero_cnj": "9146329-59.2024.8.26.0100",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Rescisão de Contrato",
+          "tribunal": "TJSP"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:35:07",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "84.232.700/0001-88",
+    "razao_social": "ENGENHARIA OBRAS S.A.",
+    "nome_fantasia": "SERVICOS",
+    "situacao": "ATIVA",
+    "cnae_principal": "5611-2/01",
+    "cnae_buscado": "5611-2/01",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "São Paulo",
+    "data_abertura": "2017-07-19",
+    "processos": {
+      "total_processos": 5,
+      "tribunais_consultados": [
+        "tjsp",
+        "trt2"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "3603450-43.2024.8.26.0100",
+          "classe": "Procedimento Comum",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TRT-2"
+        },
+        {
+          "numero_cnj": "4107019-55.2024.8.26.0100",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Cobrança",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "3020554-76.2024.8.26.0100",
+          "classe": "Procedimento Comum",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "7066880-90.2024.8.26.0100",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TRT-2"
+        },
+        {
+          "numero_cnj": "9149007-62.2024.8.26.0100",
+          "classe": "Procedimento Comum",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TRT-2"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:35:07",
+    "modo": "DEMONSTRAÇÃO"
+  }
+]

@@ -1,0 +1,789 @@
+[
+  {
+    "cnpj": "66.949.683/0001-64",
+    "razao_social": "LABORATORIO CLINICO LTDA",
+    "nome_fantasia": "LABORATORIO",
+    "situacao": "ATIVA",
+    "cnae_principal": "8256-1/00",
+    "cnae_buscado": "pesca",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2011-12-24",
+    "processos": {
+      "total_processos": 8,
+      "tribunais_consultados": [
+        "trt17",
+        "tjes",
+        "trt15",
+        "trt7"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "4091577-44.2020.8.26.0926",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trt15"
+        },
+        {
+          "numero_cnj": "1418170-67.2020.8.26.0961",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "trf2"
+        },
+        {
+          "numero_cnj": "2418590-30.2024.8.26.0786",
+          "classe": "Execução Fiscal",
+          "assunto": "FGTS",
+          "tribunal": "tjms"
+        },
+        {
+          "numero_cnj": "5661293-50.2024.8.26.0995",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjto"
+        },
+        {
+          "numero_cnj": "8601969-72.2024.8.26.0173",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Dano Material",
+          "tribunal": "trt18"
+        },
+        {
+          "numero_cnj": "4559358-71.2024.8.26.0743",
+          "classe": "Ação de Indenização",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjac"
+        },
+        {
+          "numero_cnj": "9554860-22.2022.8.26.0274",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "trt16"
+        },
+        {
+          "numero_cnj": "3363600-15.2021.8.26.0818",
+          "classe": "Ação de Cobrança",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trt1"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:23",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "16.641.996/0001-14",
+    "razao_social": "RESTAURANTE BOM SABOR LTDA",
+    "nome_fantasia": "CLINICA",
+    "situacao": "ATIVA",
+    "cnae_principal": "9954-3/00",
+    "cnae_buscado": "pesca",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2020-05-23",
+    "processos": {
+      "total_processos": 7,
+      "tribunais_consultados": [
+        "tjrn",
+        "trt17",
+        "trf4"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "7325758-82.2023.8.26.0816",
+          "classe": "Ação de Cobrança",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tjsp"
+        },
+        {
+          "numero_cnj": "6619521-75.2024.8.26.0286",
+          "classe": "Ação de Cobrança",
+          "assunto": "Horas Extras",
+          "tribunal": "tjro"
+        },
+        {
+          "numero_cnj": "7980793-18.2020.8.26.0614",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjto"
+        },
+        {
+          "numero_cnj": "2711248-34.2021.8.26.0363",
+          "classe": "Execução Fiscal",
+          "assunto": "FGTS",
+          "tribunal": "trt18"
+        },
+        {
+          "numero_cnj": "7477784-21.2022.8.26.0583",
+          "classe": "Execução Fiscal",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tjsc"
+        },
+        {
+          "numero_cnj": "2600498-54.2023.8.26.0783",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "trt15"
+        },
+        {
+          "numero_cnj": "9411464-37.2023.8.26.0311",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tjma"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:23",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "96.492.172/0001-24",
+    "razao_social": "OBRAS E REFORMAS ME",
+    "nome_fantasia": "EDIFICAÇÕES",
+    "situacao": "ATIVA",
+    "cnae_principal": "1904-2/00",
+    "cnae_buscado": "pesca",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2011-04-07",
+    "processos": {
+      "total_processos": 11,
+      "tribunais_consultados": [
+        "trf6",
+        "trt5",
+        "trt24",
+        "tjpe",
+        "tjpi"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "9805028-37.2021.8.26.0751",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt8"
+        },
+        {
+          "numero_cnj": "2029159-89.2020.8.26.0153",
+          "classe": "Ação de Cobrança",
+          "assunto": "Horas Extras",
+          "tribunal": "tjmg"
+        },
+        {
+          "numero_cnj": "9154312-61.2020.8.26.0415",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tjms"
+        },
+        {
+          "numero_cnj": "9265150-69.2022.8.26.0666",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "tst"
+        },
+        {
+          "numero_cnj": "1472255-69.2022.8.26.0985",
+          "classe": "Ação de Cobrança",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "trt23"
+        },
+        {
+          "numero_cnj": "3380872-83.2023.8.26.0728",
+          "classe": "Execução Fiscal",
+          "assunto": "Horas Extras",
+          "tribunal": "trt21"
+        },
+        {
+          "numero_cnj": "9831119-32.2024.8.26.0253",
+          "classe": "Ação de Indenização",
+          "assunto": "Dano Material",
+          "tribunal": "trt21"
+        },
+        {
+          "numero_cnj": "4819844-69.2021.8.26.0175",
+          "classe": "Ação de Indenização",
+          "assunto": "Dano Material",
+          "tribunal": "trt18"
+        },
+        {
+          "numero_cnj": "6384146-52.2023.8.26.0986",
+          "classe": "Ação de Cobrança",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt10"
+        },
+        {
+          "numero_cnj": "1093853-72.2020.8.26.0781",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Dano Material",
+          "tribunal": "tjrj"
+        },
+        {
+          "numero_cnj": "9219280-17.2020.8.26.0607",
+          "classe": "Execução Fiscal",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "trf2"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:23",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "24.481.973/0001-96",
+    "razao_social": "ENGENHARIA CIVIL ME",
+    "nome_fantasia": "CONSTRUTORA",
+    "situacao": "ATIVA",
+    "cnae_principal": "9061-8/00",
+    "cnae_buscado": "pesca",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2013-02-15",
+    "processos": {
+      "total_processos": 8,
+      "tribunais_consultados": [
+        "tjmg",
+        "trt24",
+        "trf6",
+        "tjpe"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "5870962-96.2023.8.26.0179",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Horas Extras",
+          "tribunal": "trf5"
+        },
+        {
+          "numero_cnj": "2112470-78.2022.8.26.0336",
+          "classe": "Ação de Indenização",
+          "assunto": "Dano Material",
+          "tribunal": "trt13"
+        },
+        {
+          "numero_cnj": "1829821-92.2023.8.26.0998",
+          "classe": "Ação de Indenização",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjpi"
+        },
+        {
+          "numero_cnj": "2675102-55.2020.8.26.0460",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trt18"
+        },
+        {
+          "numero_cnj": "4850674-91.2022.8.26.0825",
+          "classe": "Ação de Indenização",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "stf"
+        },
+        {
+          "numero_cnj": "3710019-26.2024.8.26.0680",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Horas Extras",
+          "tribunal": "trt15"
+        },
+        {
+          "numero_cnj": "8819854-11.2020.8.26.0761",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tjdf"
+        },
+        {
+          "numero_cnj": "7633684-88.2022.8.26.0889",
+          "classe": "Ação de Cobrança",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tjgo"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:23",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "97.486.897/0001-81",
+    "razao_social": "SABORES DA CASA LTDA",
+    "nome_fantasia": "LOJA",
+    "situacao": "ATIVA",
+    "cnae_principal": "5075-3/00",
+    "cnae_buscado": "pesca",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2013-01-26",
+    "processos": {
+      "total_processos": 8,
+      "tribunais_consultados": [
+        "trf4",
+        "trf3",
+        "tjrr",
+        "tjma"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "6634890-80.2024.8.26.0877",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "trf1"
+        },
+        {
+          "numero_cnj": "1518567-19.2024.8.26.0642",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Horas Extras",
+          "tribunal": "trt20"
+        },
+        {
+          "numero_cnj": "7448012-77.2022.8.26.0609",
+          "classe": "Ação de Cobrança",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjpi"
+        },
+        {
+          "numero_cnj": "8937258-15.2021.8.26.0541",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "trt14"
+        },
+        {
+          "numero_cnj": "8986698-66.2024.8.26.0590",
+          "classe": "Ação de Cobrança",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjap"
+        },
+        {
+          "numero_cnj": "7076312-84.2022.8.26.0368",
+          "classe": "Execução Fiscal",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "trt20"
+        },
+        {
+          "numero_cnj": "2406216-63.2022.8.26.0295",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Horas Extras",
+          "tribunal": "trt7"
+        },
+        {
+          "numero_cnj": "2454075-34.2020.8.26.0382",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "trt4"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:23",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "70.175.914/0001-49",
+    "razao_social": "LABORATORIO CLINICO ME",
+    "nome_fantasia": "CLOUD",
+    "situacao": "ATIVA",
+    "cnae_principal": "8585-7/00",
+    "cnae_buscado": "pesca",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2012-09-01",
+    "processos": {
+      "total_processos": 1,
+      "tribunais_consultados": [
+        "tjgo"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "2640211-57.2023.8.26.0707",
+          "classe": "Ação de Indenização",
+          "assunto": "Horas Extras",
+          "tribunal": "trf6"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:23",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "33.230.987/0001-32",
+    "razao_social": "RESTAURANTE BOM SABOR ME",
+    "nome_fantasia": "DIGITAL",
+    "situacao": "ATIVA",
+    "cnae_principal": "3446-6/00",
+    "cnae_buscado": "pesca",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2023-08-15",
+    "processos": {
+      "total_processos": 10,
+      "tribunais_consultados": [
+        "tjba",
+        "tjrj",
+        "tjsp",
+        "stj",
+        "trt2"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "3820786-83.2021.8.26.0535",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt13"
+        },
+        {
+          "numero_cnj": "1960543-97.2024.8.26.0312",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjto"
+        },
+        {
+          "numero_cnj": "2021793-31.2023.8.26.0290",
+          "classe": "Ação de Indenização",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trf4"
+        },
+        {
+          "numero_cnj": "7852976-68.2021.8.26.0443",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trt3"
+        },
+        {
+          "numero_cnj": "8782527-91.2024.8.26.0485",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjpe"
+        },
+        {
+          "numero_cnj": "9394385-36.2022.8.26.0366",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjgo"
+        },
+        {
+          "numero_cnj": "5918512-77.2023.8.26.0990",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "trt6"
+        },
+        {
+          "numero_cnj": "1964125-67.2022.8.26.0463",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "tjro"
+        },
+        {
+          "numero_cnj": "6683359-43.2024.8.26.0857",
+          "classe": "Ação de Indenização",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "tjmt"
+        },
+        {
+          "numero_cnj": "4128553-88.2024.8.26.0868",
+          "classe": "Ação de Cobrança",
+          "assunto": "FGTS",
+          "tribunal": "trt23"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:23",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "62.433.895/0001-26",
+    "razao_social": "LOJA DE VARIEDADES ME",
+    "nome_fantasia": "CULINÁRIA",
+    "situacao": "ATIVA",
+    "cnae_principal": "4534-4/00",
+    "cnae_buscado": "pesca",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2017-03-25",
+    "processos": {
+      "total_processos": 4,
+      "tribunais_consultados": [
+        "trt10",
+        "tjms"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "1127954-61.2023.8.26.0643",
+          "classe": "Ação de Cobrança",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjse"
+        },
+        {
+          "numero_cnj": "9040081-23.2021.8.26.0265",
+          "classe": "Ação de Cobrança",
+          "assunto": "Horas Extras",
+          "tribunal": "trt9"
+        },
+        {
+          "numero_cnj": "7459997-57.2021.8.26.0995",
+          "classe": "Ação de Cobrança",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt13"
+        },
+        {
+          "numero_cnj": "7206274-70.2024.8.26.0110",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "tjmg"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:23",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "60.478.291/0001-59",
+    "razao_social": "RESTAURANTE BOM SABOR ME",
+    "nome_fantasia": "GASTRONOMIA",
+    "situacao": "ATIVA",
+    "cnae_principal": "9196-6/00",
+    "cnae_buscado": "pesca",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2020-06-19",
+    "processos": {
+      "total_processos": 8,
+      "tribunais_consultados": [
+        "tjrn",
+        "trt17",
+        "trt23",
+        "trf4"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "8614735-15.2022.8.26.0405",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "FGTS",
+          "tribunal": "trf1"
+        },
+        {
+          "numero_cnj": "8184971-17.2022.8.26.0573",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "FGTS",
+          "tribunal": "trf6"
+        },
+        {
+          "numero_cnj": "8827188-99.2020.8.26.0282",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Horas Extras",
+          "tribunal": "tjpr"
+        },
+        {
+          "numero_cnj": "7799308-26.2023.8.26.0897",
+          "classe": "Ação de Indenização",
+          "assunto": "Dano Material",
+          "tribunal": "tjsc"
+        },
+        {
+          "numero_cnj": "3706359-24.2023.8.26.0809",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Horas Extras",
+          "tribunal": "trt15"
+        },
+        {
+          "numero_cnj": "2408436-74.2020.8.26.0415",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Horas Extras",
+          "tribunal": "trt14"
+        },
+        {
+          "numero_cnj": "9163990-72.2020.8.26.0680",
+          "classe": "Rescisão de Contrato",
+          "assunto": "FGTS",
+          "tribunal": "tjto"
+        },
+        {
+          "numero_cnj": "8807421-90.2020.8.26.0822",
+          "classe": "Ação de Indenização",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tjmg"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:23",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "49.852.136/0001-63",
+    "razao_social": "CENTRO MEDICO ME",
+    "nome_fantasia": "INOVAÇÃO",
+    "situacao": "ATIVA",
+    "cnae_principal": "8575-1/00",
+    "cnae_buscado": "pesca",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2010-05-10",
+    "processos": {
+      "total_processos": 10,
+      "tribunais_consultados": [
+        "tjto",
+        "trt8",
+        "tst",
+        "trf6",
+        "trf1"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "2616741-37.2021.8.26.0921",
+          "classe": "Ação de Indenização",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt14"
+        },
+        {
+          "numero_cnj": "5633676-83.2024.8.26.0956",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Horas Extras",
+          "tribunal": "trt16"
+        },
+        {
+          "numero_cnj": "4115181-64.2022.8.26.0759",
+          "classe": "Ação de Indenização",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "trt16"
+        },
+        {
+          "numero_cnj": "8625432-29.2021.8.26.0136",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "trt11"
+        },
+        {
+          "numero_cnj": "6994966-45.2021.8.26.0236",
+          "classe": "Ação de Cobrança",
+          "assunto": "Dano Material",
+          "tribunal": "stj"
+        },
+        {
+          "numero_cnj": "7342103-16.2021.8.26.0233",
+          "classe": "Execução Fiscal",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjsc"
+        },
+        {
+          "numero_cnj": "8792164-24.2023.8.26.0629",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "stf"
+        },
+        {
+          "numero_cnj": "1711763-28.2023.8.26.0746",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "FGTS",
+          "tribunal": "tjpe"
+        },
+        {
+          "numero_cnj": "3080479-35.2024.8.26.0703",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tjac"
+        },
+        {
+          "numero_cnj": "6646568-58.2020.8.26.0293",
+          "classe": "Execução Fiscal",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "trt10"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:23",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "92.624.961/0001-98",
+    "razao_social": "LOJA DE VARIEDADES LTDA",
+    "nome_fantasia": "CULINÁRIA",
+    "situacao": "ATIVA",
+    "cnae_principal": "7296-9/00",
+    "cnae_buscado": "pesca",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Hortolândia",
+    "data_abertura": "2023-03-11",
+    "processos": {
+      "total_processos": 9,
+      "tribunais_consultados": [
+        "trt4",
+        "trt5",
+        "tjce",
+        "trt19"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "9612865-45.2023.8.26.0606",
+          "classe": "Execução Fiscal",
+          "assunto": "FGTS",
+          "tribunal": "tjpi"
+        },
+        {
+          "numero_cnj": "5660945-47.2022.8.26.0364",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "FGTS",
+          "tribunal": "tjpr"
+        },
+        {
+          "numero_cnj": "4307793-59.2023.8.26.0800",
+          "classe": "Ação de Indenização",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "tjsp"
+        },
+        {
+          "numero_cnj": "9564408-36.2022.8.26.0815",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Dano Material",
+          "tribunal": "trt3"
+        },
+        {
+          "numero_cnj": "5382146-12.2023.8.26.0566",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Horas Extras",
+          "tribunal": "trt19"
+        },
+        {
+          "numero_cnj": "4256671-65.2024.8.26.0667",
+          "classe": "Execução Fiscal",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tse"
+        },
+        {
+          "numero_cnj": "4435685-59.2022.8.26.0120",
+          "classe": "Ação de Indenização",
+          "assunto": "Dano Material",
+          "tribunal": "stj"
+        },
+        {
+          "numero_cnj": "7196283-33.2021.8.26.0169",
+          "classe": "Ação de Indenização",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "tjal"
+        },
+        {
+          "numero_cnj": "2063008-85.2022.8.26.0219",
+          "classe": "Ação de Cobrança",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "trt4"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:53:23",
+    "modo": "DEMONSTRAÇÃO"
+  }
+]

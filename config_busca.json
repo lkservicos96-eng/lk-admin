@@ -1,0 +1,42 @@
+{
+  "descricao": "Configuração para busca automática de empresas com processos",
+  "busca": {
+    "cnaes": [
+      {
+        "codigo": "6201-5/00",
+        "descricao": "Desenvolvimento de programas de computador sob encomenda",
+        "comentario": "Exemplo - você pode adicionar outros CNAEs aqui"
+      },
+      {
+        "codigo": "4711-3/02",
+        "descricao": "Comércio varejista de mercadorias em geral",
+        "comentario": "Adicione os CNAEs que você quer buscar"
+      }
+    ],
+    "estados": [
+      "SP",
+      "RJ",
+      "MG",
+      "RS",
+      "PR"
+    ],
+    "filtros": {
+      "apenas_com_processos": true,
+      "buscar_processos_trabalhistas": true,
+      "buscar_processos_civeis": true,
+      "porte_empresa": ["ME", "EPP"],
+      "situacao_cadastral": ["ATIVA"]
+    }
+  },
+  "agendamento": {
+    "horario": "09:00",
+    "dias_da_semana": [1, 2, 3, 4, 5],
+    "comentario": "Segunda a sexta às 9h"
+  },
+  "notificacao": {
+    "enviar_email": false,
+    "email_destino": "seu@email.com",
+    "salvar_arquivo": true,
+    "pasta_saida": "./resultados/"
+  }
+}

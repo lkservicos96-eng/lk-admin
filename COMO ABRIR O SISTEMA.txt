@@ -1,0 +1,6 @@
+Para abrir o sistema:
+1. De dois cliques no arquivo "INICIAR LK ADMIN.bat" (na pasta do projeto).
+2. O navegador vai abrir sozinho em http://localhost:5000
+3. Nao feche a janela preta enquanto estiver usando o sistema. Para encerrar, feche a janela ou aperte CTRL+C.
+
+Se nao abrir, leia a mensagem da janela preta e me envie um print / copie o texto aqui.

@@ -1,0 +1,1021 @@
+[
+  {
+    "cnpj": "20.370.744/0001-74",
+    "razao_social": "CULINÁRIA EXPRESS LTDA",
+    "nome_fantasia": "GASTRONOMIA",
+    "situacao": "ATIVA",
+    "cnae_principal": "2886-9/00",
+    "cnae_buscado": "restaurante",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Campinas",
+    "data_abertura": "2010-05-05",
+    "processos": {
+      "total_processos": 10,
+      "tribunais_consultados": [
+        "TJRJ",
+        "TRF-3",
+        "TRT-2"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "8982230-78.2023.8.26.0590",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "TJRJ"
+        },
+        {
+          "numero_cnj": "3181967-94.2021.8.26.0842",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TJRJ"
+        },
+        {
+          "numero_cnj": "5297831-68.2024.8.26.0267",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "FGTS",
+          "tribunal": "TJRJ"
+        },
+        {
+          "numero_cnj": "7573241-17.2021.8.26.0984",
+          "classe": "Ação de Indenização",
+          "assunto": "Horas Extras",
+          "tribunal": "TRT-1"
+        },
+        {
+          "numero_cnj": "4736693-42.2024.8.26.0706",
+          "classe": "Ação de Indenização",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "TJRJ"
+        },
+        {
+          "numero_cnj": "6545091-30.2024.8.26.0173",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Horas Extras",
+          "tribunal": "TJRJ"
+        },
+        {
+          "numero_cnj": "2645765-31.2023.8.26.0162",
+          "classe": "Ação de Cobrança",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "TJMG"
+        },
+        {
+          "numero_cnj": "1950620-48.2022.8.26.0333",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "4083588-22.2020.8.26.0242",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "TJRJ"
+        },
+        {
+          "numero_cnj": "1047850-13.2022.8.26.0862",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TRT-1"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:38:53",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "51.748.515/0001-83",
+    "razao_social": "FOOD COMPANY S.A.",
+    "nome_fantasia": "GASTRONOMIA",
+    "situacao": "ATIVA",
+    "cnae_principal": "8385-2/00",
+    "cnae_buscado": "restaurante",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Santos",
+    "data_abertura": "2015-12-04",
+    "processos": {
+      "total_processos": 4,
+      "tribunais_consultados": [
+        "TJRJ"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "1826701-25.2020.8.26.0287",
+          "classe": "Ação de Cobrança",
+          "assunto": "Horas Extras",
+          "tribunal": "TJRJ"
+        },
+        {
+          "numero_cnj": "9692834-72.2022.8.26.0368",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "2986809-64.2022.8.26.0529",
+          "classe": "Ação de Cobrança",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "9086269-56.2022.8.26.0364",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "TJRJ"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:38:53",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "48.348.459/0001-31",
+    "razao_social": "SABORES DA CASA EIRELI",
+    "nome_fantasia": "RESTAURANTE",
+    "situacao": "ATIVA",
+    "cnae_principal": "7003-9/00",
+    "cnae_buscado": "restaurante",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "São Paulo",
+    "data_abertura": "2011-11-27",
+    "processos": {
+      "total_processos": 11,
+      "tribunais_consultados": [
+        "TJRJ",
+        "TJMG",
+        "TJSP"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "9027155-98.2020.8.26.0450",
+          "classe": "Execução Fiscal",
+          "assunto": "FGTS",
+          "tribunal": "TRT-2"
+        },
+        {
+          "numero_cnj": "1122990-74.2023.8.26.0967",
+          "classe": "Ação de Indenização",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "9885946-51.2022.8.26.0797",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TRF-3"
+        },
+        {
+          "numero_cnj": "8854514-95.2023.8.26.0114",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "TRT-1"
+        },
+        {
+          "numero_cnj": "8742118-78.2020.8.26.0670",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "FGTS",
+          "tribunal": "TJMG"
+        },
+        {
+          "numero_cnj": "8339385-71.2021.8.26.0576",
+          "classe": "Ação de Indenização",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "TRT-1"
+        },
+        {
+          "numero_cnj": "6207400-50.2021.8.26.0157",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "TRT-2"
+        },
+        {
+          "numero_cnj": "5751072-88.2022.8.26.0256",
+          "classe": "Execução Fiscal",
+          "assunto": "Dano Material",
+          "tribunal": "TRT-1"
+        },
+        {
+          "numero_cnj": "9904692-98.2022.8.26.0190",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "TJMG"
+        },
+        {
+          "numero_cnj": "2815550-27.2023.8.26.0605",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "FGTS",
+          "tribunal": "TRT-1"
+        },
+        {
+          "numero_cnj": "5575972-87.2022.8.26.0466",
+          "classe": "Execução Fiscal",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "TJRJ"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:38:53",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "17.682.595/0001-62",
+    "razao_social": "RESTAURANTE BOM SABOR ME",
+    "nome_fantasia": "CULINÁRIA",
+    "situacao": "ATIVA",
+    "cnae_principal": "1172-4/00",
+    "cnae_buscado": "restaurante",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Sorocaba",
+    "data_abertura": "2018-07-15",
+    "processos": {
+      "total_processos": 9,
+      "tribunais_consultados": [
+        "TRT-1",
+        "TJMG",
+        "TJRJ"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "9521552-26.2021.8.26.0656",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "9485639-80.2024.8.26.0366",
+          "classe": "Ação de Indenização",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "8792125-26.2022.8.26.0396",
+          "classe": "Execução Fiscal",
+          "assunto": "FGTS",
+          "tribunal": "TRT-2"
+        },
+        {
+          "numero_cnj": "2175009-72.2023.8.26.0893",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Dano Material",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "9575738-64.2021.8.26.0579",
+          "classe": "Execução Fiscal",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "TJMG"
+        },
+        {
+          "numero_cnj": "3050041-61.2024.8.26.0553",
+          "classe": "Execução Fiscal",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "5110010-92.2022.8.26.0397",
+          "classe": "Ação de Indenização",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "TRF-3"
+        },
+        {
+          "numero_cnj": "4579768-79.2023.8.26.0934",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "TRF-3"
+        },
+        {
+          "numero_cnj": "8958682-26.2020.8.26.0410",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Horas Extras",
+          "tribunal": "TRT-2"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:38:53",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "20.388.610/0001-31",
+    "razao_social": "FOOD COMPANY EIRELI",
+    "nome_fantasia": "RESTAURANTE",
+    "situacao": "ATIVA",
+    "cnae_principal": "6429-2/00",
+    "cnae_buscado": "restaurante",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "São José dos Campos",
+    "data_abertura": "2018-06-14",
+    "processos": {
+      "total_processos": 3,
+      "tribunais_consultados": [
+        "TJRJ"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "8893707-41.2022.8.26.0787",
+          "classe": "Ação de Indenização",
+          "assunto": "Dano Material",
+          "tribunal": "TRT-1"
+        },
+        {
+          "numero_cnj": "1020133-87.2022.8.26.0967",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "TRT-1"
+        },
+        {
+          "numero_cnj": "8534117-21.2020.8.26.0875",
+          "classe": "Ação de Cobrança",
+          "assunto": "Dano Material",
+          "tribunal": "TJSP"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:38:53",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "24.677.765/0001-32",
+    "razao_social": "CULINÁRIA EXPRESS S.A.",
+    "nome_fantasia": "GASTRONOMIA",
+    "situacao": "ATIVA",
+    "cnae_principal": "5745-2/00",
+    "cnae_buscado": "restaurante",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "São José dos Campos",
+    "data_abertura": "2022-05-07",
+    "processos": {
+      "total_processos": 7,
+      "tribunais_consultados": [
+        "TJSP",
+        "TJMG"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "4312898-25.2020.8.26.0626",
+          "classe": "Ação de Cobrança",
+          "assunto": "Dano Material",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "3867451-43.2022.8.26.0754",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Horas Extras",
+          "tribunal": "TRT-2"
+        },
+        {
+          "numero_cnj": "5481748-46.2021.8.26.0467",
+          "classe": "Execução Fiscal",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "TRT-1"
+        },
+        {
+          "numero_cnj": "9060550-19.2021.8.26.0417",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "TJRJ"
+        },
+        {
+          "numero_cnj": "9131713-62.2024.8.26.0821",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "TRF-3"
+        },
+        {
+          "numero_cnj": "3488766-64.2024.8.26.0569",
+          "classe": "Execução Fiscal",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TJRJ"
+        },
+        {
+          "numero_cnj": "6261651-96.2022.8.26.0701",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TJMG"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:38:53",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "20.763.778/0001-74",
+    "razao_social": "RESTAURANTE BOM SABOR LTDA",
+    "nome_fantasia": "FOOD",
+    "situacao": "ATIVA",
+    "cnae_principal": "5678-4/00",
+    "cnae_buscado": "restaurante",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "São Paulo",
+    "data_abertura": "2012-03-24",
+    "processos": {
+      "total_processos": 12,
+      "tribunais_consultados": [
+        "TRF-3",
+        "TJMG",
+        "TJSP"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "3872794-44.2023.8.26.0872",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Horas Extras",
+          "tribunal": "TRF-3"
+        },
+        {
+          "numero_cnj": "3226040-48.2022.8.26.0343",
+          "classe": "Ação de Cobrança",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "TRT-1"
+        },
+        {
+          "numero_cnj": "3019487-94.2023.8.26.0408",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TRT-1"
+        },
+        {
+          "numero_cnj": "2051091-49.2024.8.26.0923",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Dano Material",
+          "tribunal": "TRT-1"
+        },
+        {
+          "numero_cnj": "4569204-99.2020.8.26.0933",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "TRT-1"
+        },
+        {
+          "numero_cnj": "6459277-44.2021.8.26.0783",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TJRJ"
+        },
+        {
+          "numero_cnj": "3021395-50.2023.8.26.0391",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "TJMG"
+        },
+        {
+          "numero_cnj": "4655725-48.2021.8.26.0163",
+          "classe": "Ação de Cobrança",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "TJMG"
+        },
+        {
+          "numero_cnj": "2632534-79.2020.8.26.0657",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "TRT-2"
+        },
+        {
+          "numero_cnj": "4342947-45.2020.8.26.0238",
+          "classe": "Execução Fiscal",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "TJMG"
+        },
+        {
+          "numero_cnj": "7560740-68.2022.8.26.0883",
+          "classe": "Execução Fiscal",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TJRJ"
+        },
+        {
+          "numero_cnj": "7742039-16.2021.8.26.0307",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "TJMG"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:38:53",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "93.631.128/0001-23",
+    "razao_social": "CULINÁRIA EXPRESS EIRELI",
+    "nome_fantasia": "RESTAURANTE",
+    "situacao": "ATIVA",
+    "cnae_principal": "8677-4/00",
+    "cnae_buscado": "restaurante",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "São José dos Campos",
+    "data_abertura": "2018-08-23",
+    "processos": {
+      "total_processos": 12,
+      "tribunais_consultados": [
+        "TRT-1",
+        "TRF-3",
+        "TRT-2"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "7130568-62.2024.8.26.0844",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Horas Extras",
+          "tribunal": "TRT-2"
+        },
+        {
+          "numero_cnj": "3790672-54.2024.8.26.0130",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "3186350-78.2020.8.26.0382",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "TRT-2"
+        },
+        {
+          "numero_cnj": "8203061-97.2022.8.26.0754",
+          "classe": "Execução Fiscal",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TRT-1"
+        },
+        {
+          "numero_cnj": "3465308-68.2021.8.26.0210",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "TJRJ"
+        },
+        {
+          "numero_cnj": "4031290-45.2024.8.26.0368",
+          "classe": "Ação de Cobrança",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "TRF-3"
+        },
+        {
+          "numero_cnj": "7484736-58.2021.8.26.0865",
+          "classe": "Execução Fiscal",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TJRJ"
+        },
+        {
+          "numero_cnj": "4529017-60.2020.8.26.0692",
+          "classe": "Ação de Indenização",
+          "assunto": "FGTS",
+          "tribunal": "TRF-3"
+        },
+        {
+          "numero_cnj": "1907551-97.2024.8.26.0323",
+          "classe": "Execução Fiscal",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "TJMG"
+        },
+        {
+          "numero_cnj": "8845466-38.2024.8.26.0201",
+          "classe": "Execução Fiscal",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "6427026-88.2021.8.26.0624",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "8194424-94.2020.8.26.0773",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Dano Material",
+          "tribunal": "TJMG"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:38:53",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "87.259.860/0001-88",
+    "razao_social": "RESTAURANTE BOM SABOR LTDA",
+    "nome_fantasia": "SABORES",
+    "situacao": "ATIVA",
+    "cnae_principal": "2360-2/00",
+    "cnae_buscado": "restaurante",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "São Paulo",
+    "data_abertura": "2019-03-08",
+    "processos": {
+      "total_processos": 2,
+      "tribunais_consultados": [
+        "TJSP"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "3342229-95.2021.8.26.0346",
+          "classe": "Execução Fiscal",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "TRT-1"
+        },
+        {
+          "numero_cnj": "6483097-73.2020.8.26.0108",
+          "classe": "Ação de Cobrança",
+          "assunto": "Horas Extras",
+          "tribunal": "TRT-1"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:38:53",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "81.381.834/0001-96",
+    "razao_social": "CULINÁRIA EXPRESS ME",
+    "nome_fantasia": "CULINÁRIA",
+    "situacao": "ATIVA",
+    "cnae_principal": "6276-6/00",
+    "cnae_buscado": "restaurante",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "São Paulo",
+    "data_abertura": "2013-07-03",
+    "processos": {
+      "total_processos": 8,
+      "tribunais_consultados": [
+        "TRT-2",
+        "TJSP"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "8382744-47.2022.8.26.0484",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "TRT-2"
+        },
+        {
+          "numero_cnj": "3401487-35.2024.8.26.0308",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TJRJ"
+        },
+        {
+          "numero_cnj": "9759232-26.2022.8.26.0681",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "TRT-2"
+        },
+        {
+          "numero_cnj": "7913924-13.2024.8.26.0139",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Horas Extras",
+          "tribunal": "TRT-1"
+        },
+        {
+          "numero_cnj": "8326326-14.2022.8.26.0502",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "TJRJ"
+        },
+        {
+          "numero_cnj": "3671651-66.2021.8.26.0229",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Horas Extras",
+          "tribunal": "TJRJ"
+        },
+        {
+          "numero_cnj": "6830157-82.2024.8.26.0332",
+          "classe": "Ação de Cobrança",
+          "assunto": "Horas Extras",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "7159691-63.2020.8.26.0942",
+          "classe": "Execução Fiscal",
+          "assunto": "Rescisão de Contrato de Trabalho",
+          "tribunal": "TRT-1"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:38:53",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "46.365.493/0001-15",
+    "razao_social": "SABORES DA CASA ME",
+    "nome_fantasia": "CULINÁRIA",
+    "situacao": "ATIVA",
+    "cnae_principal": "9908-6/00",
+    "cnae_buscado": "restaurante",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "Santos",
+    "data_abertura": "2018-06-15",
+    "processos": {
+      "total_processos": 2,
+      "tribunais_consultados": [
+        "TJRJ"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "8275106-56.2024.8.26.0522",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Dano Material",
+          "tribunal": "TRF-3"
+        },
+        {
+          "numero_cnj": "4048660-54.2024.8.26.0276",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Dano Material",
+          "tribunal": "TRF-3"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:38:53",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "80.440.897/0001-22",
+    "razao_social": "FOOD COMPANY ME",
+    "nome_fantasia": "RESTAURANTE",
+    "situacao": "ATIVA",
+    "cnae_principal": "3202-7/00",
+    "cnae_buscado": "restaurante",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Sorocaba",
+    "data_abertura": "2016-03-03",
+    "processos": {
+      "total_processos": 10,
+      "tribunais_consultados": [
+        "TRT-2",
+        "TRF-3",
+        "TJMG"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "7976292-21.2021.8.26.0289",
+          "classe": "Execução Fiscal",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TRT-1"
+        },
+        {
+          "numero_cnj": "2351735-38.2021.8.26.0510",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "2620005-80.2020.8.26.0193",
+          "classe": "Ação de Indenização",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TRF-3"
+        },
+        {
+          "numero_cnj": "9537845-76.2021.8.26.0568",
+          "classe": "Ação de Cobrança",
+          "assunto": "Horas Extras",
+          "tribunal": "TRF-3"
+        },
+        {
+          "numero_cnj": "5863200-35.2020.8.26.0355",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TJRJ"
+        },
+        {
+          "numero_cnj": "8962609-51.2024.8.26.0476",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "TRF-3"
+        },
+        {
+          "numero_cnj": "8117278-74.2024.8.26.0994",
+          "classe": "Ação de Indenização",
+          "assunto": "Dano Material",
+          "tribunal": "TJSP"
+        },
+        {
+          "numero_cnj": "5875259-87.2021.8.26.0244",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "TRT-2"
+        },
+        {
+          "numero_cnj": "8975944-63.2023.8.26.0283",
+          "classe": "Ação de Indenização",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "TRT-1"
+        },
+        {
+          "numero_cnj": "3219390-17.2021.8.26.0779",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "TJSP"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:38:53",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "59.309.485/0001-11",
+    "razao_social": "RESTAURANTE BOM SABOR ME",
+    "nome_fantasia": "FOOD",
+    "situacao": "ATIVA",
+    "cnae_principal": "2657-7/00",
+    "cnae_buscado": "restaurante",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Santos",
+    "data_abertura": "2015-11-15",
+    "processos": {
+      "total_processos": 2,
+      "tribunais_consultados": [
+        "TJMG"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "7700562-90.2023.8.26.0203",
+          "classe": "Ação de Indenização",
+          "assunto": "Verbas Rescisórias",
+          "tribunal": "TRT-2"
+        },
+        {
+          "numero_cnj": "6632258-26.2024.8.26.0633",
+          "classe": "Rescisão de Contrato",
+          "assunto": "FGTS",
+          "tribunal": "TRT-2"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:38:53",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "27.414.950/0001-27",
+    "razao_social": "RESTAURANTE BOM SABOR EIRELI",
+    "nome_fantasia": "SABORES",
+    "situacao": "ATIVA",
+    "cnae_principal": "2097-8/00",
+    "cnae_buscado": "restaurante",
+    "porte": "ME",
+    "estado": "SP",
+    "cidade": "São Paulo",
+    "data_abertura": "2021-02-04",
+    "processos": {
+      "total_processos": 1,
+      "tribunais_consultados": [
+        "TJRJ"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "1433157-74.2023.8.26.0908",
+          "classe": "Ação de Indenização",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "TRF-3"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:38:53",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "87.494.737/0001-27",
+    "razao_social": "CULINÁRIA EXPRESS S.A.",
+    "nome_fantasia": "GASTRONOMIA",
+    "situacao": "ATIVA",
+    "cnae_principal": "8293-1/00",
+    "cnae_buscado": "restaurante",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Santos",
+    "data_abertura": "2019-08-13",
+    "processos": {
+      "total_processos": 5,
+      "tribunais_consultados": [
+        "TRT-1"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "7979622-37.2022.8.26.0574",
+          "classe": "Pedido de Recuperação Judicial",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TRF-3"
+        },
+        {
+          "numero_cnj": "2688930-39.2020.8.26.0502",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TRT-1"
+        },
+        {
+          "numero_cnj": "6930337-64.2024.8.26.0929",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Dano Material",
+          "tribunal": "TRF-3"
+        },
+        {
+          "numero_cnj": "4442290-59.2022.8.26.0126",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "TRT-2"
+        },
+        {
+          "numero_cnj": "1430780-38.2021.8.26.0350",
+          "classe": "Execução Fiscal",
+          "assunto": "Cobrança de Dívida",
+          "tribunal": "TJRJ"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:38:53",
+    "modo": "DEMONSTRAÇÃO"
+  },
+  {
+    "cnpj": "54.762.269/0001-93",
+    "razao_social": "CULINÁRIA EXPRESS ME",
+    "nome_fantasia": "RESTAURANTE",
+    "situacao": "ATIVA",
+    "cnae_principal": "1974-9/00",
+    "cnae_buscado": "restaurante",
+    "porte": "EPP",
+    "estado": "SP",
+    "cidade": "Sorocaba",
+    "data_abertura": "2017-05-06",
+    "processos": {
+      "total_processos": 8,
+      "tribunais_consultados": [
+        "TJRJ",
+        "TRT-1"
+      ],
+      "processos": [
+        {
+          "numero_cnj": "9474693-51.2023.8.26.0154",
+          "classe": "Execução Fiscal",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "TJMG"
+        },
+        {
+          "numero_cnj": "8650301-74.2024.8.26.0188",
+          "classe": "Execução Fiscal",
+          "assunto": "Inadimplência Contratual",
+          "tribunal": "TJMG"
+        },
+        {
+          "numero_cnj": "7428367-55.2021.8.26.0750",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Dano Material",
+          "tribunal": "TJMG"
+        },
+        {
+          "numero_cnj": "4086327-52.2021.8.26.0719",
+          "classe": "Rescisão de Contrato",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "TJRJ"
+        },
+        {
+          "numero_cnj": "4518565-22.2021.8.26.0170",
+          "classe": "Reclamação Trabalhista",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TRF-3"
+        },
+        {
+          "numero_cnj": "4879452-83.2020.8.26.0265",
+          "classe": "Procedimento Comum Cível",
+          "assunto": "Responsabilidade Civil",
+          "tribunal": "TJMG"
+        },
+        {
+          "numero_cnj": "8106389-19.2020.8.26.0671",
+          "classe": "Ação de Cobrança",
+          "assunto": "Indenização por Dano Moral",
+          "tribunal": "TRT-1"
+        },
+        {
+          "numero_cnj": "2979878-11.2020.8.26.0561",
+          "classe": "Ação de Indenização",
+          "assunto": "Horas Extras",
+          "tribunal": "TRF-3"
+        }
+      ]
+    },
+    "tem_processos": true,
+    "data_consulta": "2026-11-08 01:38:53",
+    "modo": "DEMONSTRAÇÃO"
+  }
+]
