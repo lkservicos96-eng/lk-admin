@@ -1,13 +1,20 @@
 """
 Módulo de busca de empresas usando API CNPJA Comercial
-Endpoint correto: GET /office (pesquisa avançada por filtros)
+Endpoint: GET /office (pesquisa avançada por filtros)
 Docs: https://cnpja.com/api/reference
+
+Blindagem contra erro 400: se a API rejeitar algum filtro
+(mensagem "property X should not exist"), o cliente remove o campo
+rejeitado e refaz a busca automaticamente — até 3 tentativas.
+Requisições rejeitadas por validação não retornam dados (não consomem créditos).
 """
 
 import requests
 import os
-from typing import List, Dict, Optional
+import re
 import time
+from typing import List, Dict, Optional
+
 
 class BuscadorCNPJA:
     """Cliente para API CNPJA Comercial"""
@@ -18,6 +25,88 @@ class BuscadorCNPJA:
         self.headers = {
             'Authorization': self.api_key
         }
+
+    def montar_filtros(self,
+                       cnae_ids: List[str] = None,
+                       uf: str = None,
+                       cidades: List[str] = None,
+                       portes: List[str] = None,
+                       limite: int = 100) -> Dict:
+        """Monta o dicionário de filtros do GET /office (formato campo.operador=valor)"""
+        filtros = {'limit': str(limite)}
+
+        # CNAEs do ramo (códigos numéricos, ex: '5611201')
+        if cnae_ids:
+            filtros['mainActivity.id.in'] = ','.join(cnae_ids)
+
+        # Estado (ex: 'SP')
+        if uf:
+            filtros['address.state.in'] = uf
+
+        # Cidades (ex: ['Americana', 'Limeira'])
+        if cidades:
+            filtros['address.city.in'] = ','.join(cidades)
+
+        # Porte: company.size.id -> 1=ME, 3=EPP
+        if portes:
+            mapa = {'ME': '1', 'EPP': '3'}
+            ids = [mapa.get(p) for p in portes if p in mapa]
+            if ids:
+                filtros['company.size.id.in'] = ','.join(ids)
+
+        # Apenas empresas ativas (status.id 2 = Ativa)
+        filtros['status.id.in'] = '2'
+
+        return filtros
+
+    def _consultar_com_fallback(self, params: Dict) -> Optional[Dict]:
+        """
+        Faz GET /office. Se a API rejeitar algum campo (erro 400 de validação),
+        remove os campos rejeitados e tenta de novo (máx. 3 tentativas).
+        Retorna o JSON da resposta ou None.
+        """
+        for tentativa in range(3):
+            try:
+                resp = requests.get(
+                    f'{self.base_url}/office',
+                    headers=self.headers,
+                    params=params,
+                    timeout=30
+                )
+            except Exception as e:
+                print(f"❌ Erro de rede na consulta: {e}")
+                return None
+
+            if resp.status_code == 200:
+                return resp.json()
+
+            # Erro 400 de validação: extrai campos rejeitados da mensagem
+            if resp.status_code == 400:
+                campos = re.findall(r'property (\S+) should not exist', resp.text)
+                if campos:
+                    removidos = []
+                    for campo in campos:
+                        # A chave de params pode ser exatamente 'campo' (ex: 'names')
+                        # ou algo como 'address.city.in' quando o erro aponta 'city.in'
+                        chave_alvo = None
+                        for chave in list(params):
+                            if chave == campo or chave.endswith('.' + campo):
+                                chave_alvo = chave
+                                break
+                        if chave_alvo and chave_alvo != 'token':
+                            del params[chave_alvo]
+                            removidos.append(chave_alvo)
+                    if removidos:
+                        print(f"   ⚠️  API não aceita: {', '.join(removidos)} — refazendo sem eles")
+                        continue  # tenta de novo sem os campos rejeitados
+                print(f"⚠️  Erro 400: {resp.text[:300]}")
+                return None
+
+            print(f"⚠️  Erro {resp.status_code}: {resp.text[:300]}")
+            return None
+
+        print("⚠️  Ainda com erro 400 após remover filtros; desistindo desta busca")
+        return None
 
     def buscar_por_filtros(self,
                            cnae_ids: List[str] = None,
@@ -33,7 +122,7 @@ class BuscadorCNPJA:
         Args:
             cnae_ids: Códigos CNAE numéricos (ex: ['5611201', '5611203'])
             uf: Sigla do estado (ex: 'SP')
-            cidades: Nomes de cidades (ex: ['São Paulo', 'Campinas'])
+            cidades: Nomes de cidades (ex: ['Americana', 'Campinas'])
             portes: ['ME', 'EPP'] -> company.size.id.in=1,3
             limite: Registros por página (max 1000)
             paginas: Quantas páginas buscar (cada página custa créditos!)
@@ -45,57 +134,33 @@ class BuscadorCNPJA:
             print("⚠️  CNPJA_API_KEY não configurada")
             return []
 
+        filtros = self.montar_filtros(
+            cnae_ids=cnae_ids, uf=uf, cidades=cidades,
+            portes=portes, limite=limite
+        )
+
         registros = []
         token = None
 
         for pagina in range(paginas):
-            params = {'limit': limite}
-
-            # Filtros conforme documentação oficial (campo.operador=valor)
-            if cnae_ids:
-                params['mainActivity.id.in'] = ','.join(cnae_ids)
-            if uf:
-                params['address.state.in'] = uf
-            if cidades:
-                params['address.city.in'] = ','.join(cidades)
-            if portes:
-                # company.size.id: 1=ME, 3=EPP, 5=Demais
-                mapa = {'ME': '1', 'EPP': '3'}
-                ids = [mapa.get(p) for p in portes if p in mapa]
-                if ids:
-                    params['company.size.id.in'] = ','.join(ids)
-            # Apenas ativas (status.id 2 = Ativa)
-            params['status.id.in'] = '2'
-
+            params = dict(filtros)
             if token:
-                params = {'token': token, 'limit': limite}
+                params['token'] = token
 
-            try:
-                resp = requests.get(
-                    f'{self.base_url}/office',
-                    headers=self.headers,
-                    params=params,
-                    timeout=30
-                )
-
-                if resp.status_code != 200:
-                    print(f"⚠️  Erro {resp.status_code}: {resp.text[:300]}")
-                    break
-
-                data = resp.json()
-                lote = data.get('records', [])
-                registros.extend(lote)
-                print(f"   Página {pagina+1}: {len(lote)} registros (total disponível: {data.get('count', '?')})")
-
-                token = data.get('next')
-                if not token:
-                    break  # não há mais páginas
-
-                time.sleep(0.3)
-
-            except Exception as e:
-                print(f"❌ Erro na pesquisa: {e}")
+            data = self._consultar_com_fallback(params)
+            if data is None:
                 break
+
+            lote = data.get('records', [])
+            registros.extend(lote)
+            print(f"   Página {pagina+1}: {len(lote)} registros "
+                  f"(total disponível: {data.get('count', '?')})")
+
+            token = data.get('next')
+            if not token:
+                break  # não há mais páginas
+
+            time.sleep(0.3)
 
         return registros
 

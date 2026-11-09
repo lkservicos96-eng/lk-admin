@@ -214,7 +214,7 @@ def buscar_empresas():
 
             empresas_encontradas = []
 
-                        for estado in estados:
+            for estado in estados:
                 print(f"📍 Pesquisando estabelecimentos em {estado}...")
                 # NOTA: busca por ramo (texto livre) requer mapeamento ramo → CNAEs
                 registros = buscador.buscar_por_filtros(
