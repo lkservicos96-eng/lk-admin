@@ -183,7 +183,7 @@ def get_cidades(sigla_estado):
 
 @app.route('/api/buscar', methods=['POST'])
 def buscar_empresas():
-    """Executa a busca de empresas - MODO DEMONSTRAÇÃO"""
+    """Executa a busca de empresas - API CNPJA ou MODO DEMONSTRAÇÃO"""
     try:
         dados = request.json
 
@@ -195,13 +195,78 @@ def buscar_empresas():
         apenas_com_processos = dados.get('apenas_com_processos', True)
         buscar_processos = dados.get('buscar_processos', True)
 
-        print(f"\n🔍 Nova busca recebida (MODO DEMO):")
+        # Verifica se a chave da API está configurada
+        api_key = os.environ.get('CNPJA_API_KEY', '')
+        modo_real = bool(api_key)
+
+        print(f"\n🔍 Nova busca recebida ({'API CNPJA' if modo_real else 'MODO DEMO'}):")
         print(f"   Ramo: {ramo}")
         print(f"   Estados: {estados}")
         print(f"   Cidades: {cidades}")
         print(f"   Portes: {portes}")
         print(f"   Mínimo de processos: {min_processos}")
         print(f"   Apenas com processos: {apenas_com_processos}")
+
+        if modo_real:
+            # Busca real via API CNPJA
+            from busca_cnpja_api import BuscadorCNPJA
+            buscador = BuscadorCNPJA()
+
+            empresas_encontradas = buscador.buscar_empresas(
+                ramo=ramo,
+                estados=estados,
+                cidades=cidades if cidades else [],
+                portes=portes,
+                limite_por_cidade=50
+            )
+
+            # Se não especificou cidades, busca em todas as principais do estado
+            if not cidades:
+                for estado in estados:
+                    cidades_estado = CIDADES_POR_ESTADO.get(estado, [])[:5]  # Top 5 cidades
+                    empresas_encontradas.extend(
+                        buscador.buscar_empresas(
+                            ramo=ramo,
+                            estados=[estado],
+                            cidades=cidades_estado,
+                            portes=portes,
+                            limite_por_cidade=10
+                        )
+                    )
+
+            # Adiciona campo de processos (por enquanto vazio - integração futura)
+            for empresa in empresas_encontradas:
+                empresa['processos'] = {
+                    'total_processos': 0,
+                    'tribunais_consultados': [],
+                    'processos': []
+                }
+                empresa['tem_processos'] = False
+                empresa['data_consulta'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                empresa['modo'] = 'API CNPJA - Dados Reais'
+
+            # Salva resultados
+            pasta_saida = './resultados/'
+            os.makedirs(pasta_saida, exist_ok=True)
+
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            nome_arquivo = os.path.join(pasta_saida, f"busca_cnpja_{timestamp}.json")
+
+            with open(nome_arquivo, 'w', encoding='utf-8') as f:
+                json.dump(empresas_encontradas, f, ensure_ascii=False, indent=2)
+
+            print(f"✅ Encontradas {len(empresas_encontradas)} empresas reais")
+
+            return jsonify({
+                'sucesso': True,
+                'total': len(empresas_encontradas),
+                'resultados': empresas_encontradas,
+                'arquivo': nome_arquivo,
+                'modo': 'API CNPJA - Empresas Reais'
+            })
+
+        # MODO DEMONSTRAÇÃO (código existente)
+        print(f"\n⚠️  Rodando em modo DEMO - configure CNPJA_API_KEY para dados reais")
 
         # DADOS DE DEMONSTRAÇÃO (simulando resultados reais)
         import random
