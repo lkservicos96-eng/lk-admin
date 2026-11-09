@@ -24,18 +24,17 @@ class BuscadorCNPJA:
                            uf: str = None,
                            cidades: List[str] = None,
                            portes: List[str] = None,
-                           termo_nome: str = None,
                            limite: int = 100,
                            paginas: int = 1) -> List[Dict]:
         """
-        Pesquisa estabelecimentos via GET /office com filtros
+        Pesquisa estabelecimentos via GET /office com filtros estruturados
+        Docs: https://cnpja.com/api/reference
 
         Args:
-            cnae_ids: Códigos CNAE numéricos (ex: ['5611201'])
+            cnae_ids: Códigos CNAE numéricos (ex: ['5611201', '5611203'])
             uf: Sigla do estado (ex: 'SP')
-            cidades: Nomes de cidades (filtro city.in, separado por vírgula)
+            cidades: Nomes de cidades (ex: ['São Paulo', 'Campinas'])
             portes: ['ME', 'EPP'] -> company.size.id.in=1,3
-            termo_nome: Termo livre para buscar no nome (names)
             limite: Registros por página (max 1000)
             paginas: Quantas páginas buscar (cada página custa créditos!)
 
@@ -52,21 +51,19 @@ class BuscadorCNPJA:
         for pagina in range(paginas):
             params = {'limit': limite}
 
-            # Filtros no formato campo.operador=valor
+            # Filtros conforme documentação oficial (campo.operador=valor)
             if cnae_ids:
                 params['mainActivity.id.in'] = ','.join(cnae_ids)
             if uf:
                 params['address.state.in'] = uf
             if cidades:
-                params['city.in'] = ','.join(cidades)
+                params['address.city.in'] = ','.join(cidades)
             if portes:
-                # company.size.id: 1=ME, 3=EPP
+                # company.size.id: 1=ME, 3=EPP, 5=Demais
                 mapa = {'ME': '1', 'EPP': '3'}
                 ids = [mapa.get(p) for p in portes if p in mapa]
                 if ids:
                     params['company.size.id.in'] = ','.join(ids)
-            if termo_nome:
-                params['names'] = termo_nome
             # Apenas ativas (status.id 2 = Ativa)
             params['status.id.in'] = '2'
 

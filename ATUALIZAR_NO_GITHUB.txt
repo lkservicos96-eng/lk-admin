@@ -1,0 +1,57 @@
+========================================
+ARQUIVOS PARA SUBIR NO GITHUB
+========================================
+
+Acabei de integrar a API CNPJA comercial no seu sistema LK admin!
+
+ARQUIVOS NOVOS (você precisa adicionar no GitHub):
+---------------------------------------------------
+1. busca_cnpja_api.py         - Módulo que conecta com a API CNPJA
+2. COMO_FUNCIONA_API.md       - Documentação da integração
+3. ATUALIZAR_NO_GITHUB.txt    - Este arquivo (pode ignorar)
+
+ARQUIVOS MODIFICADOS (substituir no GitHub):
+---------------------------------------------
+1. servidor_web.py            - Agora detecta automaticamente se tem API key
+                                e busca empresas reais quando configurada
+
+COMO FAZER O UPLOAD:
+--------------------
+1. Abra o GitHub no navegador
+2. Vá no seu repositório lk-admin
+3. Para ADICIONAR arquivos novos:
+   - Clique em "Add file" → "Upload files"
+   - Arraste: busca_cnpja_api.py e COMO_FUNCIONA_API.md
+   - Commit com mensagem: "Integra API CNPJA para buscar empresas reais"
+
+4. Para ATUALIZAR servidor_web.py:
+   - Clique no arquivo servidor_web.py que já está lá
+   - Clique no ícone de lápis (editar)
+   - Apague todo o conteúdo antigo
+   - Abra o arquivo novo aqui do seu PC e copie todo o conteúdo
+   - Cole no GitHub
+   - Commit com mensagem: "Atualiza servidor para usar API CNPJA"
+
+O QUE VAI ACONTECER DEPOIS:
+---------------------------
+- Render vai detectar as mudanças automaticamente (~2 minutos)
+- Vai fazer deploy da nova versão
+- Como você já configurou CNPJA_API_KEY no Render, o sistema vai
+  começar a buscar empresas REAIS automaticamente!
+
+TESTANDO:
+---------
+Depois que o Render terminar o deploy:
+1. Acesse: https://lk-admin-oouh.onrender.com
+2. Faça uma busca (ex: "restaurante" em "SP")
+3. O sistema vai buscar empresas reais da API!
+4. No canto da tela vai aparecer "API CNPJA - Empresas Reais"
+   (em vez de "DEMONSTRAÇÃO")
+
+OBSERVAÇÕES:
+------------
+- Processos judiciais ainda não estão integrados (próxima etapa)
+- Cada busca consome créditos da sua API
+- Se a chave não estiver configurada, volta pro modo DEMO automaticamente
+
+Qualquer dúvida, me avisa!
