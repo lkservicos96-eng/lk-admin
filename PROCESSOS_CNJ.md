@@ -9,17 +9,19 @@ O sistema agora consulta **processos reais** em todos os tribunais do Brasil:
 
 Isso usa a **API pública do CNJ** (DataJud), que é **OFICIAL e GRATUITA**.
 
-## Passo 1: Cadastrar-se no CNJ (gratuito, 2 minutos)
+## Passo 1: Pegar a chave pública (gratuita, 1 minuto)
 
 1. Acesse: **https://datajud-wiki.cnj.jus.br/api-publica/**
-2. Role até a seção de cadastro e clique no **formulário de inscrição**
-3. Preencha com seus dados (nome e e-mail)
-4. **Verifique sua caixa de e-mail** (e o spam!) — o CNJ envia uma **APIKey** (código de acesso)
+2. Role até a seção **"API Key"**
+3. Copie a **chave pública atual** — o código que aparece depois de "Authorization: APIKey":
 
-A chave parece com isto (exemplo fictício):
 ```
-APIKey cDZHYzlZa0JadVREZDJCendQbXY6SkJlTzNjLV9TRENyQk1RdnFKZGRQdw==
+cDZHYzlZa0JadVREZDJCendQbXY6SkJlTzNjLV9TRENyQk1RdnFKZGRQdw==
 ```
+
+⚠️ **Atenção:**
+- Cole **SOMENTE o código** (não inclua a palavra "APIKey" — o sistema adiciona sozinho)
+- O CNJ pode **trocar a chave a qualquer momento** (eles avisam na mesma página). Se a consulta de processos parar de funcionar, volte lá e copie a chave nova.
 
 ## Passo 2: Configurar a chave no Render
 
@@ -28,8 +30,7 @@ APIKey cDZHYzlZa0JadVREZDJCendQbXY6SkJlTzNjLV9TRENyQk1RdnFKZGRQdw==
 3. Clique em **Add Environment Variable**
 4. Preencha:
    - **Key (Nome):** `CNJ_DATAJUD_KEY`
-   - **Value (Valor):** a chave que você recebeu por e-mail
-   - ⚠️ **IMPORTANTE:** cole a chave COMPLETA, incluindo o "APIKey" do início? **NÃO** — cole apenas a parte depois de "APIKey" (o código que começa com letras/números)
+   - **Value (Valor):** cole o código da chave (ex: `cDZHYzlZa0Ja...Qdw==`)
 5. Clique em **Save Changes** — o Render reinicia sozinho
 
 ## Passo 3: Usar no sistema
@@ -62,6 +63,9 @@ Sim — clique em **📊 Exportar Excel** depois de consultar: o arquivo sai com
 
 **Deu erro "Configure a variável CNJ_DATAJUD_KEY"?**
 A chave não está configurada no Render. Refaça o Passo 2.
+
+**Erros 401 ou 403 em todos os tribunais?**
+A chave pública pode ter sido trocada pelo CNJ. Volte à wiki (https://datajud-wiki.cnj.jus.br/api-publica/), copie a chave nova e atualize a variável `CNJ_DATAJUD_KEY` no Render.
 
 **0 processos para todas as empresas?**
 Pode ser: (1) as empresas realmente não têm processos; ou (2) precisamos ajustar a consulta (me mande o log do Render que eu calibro).
