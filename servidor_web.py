@@ -210,19 +210,30 @@ def buscar_empresas():
         if modo_real:
             # Busca real via API CNPJA (GET /office com filtros)
             from busca_cnpja_api import BuscadorCNPJA
+            from mapeador_cnae import cnaes_para_ramo
             buscador = BuscadorCNPJA()
 
             empresas_encontradas = []
+            avisos = []
+
+            # Converte ramo (texto livre) em códigos CNAE via mapeador
+            cnae_ids = None
+            if ramo:
+                cnae_ids = cnaes_para_ramo(ramo)
+                if cnae_ids:
+                    print(f"   Ramo '{ramo}' → CNAEs: {', '.join(cnae_ids)}")
+                else:
+                    avisos.append(f"Ramo '{ramo}' ainda não está mapeado para CNAEs — buscando sem filtro de atividade")
 
             for estado in estados:
                 print(f"📍 Pesquisando estabelecimentos em {estado}...")
-                # NOTA: busca por ramo (texto livre) requer mapeamento ramo → CNAEs
                 registros = buscador.buscar_por_filtros(
+                    cnae_ids=cnae_ids,
                     uf=estado,
                     cidades=cidades if cidades else None,
                     portes=portes,
                     limite=100,
-                    paginas=1
+                    paginas=1  # cada página custa créditos; começa com 1
                 )
                 print(f"   {len(registros)} registros recebidos em {estado}")
 
@@ -232,6 +243,13 @@ def buscar_empresas():
                     if emp['porte'] and emp['porte'] not in portes:
                         continue
                     empresas_encontradas.append(emp)
+
+            # Coleta avisos do buscador (ex: cidade indisponível, CNAE rejeitado)
+            avisos.extend(getattr(buscador, 'avisos', []))
+
+            # Aviso honesto sobre processos (ainda não integrados)
+            if apenas_com_processos or (min_processos or 0) > 0:
+                avisos.append('Consulta de processos judiciais ainda não integrada — os resultados NÃO foram filtrados por processos')
 
             # Adiciona campo de processos (por enquanto vazio - integração futura)
             for empresa in empresas_encontradas:
@@ -255,13 +273,17 @@ def buscar_empresas():
                 json.dump(empresas_encontradas, f, ensure_ascii=False, indent=2)
 
             print(f"✅ Encontradas {len(empresas_encontradas)} empresas reais")
+            if avisos:
+                for av in avisos:
+                    print(f"   ⚠️  {av}")
 
             return jsonify({
                 'sucesso': True,
                 'total': len(empresas_encontradas),
                 'resultados': empresas_encontradas,
                 'arquivo': nome_arquivo,
-                'modo': 'API CNPJA - Empresas Reais'
+                'modo': 'API CNPJA - Empresas Reais',
+                'avisos': avisos
             })
 
         # MODO DEMONSTRAÇÃO (código existente)

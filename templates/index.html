@@ -894,7 +894,7 @@
                     document.getElementById('actionButtons').style.display = 'flex';
                     ultimosResultados = data.resultados;
                     mostrarEstatisticas(data.resultados);
-                    showResults(data.resultados);
+                    showResults(data.resultados, data.avisos || []);
                 } else {
                     throw new Error(data.erro || 'Erro desconhecido');
                 }
@@ -908,13 +908,21 @@
             }
         });
 
-        function showResults(rs) {
+        function showResults(rs, avisos = []) {
             const c = document.getElementById('resultsContainer');
+
+            // Banner de avisos (ex: ramo não mapeado, cidade indisponível, processos não integrados)
+            let bannerHtml = '';
+            if (avisos.length) {
+                const itens = avisos.map(a => `<div style="display:flex;gap:8px;align-items:start"><span>⚠️</span><span>${a}</span></div>`).join('');
+                bannerHtml = `<div style="background:#fef3c7;border:1px solid #f59e0b;border-radius:8px;padding:16px;margin-bottom:24px;color:#92400e;font-size:14px;line-height:1.6">${itens}</div>`;
+            }
+
             if(!rs.length) {
-                c.innerHTML = '<div class="empty-state"><div class="empty-icon">🔍</div><p>Nenhuma empresa encontrada com esses filtros</p><p class="hint">Tente ampliar os filtros ou escolher outras cidades</p></div>';
+                c.innerHTML = bannerHtml + '<div class="empty-state"><div class="empty-icon">🔍</div><p>Nenhuma empresa encontrada com esses filtros</p><p class="hint">Tente ampliar os filtros ou escolher outras cidades</p></div>';
                 return;
             }
-            c.innerHTML = rs.map((e,i) => {
+            c.innerHTML = bannerHtml + rs.map((e,i) => {
                 const p = e.processos || {};
                 const tp = p.total_processos || 0;
                 const lp = p.processos || [];
